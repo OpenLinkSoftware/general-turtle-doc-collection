@@ -1,0 +1,557 @@
+@prefix oplwebsrv:   <http://www.openlinksw.com/ontology/webservices#> .
+@prefix oplsec:      <http://www.openlinksw.com/ontology/securityschemes#> .
+@prefix schema:      <http://schema.org/> .
+@prefix cc:          <http://creativecommons.org/ns#> .
+@prefix xhv:         <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix wdrs:        <http://www.w3.org/2007/05/powder-s#> .
+@prefix :            <#> .
+@prefix source:      <http://www.openlinksw.com/data/turtle/actions.ttl> .
+@prefix sourceDAV:   <http://www.openlinksw.com/DAV/data/turtle/actions.ttl> .
+
+sourceDAV:
+   a schema:CreativeWork ;
+   schema:author <http://www.openlinksw.com/#this> ;
+   xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName "OpenLink Software" ;
+   cc:attributionURL <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+   schema:datePublished "2013-01-12T12:38:25-00:00"^^xsd:dateTime ;
+   schema:dateCreated "2013-01-12T12:38:25-00:00"^^xsd:dateTime ;
+   schema:dateModified "2018-11-11T16:25:10+01:00"^^xsd:dateTime;
+   schema:name "OpenLink Actions and their Endpoints Related Information Document " ;
+   schema:comment  """This document is a launch point for discovering routes to various information sources associated with OpenLink Actions and their Endpoints """^^xsd:string ;
+   owl:sameAs source: .
+
+<http://uda.openlinksw.com/offers/> xhv:alternate source: .
+
+source: a schema:CreativeWork ;
+   schema:name "OpenLink Actions and their Endpoints"^^xsd:string  ;
+   schema:comment  """This document describes OpenLink Actions and their Endpoints"""^^xsd:string  ;
+   schema:author <http://www.openlinksw.com/#this> ;
+   xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName "OpenLink Software " ;
+   cc:attributionURL <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+   schema:datePublished "2013-01-12T12:38:25-00:00"^^xsd:dateTime ;
+   schema:dateCreated "2013-01-12T12:38:25-00:00"^^xsd:dateTime ;
+   schema:dateModified "2018-11-11T16:25:10+01:00"^^xsd:dateTime;
+   xhv:alternate <http://virtuoso.openlinksw.com/offers/> ;
+   schema:mainEntity <https://shop.openlinksw.com/cart.vsp#this> ,
+                     <https://shop.openlinksw.com/cart#this> ,
+                     <https://shop.openlinksw.com/cart.vsp> ,
+                     <https://shop.openlinksw.com/shop.vsp#this> ,
+                     <https://shop.openlinksw.com/shop#this> ,
+                     <http://virtuoso.openlinksw.com/offers/offers.vsp#this>  ,
+                     <http://virtuoso.openlinksw.com/offers/offers#this> ,
+                     <http://uda.openlinksw.com/offers/offers.vsp#this> ,
+                     <http://uda.openlinksw.com/offers/offers#this> ,
+                     <http://www.openlinksw.com/fct/search.vsp#this> ,
+                     <http://www.openlinksw.com/fct/search#this> ;
+   schema:about <https://shop.openlinksw.com/cart.vsp#this> ,
+                <https://shop.openlinksw.com/cart#this> ,
+                <https://shop.openlinksw.com/cart.vsp> ,
+                <https://shop.openlinksw.com/shop.vsp#this> ,
+                <https://shop.openlinksw.com/shop#this> ,
+                <http://virtuoso.openlinksw.com/offers/offers.vsp#this>  ,
+                <http://virtuoso.openlinksw.com/offers/offers#this> ,
+                <http://uda.openlinksw.com/offers/offers.vsp#this> ,
+                <http://uda.openlinksw.com/offers/offers#this> ,
+                <http://www.openlinksw.com/fct/search.vsp#this> ,
+                <http://www.openlinksw.com/fct/search#this> .
+
+# ---- Shop Cart Add Item ------
+
+# ---- Actions Definition ------
+<https://shop.openlinksw.com/cart.vsp#this>
+   a schema:Action, schema:TradeAction, schema:BuyAction  ;
+   schema:name "OpenLink Shop Cart Add Item Action" ;
+   schema:description """This action adds an offer to an user's shopcart en route to purchase. """ ;
+   schema:target <https://shop.openlinksw.com/cart#this>  ;
+   wdrs:describedby source: .
+
+# ---- Endpoints Definition ------
+<https://shop.openlinksw.com/cart#this>
+   a schema:EntryPoint ;
+   schema:name "OpenLink Shop Cart Add Item Action Endpoint"^^xsd:string ;
+   schema:urlTemplate "https://shop.openlinksw.com/cart.vsp(?command,item) "^^xsd:string ;
+   schema:httpMethod "GET";
+   schema:contentType "text/html" ;
+   wdrs:describedby source: ;
+   oplwebsrv:hasParameter <https://shop.openlinksw.com/cart.vsp#itemParameter> ,
+                          <https://shop.openlinksw.com/cart.vsp#commandParameter> ;
+   oplwebsrv:endpointURL <https://shop.openlinksw.com/cart#this> ;
+   oplwebsrv:usageExample """https://shop.openlinksw.com/cart.vsp?command=add&item=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Foffer%2FOffer-2016-02-11-UDA-01-macosx-db2%23this""" ;
+   schema:url <https://shop.openlinksw.com/cart.vsp> ;
+   oplwebsrv:isWebServiceOf <https://shop.openlinksw.com/cart.vsp#this> .
+
+<https://shop.openlinksw.com/cart.vsp>
+    a schema:URL ;
+    schema:name "Shop Cart Add Item Action Endpoint URL" ;
+    schema:urlTemplate "https://shop.openlinksw.com/cart.vsp(?command,item) "^^xsd:string ;
+    schema:httpMethod "GET";
+    schema:contentType "text/html" ;
+    wdrs:describedby source: .
+
+<https://shop.openlinksw.com/cart.vsp#itemParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Item Parameter"^^xsd:string ;
+   oplwebsrv:parameterName "item";
+   schema:description "Encoded Offer URI"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "http://data.openlinksw.com/oplweb/offer/Offer-2018-03-virtuoso-8-personal-WKS-ANY#this" ;
+   wdrs:describedby source: .
+
+<https://shop.openlinksw.com/cart.vsp#commandParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Command Parameter"^^xsd:string ;
+   oplwebsrv:parameterName "command" ;
+   oplwebsrv:parameterExampleValue "add"^^xsd:string ;
+   wdrs:describedby source: .
+
+
+# ----- Shop Offers Listing ----
+
+<https://shop.openlinksw.com/shop.vsp#this>
+   a schema:Action  ;
+   schema:name "OpenLink Shop Offers Listing Action" ;
+   schema:description """This action list all OpenLink UDA and Virtuoso offers. """ ;
+   schema:target <https://shop.openlinksw.com/shop#this>  ;
+   wdrs:describedby source: .
+
+# ---- Endpoints Definition ------
+<https://shop.openlinksw.com/shop#this>
+   a schema:EntryPoint ;
+   schema:name "OpenLink Shop Offers Listing Action Endpoint"^^xsd:string ;
+   schema:urlTemplate "https://shop.openlinksw.com/shop.vsp(?proFamily,data_access,dbms,os,osType,version,format,module,sessions,cores,type) "^^xsd:string ;
+   schema:httpMethod "GET";
+   schema:contentType "text/html" ;
+   wdrs:describedby source: ;
+   oplwebsrv:hasParameter <#shopProFamilyParameter> ,
+                          <#shopData_accessParameter> ,
+                          <#shopDbmsParameter> ,
+                          <#shopOsParameter> ,
+                          <#shopOsTypeParameter> ,
+                          <#shopVersionParameter> ,
+                          <#shopData_accessParameter> ,
+                          <#shopModuleParameter> ,
+                          <#shopSessionsParameter> ,
+                          <#shopCoresParameter> ,
+                          <#shopTypeParameter> ;
+   oplwebsrv:usageExample """https://shop.openlinksw.com/shop.vsp?proFamily=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Fproduct_family%2Fuda%23this""" ,
+                          """https://shop.openlinksw.com/shop.vsp?data_access=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23DataAccessODBC""" ,
+                          """https://shop.openlinksw.com/shop.vsp?dbms=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23Virtuoso""" ,
+                          """https://shop.openlinksw.com/shop.vsp?os=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23GenericLinux""" ,
+                          """https://shop.openlinksw.com/shop.vsp?osType=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23serverWorkstationOS""" ,
+                          """https://shop.openlinksw.com/shop.vsp?version=8.1""" ,
+                          """https://shop.openlinksw.com/shop.vsp?format=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Fproduct_format%2Fmt%23this""" ,
+                          """https://shop.openlinksw.com/shop.vsp?module=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Fmodule%2FVirtuoso7ColumnStore%23this""" ,
+                          """https://shop.openlinksw.com/shop.vsp?sessions=10""" ,
+                          """https://shop.openlinksw.com/shop.vsp?cores=16""" ,
+                          """https://shop.openlinksw.com/shop.vsp?type=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Foffers%23RetailUnitPriceSpecification""" ;
+   oplwebsrv:endpointURL <https://shop.openlinksw.com/shop#this> ;
+   schema:url <https://shop.openlinksw.com/shop.vsp> ;
+   oplwebsrv:isWebServiceOf <https://shop.openlinksw.com/shop.vsp#this> .
+
+<https://shop.openlinksw.com/shop.vsp>
+    a schema:URL ;
+    schema:name "OpenLink Shop Offers Listing Action Endpoint URL" ;
+    schema:urlTemplate "https://shop.openlinksw.com/shop.vsp(?proFamily,data_access,dbms,os,osType,version,format,module,sessions,cores,type) "^^xsd:string ;
+    schema:httpMethod "GET";
+    schema:contentType "text/html" ;
+    wdrs:describedby source: .
+
+<#shopProFamilyParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Product Family"^^xsd:string ;
+   oplwebsrv:parameterName "proFamily";
+   schema:description "Encoded Family URI"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "http://data.openlinksw.com/oplweb/product_family/uda#this" ;
+   wdrs:describedby source: .
+
+<#shopData_accessParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Data Access Protocol"^^xsd:string ;
+   oplwebsrv:parameterName "data_access";
+   schema:description "Encoded Data Access Protocol Scope URI"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#DataAccessODBC" ;
+   wdrs:describedby source: .
+
+<#shopDbmsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "DBMS Family"^^xsd:string ;
+   oplwebsrv:parameterName "dbms";
+   schema:description "Encoded Database Family URI"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#MySQL" ;
+   wdrs:describedby source: .
+
+<#shopOsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "OS"^^xsd:string ;
+   oplwebsrv:parameterName "os";
+   schema:description "Encoded OS URI"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#OSFamilyAny" ;
+   wdrs:describedby source: .
+
+<#shopOsTypeParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "OS Type"^^xsd:string ;
+   oplwebsrv:parameterName "osType";
+   schema:description "Encoded OS Type URI"^^xsd:string ;
+   # oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#serverWorkstationOS" ;
+   wdrs:describedby source: .
+
+<#shopVersionParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Release"^^xsd:string ;
+   oplwebsrv:parameterName "version";
+   schema:description "Release Version"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "7.x"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#shopFormatParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Driver Format Parameter"^^xsd:string ;
+   oplwebsrv:parameterName "format";
+   schema:description "Encoded Driver Format"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "http://data.openlinksw.com/oplweb/product_format/mt#this" ;
+   wdrs:describedby source: .
+
+<#shopModuleParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "License Module"^^xsd:string ;
+   oplwebsrv:parameterName "module";
+   schema:description "Encoded License Module Unit URI"^^xsd:string ;
+   # oplwebsrv:parameterExampleValue "http://data.openlinksw.com/oplweb/module/Virtuoso8ColumnStore#this" ;
+   wdrs:describedby source: .
+
+<#shopSessionsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "DBMS Sessions"^^xsd:string ;
+   oplwebsrv:parameterName "sessions";
+   schema:description "Sessions value"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "10"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#shopCoresParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "CPU Affinity"^^xsd:string ;
+   oplwebsrv:parameterName "cores";
+   schema:description "Cores value"^^xsd:string ;
+   oplwebsrv:parameterExampleValue "16"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#shopTypeParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Offer Type"^^xsd:string ;
+   oplwebsrv:parameterName "type";
+   schema:description "Encoded Offer Type URI"^^xsd:string ;
+   # oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/offers#RetailUnitPriceSpecification" ;
+   wdrs:describedby source: .
+
+
+# ---- UDA Offers page Action + Entrypoint definitions ---
+
+# ---- Actions Definition ------
+<http://uda.openlinksw.com/offers/offers.vsp#this>
+   a schema:Action  ;
+   schema:name "OpenLink UDA Shop Offers Listing Action" ;
+   schema:description """This action list all OpenLink UDA offers. """ ;
+   schema:target <http://uda.openlinksw.com/offers/offers#this>  ;
+   wdrs:describedby source: .
+
+# ---- Actions Definition ------
+<http://uda.openlinksw.com/offers/offers#this>
+   a schema:EntryPoint ;
+   schema:name "OpenLink Shop UDA Offers Listing Action Endpoint"^^xsd:string ;
+   schema:urlTemplate "http://uda.openlinksw.com/offers/offers.vsp(?data_access,dbms,os,osType,version,format,sessions,cores,type) "^^xsd:string ;
+   schema:httpMethod "GET";
+   schema:contentType "text/html" ;
+   wdrs:describedby source: ;
+   oplwebsrv:hasParameter <#udaData_accessParameter> ,
+                          <#udaDbmsParameter> ,
+                          <#udaOsParameter> ,
+                          <#udaOsTypeParameter> ,
+                          <#udaVersionParameter> ,
+                          <#udaData_accessParameter> ,
+                          <#udaSessionsParameter> ,
+                          <#udaCoresParameter> ,
+                          <#udaTypeParameter> ;
+   oplwebsrv:usageExample """http://uda.openlinksw.com/offers/offers.vsp?data_access=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23DataAccessODBC""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?dbms=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23MySQL""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?os=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23GenericLinux""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?osType=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23serverWorkstationOS""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?version=7.x""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?format=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Fproduct_format%2Fmt%23this""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?sessions=10""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?cores=16""" ,
+                          """http://uda.openlinksw.com/offers/offers.vsp?type=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Foffers%23RetailUnitPriceSpecification""" ;
+   oplwebsrv:endpointURL <http://uda.openlinksw.com/offers/offers#this> ;
+   schema:url <http://uda.openlinksw.com/offers/offers.vsp> ;
+   oplwebsrv:isWebServiceOf <http://uda.openlinksw.com/offers/offers.vsp#this> .
+
+<http://uda.openlinksw.com/offers/offers.vsp>
+    a schema:URL ;
+    schema:name "OpenLink Shop UDA Offers Listing Action Endpoint URL" ;
+    schema:urlTemplate "http://uda.openlinksw.com/offers/offers.vsp(?data_access,dbms,os,osType,version,format,sessions,cores,type) "^^xsd:string ;
+    schema:httpMethod "GET";
+    schema:contentType "text/html" ;
+    wdrs:describedby source: .
+
+<#udaData_accessParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Data Access Protocol"^^xsd:string ;
+   schema:description "Encoded Data Access Protocol Scope URI"^^xsd:string ;
+   oplwebsrv:parameterName "data_access";
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#DataAccessODBC" ;
+   wdrs:describedby source: .
+
+<#udaDbmsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Database Family"^^xsd:string ;
+   schema:description "Encoded Database Family URI"^^xsd:string ;
+   oplwebsrv:parameterName "dbms";
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#MySQL" ;
+   wdrs:describedby source: .
+
+<#udaOsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "OS"^^xsd:string ;
+   schema:description "Encoded OS URI"^^xsd:string ;
+   oplwebsrv:parameterName "os";
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#OSFamilyAny" ;
+   wdrs:describedby source: .
+
+<#udaOsTypeParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "OS Type"^^xsd:string ;
+   schema:description "Encoded OS Type URI"^^xsd:string ;
+   oplwebsrv:parameterName "osType";
+   # oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#serverWorkstationOS" ;
+   wdrs:describedby source: .
+
+<#udaVersionParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Release"^^xsd:string ;
+   schema:description "Release Version"^^xsd:string ;
+   oplwebsrv:parameterName "item";
+   oplwebsrv:parameterExampleValue "7.x"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#udaFormatParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Driver Type"^^xsd:string ;
+   schema:description "Encoded Driver Architectural Type (e.g., Multi-Tier or Single-Tier)"^^xsd:string ;
+   oplwebsrv:parameterName "format";
+   oplwebsrv:parameterExampleValue "http://data.openlinksw.com/oplweb/product_format/mt#this" ;
+   wdrs:describedby source: .
+
+<#udaSessionsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "DBMS Sessions "^^xsd:string ;
+   schema:description "Sessions value"^^xsd:string ;
+   oplwebsrv:parameterName "sessions";
+   oplwebsrv:parameterExampleValue "10"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#udaCoresParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Max. CPU Cores"^^xsd:string ;
+   schema:description "CPU Affinity i.e., maximim Concurrent CPU Cores applied to multithreaded operations"^^xsd:string ;
+   oplwebsrv:parameterName "cores";
+   oplwebsrv:parameterExampleValue "16"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#udaTypeParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Offer Type"^^xsd:string ;
+   schema:description "Encoded Offer Type URI"^^xsd:string ;
+   oplwebsrv:parameterName "type";
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/offers#RetailUnitPriceSpecification" ;
+   wdrs:describedby source: .
+
+
+# ---- Virtuoso Offers page Action + Entrypoint definitions ---
+
+# ---- Actions Definition ------
+
+<http://virtuoso.openlinksw.com/offers/offers.vsp#this>
+   a schema:Action  ;
+   schema:name "OpenLink Virtuoso Shop Offers Listing Action" ;
+   schema:description """This action list all OpenLink Virtuoso offers. """ ;
+   schema:target <http://virtuoso.openlinksw.com/offers/offers#this>  ;
+   wdrs:describedby source: .
+
+# ---- Endpoints Definition ------
+<http://virtuoso.openlinksw.com/offers/offers#this>
+   a schema:EntryPoint ;
+   schema:name "OpenLink Shop Virtuoso Offers Listing Action Endpoint"^^xsd:string ;
+   schema:urlTemplate "http://virtuoso.openlinksw.com/offers/offers.vsp(?os,osType,version,module,sessions,cores,type) "^^xsd:string ;
+   schema:httpMethod "GET";
+   schema:contentType "text/html" ;
+   wdrs:describedby source: ;
+   oplwebsrv:hasParameter <#virtuosoDbmsParameter> ,
+                          <#virtuosoOsParameter> ,
+                          <#virtuosoOsTypeParameter> ,
+                          <#virtuosoVersionParameter> ,
+                          <#virtuosoModuleParameter> ,
+                          <#virtuosoSessionsParameter> ,
+                          <#virtuosoCoresParameter> ,
+                          <#virtuosoTypeParameter> ;
+   oplwebsrv:usageExample """http://virtuoso.openlinksw.com/offers/offers.vsp?os=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23GenericLinux""" ,
+                          """http://virtuoso.openlinksw.com/offers/offers.vsp?osType=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Fsoftware%23serverWorkstationOS""" ,
+                          """http://virtuoso.openlinksw.com/offers/offers.vsp?version=8.1""" ,
+                          """http://virtuoso.openlinksw.com/offers/offers.vsp?module=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Fmodule%2FVirtuoso8ColumnStore%23this""" ,
+                          """http://virtuoso.openlinksw.com/offers/offers.vsp?sessions=10""" ,
+                          """http://virtuoso.openlinksw.com/offers/offers.vsp?cores=16""" ,
+                          """http://virtuoso.openlinksw.com/offers/offers.vsp?type=http%3A%2F%2Fwww.openlinksw.com%2Fontology%2Foffers%23RetailUnitPriceSpecification""" ;
+   oplwebsrv:endpointURL <http://virtuoso.openlinksw.com/offers/offers#this> ;
+   schema:url <http://virtuoso.openlinksw.com/offers/offers.vsp> ;
+   oplwebsrv:isWebServiceOf <http://virtuoso.openlinksw.com/offers/offers.vsp#this> .
+
+<#virtuosoDbmsParameter> 
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "DBMS Family"^^xsd:string ;
+   oplwebsrv:parameterName "dbms";
+   schema:description "Encoded Database Family URI - for Virtuoso Offers this must be <http://www.openlinksw.com/ontology/software#OpenLinkVirtuoso>"^^xsd:string ;
+   oplwebsrv:parameterValue "http://www.openlinksw.com/ontology/software#OpenLinkVirtuoso" ;
+   wdrs:describedby source: .
+
+<#virtuosoOsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "OS"^^xsd:string ;
+   schema:description "Encoded OS URI"^^xsd:string ;
+   oplwebsrv:parameterName "os";
+   oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#OSFamilyAny" ;
+   wdrs:describedby source: .
+
+<#virtuosoOsTypeParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "OS Type"^^xsd:string ;
+   schema:description "Encoded OS Type URI"^^xsd:string ;
+   oplwebsrv:parameterName "osType";
+   # oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/software#serverWorkstationOS" ;
+   wdrs:describedby source: .
+
+<#virtuosoVersionParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Release"^^xsd:string ;
+   schema:description "Release Version"^^xsd:string ;
+   oplwebsrv:parameterName "version";
+   # oplwebsrv:parameterExampleValue "8.1"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#virtuosoModuleParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "License Module"^^xsd:string ;
+   schema:description "Encoded License Module Unit URI"^^xsd:string ;
+   oplwebsrv:parameterName "module";
+   # oplwebsrv:parameterExampleValue "http://data.openlinksw.com/oplweb/module/Virtuoso8ColumnStore#this" ;
+   wdrs:describedby source: .
+
+<#virtuosoSessionsParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Concurrent DB Sessions"^^xsd:string ;
+   schema:description "Sessions value"^^xsd:string ;
+   oplwebsrv:parameterName "sessions";
+   oplwebsrv:parameterExampleValue "10"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#virtuosoCoresParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Max. CPU Cores"^^xsd:string ;
+   schema:description "Cores value"^^xsd:string ;
+   oplwebsrv:parameterName "cores";
+   oplwebsrv:parameterExampleValue "16"^^xsd:string ;
+   wdrs:describedby source: .
+
+<#virtuosoTypeParameter>
+   a oplwebsrv:WebServiceParameter ;
+   schema:name "Offer Type"^^xsd:string ;
+   schema:description "Encoded Offer Type URI"^^xsd:string ;
+   oplwebsrv:parameterName "type";
+   #oplwebsrv:parameterExampleValue "http://www.openlinksw.com/ontology/offers#RetailUnitPriceSpecification" ;
+   wdrs:describedby source: .
+
+<http://virtuoso.openlinksw.com/offers/offers.vsp>
+    a schema:URL ;
+    schema:name "OpenLink Shop Virtuoso Offers Listing Action Action Endpoint URL" ;
+    schema:urlTemplate "http://virtuoso.openlinksw.com/offers/offers.vsp(?os,osType,version,module,sessions,cores,type) "^^xsd:string ;
+    schema:httpMethod "GET";
+    schema:contentType "text/html" ;
+    wdrs:describedby source: .
+
+# Search Action + Endpoint Description
+
+<http://www.openlinksw.com/fct/search.vsp#this>
+  a schema:Action, schema:SearchAction, schema:FindAction ;
+  schema:name "Precision Search and Find Action" ;
+  schema:target <http://www.openlinksw.com/fct/search#this> ;
+  schema:description """This action performs Search Faceted Browsing""" ;
+  wdrs:describedby source: .
+
+<http://www.openlinksw.com/fct/search#this>
+  a schema:EntryPoint ;
+  schema:name "OpenLink Search Faceted Browsing Service Endpoint" ;
+  schema:description """HTTP Service Endpoint that accepts a variety of parameters that caliberate Faceted Browsing over
+  various entity relationship dimensions: entity types, attribute names, attribute values. Parameters include: q for keywords,
+  view:type for dimension [entity type, attribute names, attribute values]. """ ;
+  schema:contentType "text/html" ;
+  schema:httpMethod "GET" ;
+  schema:urlTemplate "http://www.openlinksw.com/fct/search(?q,view:type,c-term,s-term,same-as,inference,offset,limit)" ;
+  schema:url <http://www.openlinksw.com/fct/search>;
+  oplwebsrv:isWebServiceOf <http://www.openlinksw.com/fct/search.vsp#this> ;
+  oplwebsrv:endPointURL <http://www.openlinksw.com/fct/search> ;
+  oplwebsrv:hasParameter <#FacetedBrowsingServiceParameterQ> ,
+                         <#FacetedBrowsingServiceParameterViewType> ,
+                         <#FacetedBrowsingServiceParameterSameAs> ,
+                         <#FacetedBrowsingServiceParameterOffset> ,
+                         <#FacetedBrowsingServiceParameterLimit> ;
+  oplwebsrv:usageExample """http://www.openlinksw.com/fct/search?q=odbc+driver""" ,
+                         """http://www.openlinksw.com/fct/search?q=odbc+driver&view:type=entity-types""" ,
+                         """http://www.openlinksw.com/fct/search?q=odbc+driver&view:type=entity-types&same-as=yes""" ,
+                         """http://www.openlinksw.com/fct/search?q=odbc+driver&view:type=entity-types&same-as=yes&offset=100&limit=100""" ,
+                         """http://www.openlinksw.com/fct/search?q=odbc+driver&view:type=entity-types&same-as=yes&offset=100&limit=100""" ;
+  wdrs:describedby source: .
+
+<#FacetedBrowsingServiceParameterQ>
+   a oplwebsrv:WebServiceParameter ;
+  schema:name "Search text" ;
+  schema:description """This paramater takes a keyword or phrase as its value. """;
+  oplwebsrv:parameterName "q" ;
+  oplwebsrv:isRequired true ;
+  oplwebsrv:parameterExampleValue "software+license+offer" ;
+  wdrs:describedby source: .
+
+<#FacetedBrowsingServiceParameterViewType>
+   a oplwebsrv:WebServiceParameter ;
+  schema:name "View orientation" ;
+  schema:description """This paramater takes a literal value that sets the default view orientation of the initial page returned by the Faceted Browsing Service. """;
+  oplwebsrv:parameterName "view:type" ;
+  oplwebsrv:parameterValue "entity-types" , "attribute-names" ;
+  oplwebsrv:usageExample "http://www.openlinksw.com/fct/search?q=odbc+driver&view:type=attribute-names&same-as=yes&offset=100&limit=100" ;
+  wdrs:describedby source: .
+
+<#FacetedBrowsingServiceParameterSameAs>
+   a oplwebsrv:WebServiceParameter ;
+  schema:name "sameAs inferencing" ;
+  schema:description """This paramater determines if owl:sameAs inference and reasoning is applied to the generation of driver presented by the entity description page. """;
+  oplwebsrv:parameterName "same-as" ;
+  oplwebsrv:parameterExampleValue "yes" ;
+  wdrs:describedby source: .
+
+<#FacetedBrowsingServiceParameterOffset>
+   a oplwebsrv:WebServiceParameter ;
+  schema:name "Result offset" ;
+  schema:description """This paramater determines offset (marker) boundary size that enables a user scroll (in either direction) through driver presented in the entity description page of the Faceted Browser Service. Increase using blocks of this value to page forward or backwards. """;
+  oplwebsrv:parameterName "offset" ;
+  oplwebsrv:parameterExampleValue "100" ;
+  wdrs:describedby source: .
+
+<#FacetedBrowsingServiceParameterLimit>
+   a oplwebsrv:WebServiceParameter ;
+  schema:name "Max result entities" ;
+  schema:description """This paramater determines maximum size of entity relationships in a query solution that provides driver presented in the entity description page of the Faceted Browser Service. This value remains fixed when a user is scrolling through a query solution that provides driver to a Faceted Browsing Page. """;
+  oplwebsrv:parameterName "limit" ;
+  oplwebsrv:parameterExampleValue "100" ;
+  wdrs:describedby source: .
