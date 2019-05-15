@@ -1219,7 +1219,7 @@ oplsof:OSFamilyAny a oplsof:OpsysFamily ;
   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
   schema:name """Any Operating System Family""" ;
   rdfs:label "Any Operating System Family"^^xsd:string ;
-  schema:logo <https://www.macstadium.com/content/uploads/2016/01/OS-Support.svg> .
+  schema:logo <http://www.openlinksw.com/images/OS-Support.svg> .
 
 oplsof:Windows a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
@@ -1237,7 +1237,7 @@ oplsof:Windows a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-winsrv-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/Microsoft_Windows> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Microsoft_Windows> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-windows.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-windows.gif> .
 
 oplsof:GenericLinux a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
@@ -1262,7 +1262,7 @@ oplsof:GenericLinux a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-linux-glibc25-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/Linux> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Linux> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-linux.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-linux.gif> .
 
 oplsof:Solaris a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this> ;
@@ -1286,7 +1286,7 @@ oplsof:Solaris a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/x86_64-sun-solaris2.10-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/Solaris_%28operating_system%29> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Solaris_%28operating_system%29> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-solaris.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-solaris.gif> .
 
 oplsof:AIX a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/AIX#this> ;
@@ -1309,7 +1309,7 @@ oplsof:AIX a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/rs6000-ibm-aix4.3.3.0-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/IBM_AIX_%28operating_system%29> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/IBM_AIX_%28operating_system%29> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-aix.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-aix.gif> .
 
 oplsof:HPUX a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/HPUX#this> ;
@@ -1330,7 +1330,7 @@ oplsof:HPUX a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/ia64-hp-hpux11.23-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/HP-UX> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/HP-UX> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-hpux.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-hpux.gif> .
 
 oplsof:Irix a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Irix#this> ;
@@ -1345,7 +1345,7 @@ oplsof:Irix a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/mips-sgi-irix6.5-o32#this> ;
   owl:sameAs <http://dbpedia.org/resource/Irix> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Irix> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-sgi.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-sgi.gif> .
 
 
 oplsof:MacOSClassic a oplsof:OpsysFamily ;
@@ -1361,7 +1361,7 @@ oplsof:MacOSClassic a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macos8.0-32#this> ;
   owl:sameAs <http://dbpedia.org/resource/Macintosh_Classic> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Macintosh_Classic> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-macos.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-macos.gif> .
 
 oplsof:FreeBSD a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/FreeBSD#this> ;
@@ -1380,7 +1380,7 @@ oplsof:FreeBSD a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-freebsd5.0-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/Free_bsd> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Free_bsd> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-freebsd.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-freebsd.gif> .
 
 
 oplsof:DG-UX a oplsof:OpsysFamily ;
@@ -1394,7 +1394,7 @@ oplsof:DG-UX a oplsof:OpsysFamily ;
                               <http://data.openlinksw.com/oplweb/opsys/i586-dg-dguxR4.11MU03-32-nothreads#this> ;
     owl:sameAs <http://dbpedia.org/resource/DG_UX> ;
     schema:mainEntityOfPage <http://dbpedia.org/resource/DG_UX> ;
-    schema:logo <http://download.openlinksw.com/download/images/icon-digital.gif> .
+    schema:logo <https://www.openlinksw.com/images/icon-digital.gif> .
 
 oplsof:Ruby a oplsof:OpsysFamily ;
     rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
@@ -1405,8 +1405,8 @@ oplsof:Ruby a oplsof:OpsysFamily ;
     oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/OpenSource#this> ;
     oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/ruby#this> ;
     owl:sameAs <http://dbpedia.org/resource/Ruby_programming_language> ;
-    schema:mainEntityOfPage <http://dbpedia.org/resource/Ruby_programming_language> ;
-    schema:logo <http://download.openlinksw.com/download/images/> .
+#   schema:logo <https://www.openlinksw.com/images/> ;
+    schema:mainEntityOfPage <http://dbpedia.org/resource/Ruby_programming_language> .
 
 oplsof:Firefox a oplsof:OpsysFamily ;
     rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
@@ -1415,8 +1415,8 @@ oplsof:Firefox a oplsof:OpsysFamily ;
     oplsof:OpsysFamilyLicenseCode "firefox" ;
     oplsof:OpsysFamilyName "Firefox" ;
     oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/MozillaFoundation#this> ;
-    oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/firefox3.0#this> ;
-    schema:logo <http://download.openlinksw.com/download/images/> .
+#   schema:logo <https://www.openlinksw.com/images/> ;
+    oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/firefox3.0#this> .
 
 oplsof:DynixPTX a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/DynixPTX#this> ;
@@ -1427,7 +1427,7 @@ oplsof:DynixPTX a oplsof:OpsysFamily ;
   oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i386-sequent-sysv4-32#this> ;
   owl:sameAs <http://dbpedia.org/resource/Dynix> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Dynix> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-dynix.gif> ;
+  schema:logo <https://www.openlinksw.com/images/icon-dynix.gif> ;
   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
   rdfs:label "DynixPTX"^^xsd:string .
   
@@ -1440,7 +1440,7 @@ oplsof:WebOS a oplsof:OpsysFamily ;
 	# oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i386-sequent-sysv4-32#this> ;
 	skos:related <http://dbpedia.org/resource/World_Wide_Web> ;
 	schema:mainEntityOfPage <http://dbpedia.org/page/World_Wide_Web> ;
-	# schema:logo <http://download.openlinksw.com/download/images/icon-dynix.gif> ;
+	# schema:logo <https://www.openlinksw.com/images/> ;
 	rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
     rdfs:label "WebOS"^^xsd:string .
 
@@ -1494,7 +1494,7 @@ oplsof:MacOSX a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.6-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/Mac_os_x> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Mac_os_x> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-mac-universal.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-mac-universal.gif> .
 
 oplsof:Tru64UNIX a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Tru64UNIX#this> ;
@@ -1508,7 +1508,7 @@ oplsof:Tru64UNIX a oplsof:OpsysFamily ;
          <http://data.openlinksw.com/oplweb/opsys/alphaev6-dec-osf5.0-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/Tru64> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Tru64> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-tru64.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-tru64.gif> .
 
 oplsof:SCOOpenServer a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/SCOOpenServer#this> ;
@@ -1523,7 +1523,7 @@ oplsof:SCOOpenServer a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/i486-generic-sco3.2v5.0.0-32#this> ;
   owl:sameAs <http://dbpedia.org/resource/SCO_OpenServer> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/SCO_OpenServer> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-scoopenserver.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-scoopenserver.gif> .
 
 
 oplsof:NETCLR a oplsof:OpsysFamily ;
@@ -1538,8 +1538,8 @@ oplsof:NETCLR a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/clr-microsoft-dotnet2.0-32#this>,
       <http://data.openlinksw.com/oplweb/opsys/clr-microsoft-dotnet2.0-64#this> ;
   owl:sameAs <http://dbpedia.org/resource/.NET_Framework> ;
-  schema:mainEntityOfPage <http://dbpedia.org/resource/.NET_Framework> ;
-  schema:logo <http://download.openlinksw.com/download/images/> .
+# schema:logo <https://www.openlinksw.com/images/> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/.NET_Framework> .
 
 
 oplsof:UnixWare a oplsof:OpsysFamily ;
@@ -1554,7 +1554,7 @@ oplsof:UnixWare a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/i586-sco-sysv5uw7-32-nothreads#this> ;
   owl:sameAs <http://dbpedia.org/resource/Unixware> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Unixware> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-unixware.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-unixware.gif> .
 
 oplsof:MonoCLR a oplsof:OpsysFamily ;
     rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
@@ -1569,7 +1569,7 @@ oplsof:MonoCLR a oplsof:OpsysFamily ;
         <http://data.openlinksw.com/oplweb/opsys/clr-ecma-mono2.0-64#this> ;
     owl:sameAs <http://dbpedia.org/resource/Mono_%28software%29> ;
     schema:mainEntityOfPage <http://dbpedia.org/resource/Mono_%28software%29> ;
-    schema:logo <http://download.openlinksw.com/download/images/icon-mono.gif> .
+    schema:logo <https://www.openlinksw.com/images/icon-mono.gif> .
 
 oplsof:JavaVirtualMachine a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/JavaVirtualMachine#this> ;
@@ -1586,7 +1586,7 @@ oplsof:JavaVirtualMachine a oplsof:OpsysFamily ;
       <http://data.openlinksw.com/oplweb/opsys/jvm-sun-java1.5-32#this> ;
   owl:sameAs <http://dbpedia.org/resource/Java_virtual_machine> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/Java_virtual_machine> ;
-  schema:logo <http://download.openlinksw.com/download/images/icon-java.gif> .
+  schema:logo <https://www.openlinksw.com/images/icon-java.gif> .
 
 oplsof:LynxOS a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/LynxOS#this> ;
