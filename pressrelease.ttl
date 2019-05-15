@@ -1,0 +1,181 @@
+@prefix schema:  <http://schema.org/> .
+@prefix cvocab:  <http://open-services.net/ns/core#> .
+@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix awol:    <http://bblfish.net/work/atom-owl/2006-06-06/#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix sioct:   <http://rdfs.org/sioc/types#> .
+@prefix oplweb:  <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix siocs:   <http://rdfs.org/sioc/services#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:    <http://www.w3.org/2007/05/powder-s#> .
+@prefix prodont: <http://www.productontology.org/id/> .
+@prefix xhv:     <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oplpressrelease: <http://www.openlinksw.com/ontology/pressrelease#> .
+@prefix cc:      <http://creativecommons.org/ns#> .
+@prefix gc:      <http://www.oegov.org/core/owl/gc> .
+@prefix fresnel: <http://www.w3.org/2004/09/fresnel#> .
+
+<http://www.openlinksw.com/ontology/pressrelease#> a owl:Ontology  ;
+  rdfs:label """OpenLink Press Release Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe OpenLink Press Releases."""@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/pressrelease> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  owl:versionInfo "1.0.0"^^xsd:string  ;
+  owl:imports <http://purl.org/goodrelations/v1>  ,
+              <http://xmlns.com/foaf/0.1/> ,
+              <http://www.w3.org/2002/07/owl#> ,
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+              <http://purl.org/dc/terms/> ,
+              <http://www.w3.org/2004/09/fresnel#> ;
+  <http://open.vocab.org/terms/defines>
+             oplpressrelease:PressRelease ,
+             oplpressrelease:hasStatus ,
+             oplpressrelease:hasHeadLine ,
+             oplpressrelease:hasSubHeadLine ,
+             oplpressrelease:hasSituationAnalysis ,
+             oplpressrelease:hasBody ,
+             oplpressrelease:hasQuote ;
+  schema:about
+             oplpressrelease:PressRelease ,
+             oplpressrelease:hasStatus ,
+             oplpressrelease:hasHeadLine ,
+             oplpressrelease:hasSubHeadLine ,
+             oplpressrelease:hasSituationAnalysis ,
+             oplpressrelease:hasBody ,
+             oplpressrelease:hasQuote .
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/pressrelease.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label "OpenLink Press Release Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Press Release."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/pressrelease#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/pressrelease> ;
+  xhv:describes <http://www.openlinksw.com/ontology/pressrelease#> ;
+  schema:about <http://www.openlinksw.com/ontology/pressrelease#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/pressrelease#> .
+
+<http://www.openlinksw.com/data/turtle/pressrelease.ttl>
+  a foaf:Document  ;
+  rdfs:label "OpenLink Press Release Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/>  ;
+  schema:creator <http://www.openlinksw.com/#this>  ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe Press Release Ontology."""@en  ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/pressrelease#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/pressrelease> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:describes <http://www.openlinksw.com/ontology/pressrelease#> ;
+  schema:about <http://www.openlinksw.com/ontology/pressrelease#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/pressrelease#> .
+
+<http://www.openlinksw.com/ontology/pressrelease>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Press Release Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Press Release Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/pressrelease#> ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/pressrelease#> ;
+  foaf:topic oplpressrelease:PressRelease ,
+             oplpressrelease:hasStatus ,
+             oplpressrelease:hasHeadLine ,
+             oplpressrelease:hasSubHeadLine ,
+             oplpressrelease:hasSituationAnalysis ,
+             oplpressrelease:hasBody ,
+             oplpressrelease:hasQuote .
+
+
+# <-------------- Press Release --------------> #
+
+# <-------------- Press Release Classes --------------> #
+
+
+oplpressrelease:PressRelease
+  a owl:Class ;
+  rdfs:subClassOf foaf:Document;
+  rdfs:label "PressRelease" ;
+  skos:prefLabel "Press Release"@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/pressrelease#> .
+
+dcterms:partOf rdfs:range oplpressrelease:PressRelease .
+
+# <-------------- Press Release Properties --------------> #
+
+oplpressrelease:hasStatus
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "hasStatus" ;
+  skos:altLabel "Press Release Status"@en ;
+  rdfs:comment """Associates a Press Release with its release status."""@en ;
+  rdfs:domain oplpressrelease:PressRelease ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/pressrelease#> .
+
+oplpressrelease:hasHeadLine
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "hasHeadLine" ;
+  skos:altLabel "Headline"@en ;
+  rdfs:comment """Associates a Press Release with its headline text."""@en ;
+  rdfs:domain oplpressrelease:PressRelease ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/pressrelease#> .
+
+oplpressrelease:hasSubHeadLine
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "hasSubHeadLine" ;
+  skos:altLabel "Secondary Headline"@en ;
+  rdfs:comment """Associates a Press Release with its headline text."""@en ;
+  rdfs:domain oplpressrelease:PressRelease ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/pressrelease#> .
+
+oplpressrelease:hasSituationAnalysis
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:subPropertyOf dcterms:description ;
+  rdfs:label "hasSituationAnalysis" ;
+  skos:altLabel "Has Situation Analysis"@en ;
+  rdfs:comment """Associates a Press Release with a situation oriented context for whatever
+  				the press release is about.
+  			 """@en ;
+  rdfs:domain oplpressrelease:PressRelease ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/pressrelease#> .
+
+oplpressrelease:hasBody
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:subPropertyOf dcterms:description ;
+  rdfs:label "hasBody" ;
+  skos:altLabel "Has Body"@en ;
+  rdfs:comment """Associates a Press Release with its body text."""@en ;
+  rdfs:domain oplpressrelease:PressRelease ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/pressrelease#> .
+
+oplpressrelease:hasQuote
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:subPropertyOf rdfs:comment ;
+  rdfs:label "hasQuote" ;
+  skos:altLabel "Has Quote"@en ;
+  rdfs:comment """Associates a Press Release with its quotes made by company representatives,
+  				customers, and partners.
+  			"""@en ;
+  rdfs:domain oplpressrelease:PressRelease ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/pressrelease#> .
+
