@@ -1,0 +1,245 @@
+@prefix schema:  <http://schema.org/> .
+@prefix cvocab:  <http://open-services.net/ns/core#> .
+@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix awol:    <http://bblfish.net/work/atom-owl/2006-06-06/#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix sioct:   <http://rdfs.org/sioc/types#> .
+@prefix oplweb:  <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix siocs:   <http://rdfs.org/sioc/services#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:    <http://www.w3.org/2007/05/powder-s#> .
+@prefix prodont: <http://www.productontology.org/id/> .
+@prefix xhv:     <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oplfaq:  <http://www.openlinksw.com/ontology/faq#> .
+@prefix cc:      <http://creativecommons.org/ns#> .
+@prefix gc:      <http://www.oegov.org/core/owl/gc> .
+
+
+<http://www.openlinksw.com/ontology/faq#> a owl:Ontology  ;
+  rdfs:label """OpenLink Frequently Asked Questions Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe frequently asked questions. Examples include
+  answers, questions, types etc."""@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/faq> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2018-09-13T12:00:00-05:00"^^xsd:dateTime ;
+  owl:versionInfo "1.0.0"^^xsd:string  ;
+  schema:about
+    oplfaq:User ,
+    oplfaq:Agent ,
+    oplfaq:Query ,
+    oplfaq:Source  ,
+    oplfaq:Entity ,
+    oplfaq:Question ,
+    oplfaq:Answer ,
+    oplfaq:hasQuestionText ,
+    oplfaq:hasAnswerText ,
+    oplfaq:answer ,
+    oplfaq:count ,
+    oplfaq:score ,
+    oplfaq:query ,
+    oplfaq:location ,
+    oplfaq:quota ,
+    oplfaq:userType .
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/faq.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label "OpenLink Frequently Asked Questions (FAQ) Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Frequently Asked Questions"""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/faq#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2018-09-13T12:00:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/faq> ;
+  xhv:describes <http://www.openlinksw.com/ontology/faq#> ;
+  schema:about <http://www.openlinksw.com/ontology/faq#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/faq#> .
+
+<http://www.openlinksw.com/data/turtle/faq.ttl>
+  a foaf:Document  ;
+  rdfs:label "OpenLink Frequently Asked Questions (FAQ) Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/>  ;
+  schema:creator <http://www.openlinksw.com/#this>  ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe Frequently Asked Questions (FAQ) Ontology."""@en  ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/faq#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2018-09-13T12:00:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/faq> ;
+  xhv:describes <http://www.openlinksw.com/ontology/faq#> ;
+  schema:about <http://www.openlinksw.com/ontology/faq#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/faq#> .
+
+<http://www.openlinksw.com/ontology/faq>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Frequently Asked Questions (FAQ) Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Frequently Asked Questions (FAQ) Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/faq#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2018-09-13T12:00:00-05:00"^^xsd:dateTime ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/faq#> ;
+  foaf:topic
+    oplfaq:User ,
+    oplfaq:Agent ,
+    oplfaq:Query ,
+    oplfaq:Source  ,
+    oplfaq:Entity ,
+    oplfaq:Question ,
+    oplfaq:Answer ,
+    oplfaq:hasQuestionText ,
+    oplfaq:hasAnswerText ,
+    oplfaq:answer ,
+    oplfaq:count ,
+    oplfaq:score ,
+    oplfaq:query ,
+    oplfaq:location ,
+    oplfaq:quota ,
+    oplfaq:userType .
+
+
+# <-------------- FAQ --------------> #
+
+# <-------------- FAQ Classes --------------> #
+
+oplfaq:User a owl:Class  ;
+      rdfs:subClassOf foaf:Person , schema:Person ;
+      rdfs:label "User"^^xsd:string  ;
+      rdfs:comment """An User"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#> .
+
+schema:Person rdfs:subClassOf oplfaq:Agent .
+
+oplfaq:Agent a owl:Class ;
+      rdfs:subClassOf foaf:Agent ;
+      owl:equivalentProperty foaf:Agent ;
+	    rdfs:label "Agent" ;
+	    rdfs:comment "An agent"@en ;
+	    rdfs:isDefinedBy <http://www.openlinksw.com/schemas/faq#> .
+
+oplfaq:Query a owl:Class  ;
+      rdfs:label "Query"^^xsd:string  ;
+      rdfs:comment """A Query"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#> .
+
+oplfaq:Source a owl:Class  ;
+      rdfs:label "Source"^^xsd:string  ;
+      rdfs:subClassOf rdfs:Resource ;
+      rdfs:comment """A Source"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#> .
+
+oplfaq:Entity a owl:Class  ;
+      rdfs:subClassOf gc:Entity ;
+      owl:equivalentClass schema:Thing ;
+      rdfs:label "Entity"^^xsd:string  ;
+      rdfs:comment """An Entity"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#> .
+
+oplfaq:Question a owl:Class  ;
+      owl:equivalentClass sioct:Question , schema:Question ;
+      rdfs:label "Question"^^xsd:string  ;
+      rdfs:comment """A Question"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#> .
+
+sioct:Question owl:equivalentClass  oplfaq:Question .
+
+oplfaq:Answer a owl:Class  ;
+      rdfs:subClassOf sioct:Answer ;
+      owl:equivalentClass schema:Answer ;
+      rdfs:label "Answer"^^xsd:string  ;
+      rdfs:comment """An Answer"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#> .
+
+# <-------------- FAQ Properties --------------> #
+
+oplfaq:hasQuestionText a owl:DatatypeProperty , rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+      rdfs:subPropertyOf schema:text ;
+      rdfs:label "hasQuestionText" ;
+      rdfs:domain oplfaq:Question ;
+      rdfs:range xsd:string .
+
+oplfaq:hasAnswerText a owl:DatatypeProperty , rdf:Property ;
+      rdfs:subPropertyOf schema:text ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+      rdfs:label "hasAnswerText" ;
+      rdfs:domain oplfaq:Answer ;
+      rdfs:range xsd:string .
+
+schema:suggestedAnswer rdfs:subPropertyOf oplfaq:answer .
+schema:acceptedAnswer rdfs:subPropertyOf oplfaq:answer .
+
+oplfaq:answer a owl:ObjectProperty , rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+      rdfs:label "answer"^^xsd:string  ;
+      skos:altLabel "answer"^^xsd:string ;
+      rdfs:comment """An Answer Super Property"""@en  ;
+      rdfs:domain oplfaq:Query, oplfaq:Question ;
+      rdfs:range oplfaq:Answer .
+
+oplfaq:count a owl:DatatypeProperty , rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+      rdfs:label "count"^^xsd:string  ;
+      rdfs:subPropertyOf schema:answerCount ;
+      skos:altLabel "count"^^xsd:string ;
+      rdfs:comment """Count Super Property"""@en  ;
+      schema:domainIncludes
+         oplfaq:Answer ,
+         oplfaq:Question ;
+      rdfs:range xsd:integer .
+
+oplfaq:Answer owl:disjointWith oplfaq:Question .
+
+oplfaq:score a owl:DatatypeProperty , rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+      rdfs:label "score"^^xsd:string  ;
+      skos:altLabel "score"^^xsd:string ;
+      rdfs:comment """A Query score Super Property"""@en  ;
+      rdfs:domain oplfaq:Query ;
+      rdfs:range xsd:integer .
+
+oplfaq:query a owl:DatatypeProperty , rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+      rdfs:label "query"^^xsd:string  ;
+      skos:altLabel "query"^^xsd:string ;
+      rdfs:comment """A type of Query Super Property"""@en  ;
+      rdfs:domain oplfaq:Query ;
+      rdfs:range xsd:integer .
+
+oplfaq:location
+  a owl:DatatypeProperty , rdf:Property ;
+  rdfs:subPropertyOf geo:name ;
+  owl:equivalentProperty schema:location ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+	rdfs:label "location" ;
+	skos:altLabel "location"^^xsd:string ;
+	rdfs:comment """User's general location"""@en ;
+	rdfs:domain oplfaq:User .
+
+oplfaq:quota
+  a owl:DatatypeProperty , rdf:Property ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+	rdfs:label "quota" ;
+	skos:altLabel "quota"^^xsd:string ;
+	rdfs:domain oplfaq:Agent ;
+	rdfs:range xsd:integer .
+
+oplfaq:userType
+  a owl:DatatypeProperty , rdf:Property ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/faq#>  ;
+	rdfs:label "userType" ;
+	skos:altLabel "User Type"^^xsd:string ;
+	rdfs:comment "An User Type Super Property that indicates if the user is registered or not"@en ;
+	rdfs:domain oplfaq:User ;
+	rdfs:range xsd:string .
+
