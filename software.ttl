@@ -1219,7 +1219,7 @@ oplsof:OSFamilyAny a oplsof:OpsysFamily ;
   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
   schema:name """Any Operating System Family""" ;
   rdfs:label "Any Operating System Family"^^xsd:string ;
-  schema:logo <http://www.openlinksw.com/images/OS-Support.svg> .
+  schema:logo <https://www.openlinksw.com/images/OS-Support.svg> .
 
 oplsof:Windows a oplsof:OpsysFamily ;
   owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
