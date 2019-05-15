@@ -1,0 +1,2444 @@
+@prefix doap:    <http://usefulinc.com/ns/doap#> .
+@prefix schema:  <http://schema.org/> .
+@prefix cvocab:  <http://open-services.net/ns/core#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix oplweb:  <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix siocs:   <http://rdfs.org/sioc/services#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:    <http://www.w3.org/2007/05/powder-s#> .
+@prefix prodont: <http://www.productontology.org/id/> .
+@prefix oplinst: <http://www.openlinksw.com/ontology/installers#> .
+@prefix xhv:     <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oplfea:  <http://www.openlinksw.com/ontology/features#> .
+@prefix oplpro:  <http://www.openlinksw.com/ontology/products#> .
+@prefix odbc:    <http://www.openlinksw.com/ontology/odbc#> .
+@prefix oplsof:  <http://www.openlinksw.com/ontology/software#> .
+@prefix opllic:  <http://www.openlinksw.com/ontology/licenses#> .
+@prefix oplmch:  <http://www.openlinksw.com/ontology/machines#> .
+@prefix opl:     <http://www.openlinksw.com/schema/attribution#> .
+@prefix cc:      <http://creativecommons.org/ns#> .
+
+<http://www.openlinksw.com/ontology/software#> a owl:Ontology ;
+  rdfs:label """OpenLink Software Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe software. Examples include
+  database engines, operating systems etc."""@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/software> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  dcterms:modified "2019-03-21T20:00:00-05:00"^^xsd:dateTime ;
+  owl:versionInfo "1.2.4"^^xsd:string ;
+  owl:imports <http://www.openlinksw.com/ontology/licenses#> ,
+              <http://www.openlinksw.com/ontology/odbc#> ;
+  <http://open.vocab.org/terms/defines>
+      oplsof:ApplicationProgram ,
+      oplsof:hasApplicationName ,
+      oplsof:NetworkTransportProtocol ,
+      oplsof:DatabaseNetworkConnectivityMethod ,
+      oplsof:OperatingSystem ,
+      oplsof:OpsysFamily ,
+      oplsof:OpsysType ,
+      oplsof:DbmsEngine ,
+      oplsof:DbmsFamily ,
+      oplsof:hasDatabaseEngine ,
+      oplsof:hasDatabaseFamily ,
+      oplsof:isDatabaseFamilyOf ,
+      oplsof:hasComponent ,
+      oplsof:hasDbmsFamilyName ,
+      oplsof:hasDbmsFamilyRating ,
+      oplsof:hasDbmsEngineVersion ,
+      oplsof:hasDbmsEngineOldArchiveCode ,
+      oplsof:DbmsEngineUpwardCompatible ,
+      oplsof:DbmsEngineDownwardCompatible ,
+      oplsof:hasDbmsEngineRating ,
+      oplsof:hasOperatingSystemFamily ,
+      oplsof:hasOperatingSystem ,
+      oplsof:hasClientOperatingSystemFamilyRestriction ,
+      oplsof:isOperatingSystemFamilyOf ,
+      oplsof:Component ,
+      oplsof:isForOperatingSystem  ,
+      oplsof:hasOpsysEmulationMode ,
+      oplsof:hasOpsysVersion ,
+      oplsof:OpsysUpwardCompatible ,
+      oplsof:OpsysDownwardCompatible ,
+      oplsof:hasOpsysLicenseCode ,
+      oplsof:hasOpsysFamilyLicenseCode ,
+      oplsof:hasOpsysFamilyRating ,
+      oplsof:OpsysSupported ,
+      oplsof:hasOperatingSystemType ,
+      oplsof:hasClientOperatingSystemTypeRestriction ,
+      oplsof:hasOpsysType ,
+      oplsof:isOpsysTypeOf ,
+      oplsof:hasOperatingSystemScope ,
+      oplsof:ComponentCategory  ,
+      oplsof:hasComponentMode  ,
+      oplsof:hasComponentType  ,
+      oplsof:ComponentMode   ,
+      oplsof:ComponentType ,
+      oplsof:hasFileSize ,
+      oplsof:hasBuildDate ,
+      oplsof:hasCVSID ,
+      oplsof:workstationOS              ,
+      oplsof:WindowsDesktopEditions     ,
+      oplsof:serverOS                   ,
+      oplsof:serverWorkstationOS        ,
+      oplsof:AnyOS                      ,
+      oplsof:WindowsServer              ,
+      oplsof:Windows                    ,
+      oplsof:GenericLinux               ,
+      oplsof:Solaris                    ,
+      oplsof:AIX                        ,
+      oplsof:HPUX                       ,
+      oplsof:Irix                       ,
+      oplsof:MacOSClassic               ,
+      oplsof:FreeBSD                    ,
+      oplsof:DynixPTX                   ,
+      oplsof:MacOSX                     ,
+      oplsof:Firefox ,
+      oplsof:Ruby ,
+      oplsof:DG-UX ,
+      oplsof:NETCLR ,
+      oplsof:MonoCLR ,
+      oplsof:Tru64UNIX                  ,
+      oplsof:SCOOpenServer              ,
+      oplsof:UnixWare                   ,
+      oplsof:Linux-EC2-OpenLink         ,
+      oplsof:LynxOS ,
+      oplsof:JavaVirtualMachine ,
+      oplsof:Windows-EC2-OpenLink       ,
+      oplsof:DBEngineAny ,
+      oplsof:DBEngineVersionAny ,
+      oplsof:DBFamilyAny ,
+      oplsof:ACCESS ,
+      oplsof:FileMaker ,
+      oplsof:FoxPRO ,
+      oplsof:OSFamilyAny ,
+      oplsof:OpenLinkVirtuoso ,
+      oplsof:DataAccessProtocolAny ,
+      oplsof:Ingres                     ,
+      oplsof:Oracle                     ,
+      oplsof:PrestoDB                   ,
+      oplsof:Firebird                   ,
+      oplsof:PostgreSQL                 ,
+      oplsof:DB2                        ,
+      oplsof:WorldWideWeb ,
+      oplsof:SQLServer                  ,
+      oplsof:MySQL                      ,
+      oplsof:Sybase                     ,
+      oplsof:Informix                   ,
+      oplsof:Progress                   ,
+      oplsof:ODBCBridge                 ,
+      oplsof:JDBCBridge                 ,
+      oplsof:Ingres3                    ,
+      oplsof:Ingres2                    ,
+      oplsof:Virtuoso63 ,
+      oplsof:Virtuoso70 ,
+      oplsof:Virtuoso80 ,
+      oplsof:Ingres6                    ,
+      oplsof:Ingres64                    ,
+      oplsof:Ingres8                    ,
+      oplsof:Ingres9                    ,
+      oplsof:Ingres10                   ,
+      oplsof:Ingresii                   ,
+      oplsof:Presto01                   ,
+      oplsof:Oracle7                    ,
+      oplsof:Oracle8                    ,
+      oplsof:Oracle9                    ,
+      oplsof:Oracle91                    ,
+      oplsof:Oracle10                   ,
+      oplsof:Oracle11                   ,
+      oplsof:Oracle12                   ,
+      oplsof:frb                        ,
+      oplsof:PostgreSQL6                ,
+      oplsof:PostgreSQL7                ,
+      oplsof:PostgreSQL8                ,
+      oplsof:PostgreSQL9 ,
+      oplsof:db2                        ,
+      oplsof:db26                       ,
+      oplsof:db27                       ,
+      oplsof:db28                       ,
+      oplsof:db29                       ,
+      oplsof:db210                       ,
+      oplsof:db211                       ,
+      oplsof:SQLServer6                 ,
+      oplsof:SQLServer7                 ,
+      oplsof:SQLServer2008              ,
+      oplsof:SQLServer2008R2            ,
+      oplsof:SQLServer2005              ,
+      oplsof:SQLServer2000              ,
+      oplsof:SQLServer2014              ,
+      oplsof:SQLServer2012              ,
+      oplsof:MySQL3                     ,
+      oplsof:MySQL4                     ,
+      oplsof:MySQL5                     ,
+      oplsof:Sybase10                   ,
+      oplsof:Sybase11                   ,
+      oplsof:Sybase12                   ,
+      oplsof:Sybase15                   ,
+      oplsof:Informix7                  ,
+      oplsof:Informix5                  ,
+      oplsof:Informix71                 ,
+      oplsof:Informix72                 ,
+      oplsof:Informix73                 ,
+      oplsof:Informix9                  ,
+      oplsof:Informix10                 ,
+      oplsof:Informix11                 ,
+      oplsof:Progress7                  ,
+      oplsof:Progress73c                ,
+      oplsof:Progress73d                ,
+      oplsof:Progress73e                ,
+      oplsof:Progress8                  ,
+      oplsof:Progress81a                ,
+      oplsof:Progress82a                ,
+      oplsof:Progress82c                ,
+      oplsof:Progress83a                ,
+      oplsof:Progress83b                ,
+      oplsof:Progress83c                ,
+      oplsof:Progress9                  ,
+      oplsof:Progress90a                ,
+      oplsof:Progress90b                ,
+      oplsof:Progress91                 ,
+      oplsof:Progress91a                ,
+      oplsof:Progress91b                ,
+      oplsof:Progress91c                ,
+      oplsof:Progress91d                ,
+      oplsof:Progress91e                ,
+      oplsof:Progress10                 ,
+      oplsof:Progress10A ,
+      oplsof:Progress11                 ,
+      oplsof:odbc                       ,
+      oplsof:jdbc                       ,
+      oplsof:DataAccessProtocol         ,
+      oplsof:hasDataAccessProtocolScope ,
+      oplsof:hasDataAccessProtocolType  ,
+      oplsof:DataAccessODBC ,
+      oplsof:DataAccessJDBC ,
+      oplsof:DataAccessADONET ,
+      oplsof:DataAccessOLEDB ;
+   schema:about
+      oplsof:ApplicationProgram ,
+      oplsof:hasApplicationName ,
+      oplsof:NetworkTransportProtocol ,
+      oplsof:DatabaseNetworkConnectivityMethod ,
+      oplsof:OperatingSystem ,
+      oplsof:OpsysFamily ,
+      oplsof:OpsysType ,
+      oplsof:DbmsEngine ,
+      oplsof:DbmsFamily ,
+      oplsof:hasDatabaseEngine ,
+      oplsof:hasDatabaseFamily ,
+      oplsof:isDatabaseFamilyOf ,
+      oplsof:hasComponent ,
+      oplsof:hasDbmsFamilyName ,
+      oplsof:hasDbmsFamilyRating ,
+      oplsof:hasDbmsEngineVersion ,
+      oplsof:hasDbmsEngineOldArchiveCode ,
+      oplsof:DbmsEngineUpwardCompatible ,
+      oplsof:DbmsEngineDownwardCompatible ,
+      oplsof:hasDbmsEngineRating ,
+      oplsof:hasOperatingSystemFamily ,
+      oplsof:hasOperatingSystem ,
+      oplsof:hasClientOperatingSystemFamilyRestriction ,
+      oplsof:isOperatingSystemFamilyOf ,
+      oplsof:Component ,
+      oplsof:isForOperatingSystem  ,
+      oplsof:hasOpsysEmulationMode ,
+      oplsof:hasOpsysVersion ,
+      oplsof:OpsysUpwardCompatible ,
+      oplsof:OpsysDownwardCompatible ,
+      oplsof:hasOpsysLicenseCode ,
+      oplsof:hasOpsysFamilyLicenseCode ,
+      oplsof:hasOpsysFamilyRating ,
+      oplsof:OpsysSupported ,
+      oplsof:hasOperatingSystemType ,
+      oplsof:hasClientOperatingSystemTypeRestriction ,
+      oplsof:hasOpsysType ,
+      oplsof:isOpsysTypeOf ,
+      oplsof:hasOperatingSystemScope ,
+      oplsof:ComponentCategory  ,
+      oplsof:hasComponentMode  ,
+      oplsof:hasComponentType  ,
+      oplsof:ComponentMode   ,
+      oplsof:ComponentType ,
+      oplsof:hasFileSize ,
+      oplsof:hasBuildDate ,
+      oplsof:hasCVSID ,
+      oplsof:workstationOS              ,
+      oplsof:WindowsDesktopEditions     ,
+      oplsof:serverOS                   ,
+      oplsof:serverWorkstationOS        ,
+      oplsof:AnyOS                      ,
+      oplsof:WindowsServer              ,
+      oplsof:Windows                    ,
+      oplsof:GenericLinux               ,
+      oplsof:Solaris                    ,
+      oplsof:AIX                        ,
+      oplsof:HPUX                       ,
+      oplsof:Irix                       ,
+      oplsof:MacOSClassic               ,
+      oplsof:FreeBSD                    ,
+      oplsof:DynixPTX                   ,
+      oplsof:MacOSX                     ,
+      oplsof:Firefox ,
+      oplsof:Ruby ,
+      oplsof:DG-UX ,
+      oplsof:NETCLR ,
+      oplsof:MonoCLR ,
+      oplsof:Tru64UNIX                  ,
+      oplsof:SCOOpenServer              ,
+      oplsof:UnixWare                   ,
+      oplsof:Linux-EC2-OpenLink         ,
+      oplsof:LynxOS ,
+      oplsof:JavaVirtualMachine ,
+      oplsof:Windows-EC2-OpenLink       ,
+      oplsof:DBEngineAny ,
+      oplsof:DBEngineVersionAny ,
+      oplsof:DBFamilyAny ,
+      oplsof:ACCESS ,
+      oplsof:FileMaker ,
+      oplsof:FoxPRO ,
+      oplsof:OSFamilyAny ,
+      oplsof:OpenLinkVirtuoso ,
+      oplsof:DataAccessProtocolAny ,
+      oplsof:Ingres                     ,
+      oplsof:Oracle                     ,
+      oplsof:PrestoDB                   ,
+      oplsof:Firebird                   ,
+      oplsof:PostgreSQL                 ,
+      oplsof:DB2                        ,
+      oplsof:WorldWideWeb ,
+      oplsof:SQLServer                  ,
+      oplsof:MySQL                      ,
+      oplsof:Sybase                     ,
+      oplsof:Informix                   ,
+      oplsof:Progress                   ,
+      oplsof:ODBCBridge                 ,
+      oplsof:JDBCBridge                 ,
+      oplsof:Ingres3                    ,
+      oplsof:Ingres2                    ,
+      oplsof:Virtuoso63 ,
+      oplsof:Virtuoso70 ,
+      oplsof:Virtuoso80 ,
+      oplsof:Ingres8                    ,
+      oplsof:Ingres6                    ,
+      oplsof:Ingres64                    ,
+      oplsof:Ingres9                    ,
+      oplsof:Ingres10                   ,
+      oplsof:Ingresii                   ,
+      oplsof:Presto01                   ,
+      oplsof:Oracle7                    ,
+      oplsof:Oracle8                    ,
+      oplsof:Oracle9                    ,
+      oplsof:Oracle91                    ,
+      oplsof:Oracle10                   ,
+      oplsof:Oracle11                   ,
+      oplsof:Oracle12                   ,
+      oplsof:frb                        ,
+      oplsof:PostgreSQL6                ,
+      oplsof:PostgreSQL7                ,
+      oplsof:PostgreSQL8                ,
+      oplsof:PostgreSQL9 ,
+      oplsof:db2                        ,
+      oplsof:db26                       ,
+      oplsof:db27                       ,
+      oplsof:db28                       ,
+      oplsof:db29                       ,
+      oplsof:db210                       ,
+      oplsof:db211                       ,
+      oplsof:SQLServer6                 ,
+      oplsof:SQLServer7                 ,
+      oplsof:SQLServer2008              ,
+      oplsof:SQLServer2008R2            ,
+      oplsof:SQLServer2005              ,
+      oplsof:SQLServer2000              ,
+      oplsof:SQLServer2014              ,
+      oplsof:SQLServer2012              ,
+      oplsof:MySQL3                     ,
+      oplsof:MySQL4                     ,
+      oplsof:MySQL5                     ,
+      oplsof:Sybase10                   ,
+      oplsof:Sybase11                   ,
+      oplsof:Sybase12                   ,
+      oplsof:Sybase15                   ,
+      oplsof:Informix7                  ,
+      oplsof:Informix5                  ,
+      oplsof:Informix71                 ,
+      oplsof:Informix72                 ,
+      oplsof:Informix73                 ,
+      oplsof:Informix9                  ,
+      oplsof:Informix10                 ,
+      oplsof:Informix11                 ,
+      oplsof:Progress7                  ,
+      oplsof:Progress73c                ,
+      oplsof:Progress73d                ,
+      oplsof:Progress73e                ,
+      oplsof:Progress8                  ,
+      oplsof:Progress81a                ,
+      oplsof:Progress82a                ,
+      oplsof:Progress82c                ,
+      oplsof:Progress83a                ,
+      oplsof:Progress83b                ,
+      oplsof:Progress83c                ,
+      oplsof:Progress9                  ,
+      oplsof:Progress90a                ,
+      oplsof:Progress90b                ,
+      oplsof:Progress91                 ,
+      oplsof:Progress91a                ,
+      oplsof:Progress91b                ,
+      oplsof:Progress91c                ,
+      oplsof:Progress91d                ,
+      oplsof:Progress91e                ,
+      oplsof:Progress10                 ,
+      oplsof:Progress10A ,
+      oplsof:Progress11                 ,
+      oplsof:odbc                       ,
+      oplsof:jdbc                       ,
+      oplsof:DataAccessProtocol         ,
+      oplsof:hasDataAccessProtocolScope ,
+      oplsof:hasDataAccessProtocolType  ,
+      oplsof:DataAccessODBC ,
+      oplsof:DataAccessJDBC ,
+      oplsof:DataAccessADONET ,
+      oplsof:DataAccessOLEDB .
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/software.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Software Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Software"""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/software#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2019-03-21T20:00:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/software> ;
+  xhv:describes <http://www.openlinksw.com/ontology/software#> ;
+  schema:about <http://www.openlinksw.com/ontology/software#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/software#> .
+
+<http://www.openlinksw.com/data/turtle/software.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Software Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe OpenLink Software Ontology."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/software#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/software> ;
+  xhv:describes <http://www.openlinksw.com/ontology/software#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2019-03-21T20:00:00-05:00"^^xsd:dateTime ;
+  schema:about <http://www.openlinksw.com/ontology/software#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/software#> .
+
+<http://www.openlinksw.com/ontology/software>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Software Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2019-03-21T20:00:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Software Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/software#> ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/software#> ;
+  foaf:topic
+      oplsof:ApplicationProgram ,
+      oplsof:hasApplicationName ,
+      oplsof:NetworkTransportProtocol ,
+      oplsof:DatabaseNetworkConnectivityMethod ,
+      oplsof:OperatingSystem ,
+      oplsof:OpsysFamily ,
+      oplsof:OpsysType ,
+      oplsof:DbmsEngine ,
+      oplsof:DbmsFamily ,
+      oplsof:hasDatabaseEngine ,
+      oplsof:hasDatabaseFamily ,
+      oplsof:isDatabaseFamilyOf ,
+      oplsof:hasComponent ,
+      oplsof:hasDbmsFamilyName ,
+      oplsof:hasDbmsFamilyRating ,
+      oplsof:hasDbmsEngineVersion ,
+      oplsof:hasDbmsEngineOldArchiveCode ,
+      oplsof:DbmsEngineUpwardCompatible ,
+      oplsof:DbmsEngineDownwardCompatible ,
+      oplsof:hasDbmsEngineRating ,
+      oplsof:hasOperatingSystemFamily ,
+      oplsof:hasOperatingSystem ,
+      oplsof:hasClientOperatingSystemFamilyRestriction ,
+      oplsof:isOperatingSystemFamilyOf ,
+      oplsof:Component ,
+      oplsof:isForOperatingSystem  ,
+      oplsof:hasOpsysEmulationMode ,
+      oplsof:hasOpsysVersion ,
+      oplsof:OpsysUpwardCompatible ,
+      oplsof:OpsysDownwardCompatible ,
+      oplsof:hasOpsysLicenseCode ,
+      oplsof:hasOpsysFamilyLicenseCode ,
+      oplsof:hasOpsysFamilyRating ,
+      oplsof:OpsysSupported ,
+      oplsof:hasOperatingSystemType ,
+      oplsof:hasClientOperatingSystemTypeRestriction ,
+      oplsof:hasOpsysType ,
+      oplsof:isOpsysTypeOf ,
+      oplsof:hasOperatingSystemScope ,
+      oplsof:ComponentCategory  ,
+      oplsof:hasComponentMode  ,
+      oplsof:hasComponentType  ,
+      oplsof:ComponentMode   ,
+      oplsof:ComponentType ,
+      oplsof:hasFileSize ,
+      oplsof:hasBuildDate ,
+      oplsof:hasCVSID ,
+      oplsof:workstationOS              ,
+      oplsof:WindowsDesktopEditions     ,
+      oplsof:serverOS                   ,
+      oplsof:serverWorkstationOS        ,
+      oplsof:AnyOS                      ,
+      oplsof:WindowsServer              ,
+      oplsof:Windows                    ,
+      oplsof:GenericLinux               ,
+      oplsof:Solaris                    ,
+      oplsof:AIX                        ,
+      oplsof:HPUX                       ,
+      oplsof:Irix                       ,
+      oplsof:MacOSClassic               ,
+      oplsof:FreeBSD                    ,
+      oplsof:DynixPTX                   ,
+      oplsof:MacOSX                     ,
+      oplsof:Firefox ,
+      oplsof:Ruby ,
+      oplsof:DG-UX ,
+      oplsof:NETCLR ,
+      oplsof:MonoCLR ,
+      oplsof:Tru64UNIX                  ,
+      oplsof:SCOOpenServer              ,
+      oplsof:UnixWare                   ,
+      oplsof:Linux-EC2-OpenLink         ,
+      oplsof:LynxOS ,
+      oplsof:JavaVirtualMachine ,
+      oplsof:Windows-EC2-OpenLink       ,
+      oplsof:DBEngineAny ,
+      oplsof:DBEngineVersionAny ,
+      oplsof:DBFamilyAny ,
+      oplsof:ACCESS ,
+      oplsof:FileMaker ,
+      oplsof:FoxPRO ,
+      oplsof:OSFamilyAny ,
+      oplsof:OpenLinkVirtuoso ,
+      oplsof:DataAccessProtocolAny ,
+      oplsof:Ingres                     ,
+      oplsof:Oracle                     ,
+      oplsof:PrestoDB                   ,
+      oplsof:Firebird                   ,
+      oplsof:PostgreSQL                 ,
+      oplsof:DB2                        ,
+      oplsof:WorldWideWeb ,
+      oplsof:SQLServer                  ,
+      oplsof:MySQL                      ,
+      oplsof:Sybase                     ,
+      oplsof:Informix                   ,
+      oplsof:Progress                   ,
+      oplsof:ODBCBridge                 ,
+      oplsof:JDBCBridge                 ,
+      oplsof:Ingres3                    ,
+      oplsof:Ingres2                    ,
+      oplsof:Virtuoso63 ,
+      oplsof:Virtuoso70 ,
+      oplsof:Virtuoso80 ,
+      oplsof:Ingres8                    ,
+      oplsof:Ingres6                    ,
+      oplsof:Ingres64                    ,
+      oplsof:Ingres9                    ,
+      oplsof:Ingres10                   ,
+      oplsof:Ingresii                   ,
+      oplsof:Presto01                   ,
+      oplsof:Oracle7                    ,
+      oplsof:Oracle8                    ,
+      oplsof:Oracle9                    ,
+      oplsof:Oracle91                    ,
+      oplsof:Oracle10                   ,
+      oplsof:Oracle11                   ,
+      oplsof:Oracle12                   ,
+      oplsof:frb                        ,
+      oplsof:PostgreSQL6                ,
+      oplsof:PostgreSQL7                ,
+      oplsof:PostgreSQL8                ,
+      oplsof:PostgreSQL9 ,
+      oplsof:db2                        ,
+      oplsof:db26                       ,
+      oplsof:db27                       ,
+      oplsof:db28                       ,
+      oplsof:db29                       ,
+      oplsof:db210                       ,
+      oplsof:db211                       ,
+      oplsof:SQLServer6                 ,
+      oplsof:SQLServer7                 ,
+      oplsof:SQLServer2008              ,
+      oplsof:SQLServer2008R2            ,
+      oplsof:SQLServer2005              ,
+      oplsof:SQLServer2000              ,
+      oplsof:SQLServer2014              ,
+      oplsof:SQLServer2012              ,
+      oplsof:MySQL3                     ,
+      oplsof:MySQL4                     ,
+      oplsof:MySQL5                     ,
+      oplsof:Sybase10                   ,
+      oplsof:Sybase11                   ,
+      oplsof:Sybase12                   ,
+      oplsof:Sybase15                   ,
+      oplsof:Informix7                  ,
+      oplsof:Informix5                  ,
+      oplsof:Informix71                 ,
+      oplsof:Informix72                 ,
+      oplsof:Informix73                 ,
+      oplsof:Informix9                  ,
+      oplsof:Informix10                 ,
+      oplsof:Informix11                 ,
+      oplsof:Progress7                  ,
+      oplsof:Progress73c                ,
+      oplsof:Progress73d                ,
+      oplsof:Progress73e                ,
+      oplsof:Progress8                  ,
+      oplsof:Progress81a                ,
+      oplsof:Progress82a                ,
+      oplsof:Progress82c                ,
+      oplsof:Progress83a                ,
+      oplsof:Progress83b                ,
+      oplsof:Progress83c                ,
+      oplsof:Progress9                  ,
+      oplsof:Progress90a                ,
+      oplsof:Progress90b                ,
+      oplsof:Progress91                 ,
+      oplsof:Progress91a                ,
+      oplsof:Progress91b                ,
+      oplsof:Progress91c                ,
+      oplsof:Progress91d                ,
+      oplsof:Progress91e                ,
+      oplsof:Progress10                 ,
+      oplsof:Progress10A ,
+      oplsof:Progress11                 ,
+      oplsof:odbc                       ,
+      oplsof:jdbc                       ,
+      oplsof:DataAccessProtocol         ,
+      oplsof:hasDataAccessProtocolScope ,
+      oplsof:hasDataAccessProtocolType  ,
+      oplsof:DataAccessODBC ,
+      oplsof:DataAccessJDBC ,
+      oplsof:DataAccessADONET ,
+      oplsof:DataAccessOLEDB .
+
+
+
+<http://www.openlinksw.com/data/turtle/products.ttl>
+  rdfs:seeAlso <http://virtuoso.openlinksw.com/offers/> ,
+               <http://uda.openlinksw.com/offers/> ,
+               <http://www.openlinksw.com/data/turtle/shop.ttl> ,
+               <http://www.openlinksw.com/data/turtle/offers.ttl> ,
+               <http://www.openlinksw.com/data/turtle/contracts.ttl> ,
+               <http://www.openlinksw.com/data/turtle/machines.ttl> ,
+               <http://www.openlinksw.com/data/turtle/vendors.ttl> ,
+               <http://www.openlinksw.com/data/turtle/products.ttl> ,
+               <http://www.openlinksw.com/data/turtle/features.ttl> ,
+               <http://www.openlinksw.com/data/turtle/purchases.ttl> ,
+               <http://www.openlinksw.com/data/turtle/payments.ttl> ,
+               <http://www.openlinksw.com/data/turtle/licenses.ttl> .
+
+
+# <-------------- General Classes --------------> #
+<http://data.openlinksw.com/oplweb/product/Virtuoso#this>
+      rdfs:subClassOf oplsof:ApplicationProgram ;
+      wdrs:describedby <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:ApplicationProgram a owl:Class ;
+      owl:equivalentClass <http://sw.opencyc.org/concept/Mx4rvyBIVpwpEbGdrcN5Y29ycA> ;
+      rdfs:subClassOf schema:CreativeWork , schema:SoftwareApplication ;
+      rdfs:label "Application Program"^^xsd:string ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:NetworkTransportProtocol a owl:Class ;
+      owl:equivalentClass <http://sw.opencyc.org/concept/Mx4rwFMKvpwpEbGdrcN5Y29ycA> ;
+      rdfs:label "Network Transport Protocol"^^xsd:string ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:DatabaseNetworkConnectivityMethod a owl:Class ;
+      rdfs:subClassOf <http://sw.opencyc.org/concept/Mx4rvWMjUJwpEbGdrcN5Y29ycA> ;
+      rdfs:label "Database Network Connectivity Method"@en ;
+      rdfs:comment """How a driver connects to a DBMS over a network."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+# <-------------- Operating System --------------> #
+
+# <-------------- Operating System Classes --------------> #
+
+oplsof:OperatingSystem a owl:Class ;
+      rdfs:subClassOf oplsof:OpsysFamily ;
+      rdfs:subClassOf schema:SoftwareApplication ;
+      rdfs:label "Operating System"^^xsd:string ;
+      rdfs:comment """The operating system or underlaying platform."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:OpsysFamily a owl:Class ;
+      rdfs:label "OS Family"^^xsd:string ;
+      rdfs:comment """Operating System Family"""@en ;
+      owl:disjointWith doap:Project ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:OpsysType a owl:Class ;
+      rdfs:label "OS Type"^^xsd:string ;
+      rdfs:comment """Operating System Type"""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+
+# <-------------- Operating System Properties --------------> #
+
+oplsof:hasClientOperatingSystemFamilyRestriction a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OperatingSystemsFamilies> , <http://data.openlinksw.com/oplweb/opsys_family> ;
+      rdfs:comment """Client Operating System Family Restriction"""@en ;
+      rdfs:label "hasClientOperatingSystemFamilyRestriction"^^xsd:string ;
+      skos:altLabel "Client Operating System Family Restriction"^^xsd:string ;
+      rdfs:domain opllic:ClientApplicationScope ;
+      rdfs:range oplsof:OpsysFamily .
+
+oplsof:hasOperatingSystemFamily a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf schema:about, <http://www.openlinksw.com/schemas/oplweb#OperatingSystemsFamilies> , <http://data.openlinksw.com/oplweb/opsys_family> ;
+      rdfs:comment """Operating System Family"""@en ;
+      rdfs:label "hasOperatingSystemFamily"^^xsd:string ;
+      skos:altLabel "Operating System Family"^^xsd:string ;
+      schema:domainIncludes
+         oplpro:ProductFormat ,
+         opllic:ProductLicense ;
+      rdfs:range oplsof:OpsysFamily .
+
+opllic:ProductLicense owl:disjointWith oplpro:ProductFormat .
+
+oplsof:hasOperatingSystem a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:comment """Operating System"""@en ;
+      rdfs:label "hasOperatingSystem"^^xsd:string ;
+      skos:altLabel "Operating System"^^xsd:string ;
+      rdfs:domain oplpro:Product ;
+      schema:domainIncludes
+          oplinst:InstallerArchive,
+          schema:SoftwareApplication ,
+          opllic:ProductLicense ,
+          oplsof:OpsysFamily ;
+      rdfs:range oplsof:OperatingSystem .
+
+opllic:ProductLicense owl:disjointWith oplsof:OpsysFamily  .
+
+oplsof:isOperatingSystemFamilyOf a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#hasOpsys> ;
+      rdfs:comment """Associates Operatins System Family with Operating System"""@en ;
+      rdfs:label "isOperatingSystemFamilyOf"^^xsd:string ;
+      skos:altLabel "Is Operating System Family Of"^^xsd:string ;
+      rdfs:domain oplpro:OpsysFamily ;
+      rdfs:range oplsof:OperatingSystem .
+
+
+oplsof:isForOperatingSystem a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isForOpsys> ;
+      rdfs:comment """Component for Operating System Support"""@en ;
+      rdfs:label "hasOpsys"^^xsd:string ;
+      skos:altLabel "Operating System"^^xsd:string ;
+      schema:domainIncludes
+          oplpro:Component ,
+          oplpro:ProductRelease ;
+      rdfs:range oplsof:OperatingSystem .
+
+oplpro:ProductRelease owl:disjointWith oplpro:Component .
+
+oplsof:hasOpsysEmulationMode a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysEmulationMode> ;
+      rdfs:comment """Operating System Emulation Mode"""@en ;
+      rdfs:label "hasOpsysEmulationMode"^^xsd:string ;
+      skos:altLabel "Operating System Emulation Mode"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range oplmch:ProcessorMode .
+
+oplsof:hasOpsysVersion a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysVersion> ;
+      rdfs:comment """Operating System Version"""@en ;
+      rdfs:label "hasOpsysVersion"^^xsd:string ;
+      skos:altLabel "Operating System Version"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range xsd:string .
+
+oplsof:OpsysUpwardCompatible a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysUpwardCompatible> ;
+      rdfs:comment """Operating System Upward Compatible"""@en ;
+      rdfs:label "opsysUpwardCompatible"^^xsd:string ;
+      skos:altLabel "Operating System Upward Compatible"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range xsd:boolean .
+
+oplsof:OpsysDownwardCompatible a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysDownwardCompatible> ;
+      rdfs:comment """Operating System Downward Compatible"""@en ;
+      rdfs:label "opsysDownwardCompatible"^^xsd:string ;
+      skos:altLabel "Operating System Downward Compatible"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range xsd:boolean .
+
+oplsof:hasOpsysLicenseCode a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysLicenseCode> ;
+      rdfs:comment """Operating System License Code"""@en ;
+      rdfs:label "hasOpsysLicenseCode"^^xsd:string ;
+      skos:altLabel "Operating System License Code"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range xsd:string .
+
+oplsof:hasOpsysFamilyLicenseCode a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysFamilyLicenseCode> ;
+      rdfs:comment """Operating System Family License Code"""@en ;
+      rdfs:label "hasOpsysFamilyLicenseCode"^^xsd:string ;
+      skos:altLabel "Operating System Family License Code"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range xsd:string .
+
+oplsof:hasOpsysFamilyRating a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysFamilyRating> ;
+      rdfs:comment """Operating System Family Rating"""@en ;
+      rdfs:label "hasOpsysFamilyRating"^^xsd:string ;
+      skos:altLabel "Operating System Family Rating"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range xsd:string .
+
+# fix me: products also has the same property for ProductRelease
+oplsof:OpsysSupported a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysSupported> ;
+      rdfs:comment """Operating System support indicator"""@en ;
+      rdfs:label "opsysSupported"^^xsd:string ;
+      skos:altLabel "Operating System Supported"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range xsd:string .
+
+oplsof:hasClientOperatingSystemTypeRestriction a owl:ObjectProperty, rdf:Property ;
+      rdfs:label "hasClientOperatingSystemTypeRestriction" ;
+      skos:altLabel "Client Operating System Type Restriction" ;
+      rdfs:comment """Client Operating System Type Restriction"""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:domain opllic:ClientApplicationScope ;
+      rdfs:range oplsof:OpsysType ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysType> .
+
+oplsof:hasOperatingSystemType a owl:ObjectProperty, rdf:Property ;
+      rdfs:label "hasOperatingSystemType"^^xsd:string ;
+      skos:altLabel "Operating System Type"^^xsd:string ;
+      rdfs:comment """Operating System Type"""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:domain opllic:ProductLicense ;
+      rdfs:range oplsof:OpsysType ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#OpsysType> .
+
+oplsof:hasOpsysType a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isOfOpsysType> ;
+      rdfs:comment """Operating System Type"""@en ;
+      rdfs:label "hasOpsysType"^^xsd:string ;
+      skos:altLabel "Operating System Type"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range oplsof:OpsysType .
+
+oplsof:isOpsysTypeOf a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:comment """Associates Operating System Type with Operating System"""@en ;
+      rdfs:label "isOpsysTypeOf"^^xsd:string ;
+      skos:altLabel "Is Operating System Type Of"^^xsd:string ;
+      rdfs:domain oplsof:OpsysType ;
+      rdfs:range oplsof:OperatingSystem .
+
+oplsof:hasOperatingSystemScope  a owl:ObjectProperty, rdf:Property ;
+      rdfs:label """hasOperatingSystemScope"""^^xsd:string ;
+      skos:altLabel """Has Operating System Scope"""^^xsd:string ;
+      rdfs:comment """Operating system to which this license is scoped."""@en ;
+      dcterms:description """License will only enable use of product on this operating system. Thus, you need another license if seeking to run software on a different operating system."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:domain opllic:ProductLicense .
+
+oplsof:hasApplicationName  a owl:ObjectProperty, rdf:Property ;
+      rdfs:label """hasApplicationName"""^^xsd:string ;
+      skos:altLabel """Has Application Name"""^^xsd:string ;
+      rdfs:comment """Application Name."""@en ;
+      dcterms:description """Client Application Restriction Name."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:domain opllic:ClientApplicationRestriction ;
+      rdfs:range oplsof:ApplicationProgram .
+
+
+# <-------------- Component --------------> #
+
+# <-------------- Component Classes --------------> #
+
+oplsof:Component a owl:Class ;
+      rdfs:label "Component"^^xsd:string ;
+      rdfs:comment """Component"""@en ;
+      rdfs:subClassOf <http://www.openlinksw.com/schemas/oplweb#Component> ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:ComponentCategory a owl:Class ;
+      rdfs:label "Component Category"^^xsd:string ;
+      rdfs:comment """Component Category"""@en ;
+      rdfs:subClassOf <http://www.openlinksw.com/schemas/oplweb#ComponentCategory> ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:ComponentMode a owl:Class ;
+      rdfs:label "Component Mode"^^xsd:string ;
+      rdfs:comment """Component Mode"""@en ;
+      rdfs:subClassOf <http://www.openlinksw.com/schemas/oplweb#ComponentMode> ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:ComponentType a owl:Class ;
+      rdfs:label "Component Type"^^xsd:string ;
+      rdfs:comment """Component Type"""@en ;
+      rdfs:subClassOf <http://www.openlinksw.com/schemas/oplweb#ComponentType> ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+# <-------------- Component Properties --------------> #
+
+oplsof:hasComponentMode a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isOfComponentMode> ;
+      rdfs:comment """Has Component Mode"""@en ;
+      rdfs:label "hasComponentMode"^^xsd:string ;
+      skos:altLabel "Component Mode"^^xsd:string ;
+      rdfs:domain oplpro:Component ;
+      rdfs:range oplsof:ComponentMode .
+
+oplsof:hasComponentType a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isOfComponentType> ;
+      rdfs:comment """Has Component Type"""@en ;
+      rdfs:label "hasComponentType"^^xsd:string ;
+      skos:altLabel "Component Type"^^xsd:string ;
+      rdfs:domain oplpro:Component ;
+      rdfs:range oplsof:ComponentType .
+
+oplsof:hasFileSize a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#Filesize> ;
+      rdfs:comment """Has Component File Size"""@en ;
+      rdfs:label "hasFileSize"^^xsd:string ;
+      skos:altLabel "Component File Size"^^xsd:string ;
+      rdfs:domain oplpro:Component ;
+      rdfs:range xsd:integer .
+
+oplsof:hasBuildDate a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#ComponentBuildDate> ;
+      rdfs:comment """Component Build Date"""@en ;
+      rdfs:label "hasBuildDate"^^xsd:string ;
+      skos:altLabel "Component Build Date"^^xsd:string ;
+      rdfs:domain oplpro:Component ;
+      rdfs:range xsd:dateTime .
+
+oplsof:hasCVSID a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#ComponentCvsid> ;
+      rdfs:comment """Has Components CVSID"""@en ;
+      rdfs:label "hasCVSID"^^xsd:string ;
+      skos:altLabel "Components CVSID"^^xsd:string ;
+      rdfs:domain oplpro:Component ;
+      rdfs:range xsd:string .
+
+# <-------------- DBMS --------------> #
+
+# <-------------- DBMS Classes --------------> #
+
+oplsof:DbmsEngine a owl:Class ;
+      rdfs:subClassOf oplsof:DbmsFamily , schema:SoftwareApplication ;
+      rdfs:label "Database Engine"^^xsd:string ;
+      rdfs:comment """Database Management System Engine."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:DbmsFamily a owl:Class ;
+      rdfs:subClassOf schema:SoftwareApplication ;
+      rdfs:label "DBMS Family"^^xsd:string ;
+      rdfs:comment """Database Management System Family"""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+# <-------------- DBMS Properties --------------> #
+
+oplsof:hasDatabaseEngine a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:label "hasDatabaseEngine"^^xsd:string ;
+      skos:altLabel "Database Engine"^^xsd:string ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#Databases> ,
+                         <http://www.openlinksw.com/schemas/oplweb#hasDatabaseVersions>;
+      rdfs:comment """Database Engine"""@en ;
+      owl:equivalentProperty oplsof:hasDatabase ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isForDbmsEngine> ;
+      rdfs:domain oplpro:ProductFamily ,
+                  oplpro:Product ,
+                  opllic:ProductLicense ;
+      schema:domainIncludes
+          oplsof:Component ,
+          oplsof:DbmsFamily ;
+      rdfs:range oplsof:DbmsEngine .
+
+oplsof:DbmsFamily owl:disjointWith oplsof:Component .
+
+oplsof:hasDatabaseFamily a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf schema:about , <http://www.openlinksw.com/schemas/oplweb#DatabaseFamilies> ,
+                         <http://www.openlinksw.com/schemas/oplweb#isOfDbmsFamily> ;
+      rdfs:label "hasDatabaseFamily"^^xsd:string ;
+      skos:altLabel "Database Family"^^xsd:string ;
+      rdfs:comment """Database Family"""@en ;
+      rdfs:domain oplpro:Product ,
+          oplpro:ProductFamily,
+          oplpro:ProductFormat ;
+      schema:domainIncludes
+          oplsof:DbmsEngine,
+          opllic:ProductLicense ;
+      rdfs:range oplsof:DbmsFamily .
+
+opllic:ProductLicense owl:disjointWith oplsof:DbmsEngine .
+
+oplsof:isDatabaseFamilyOf a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DatabaseFamilies> ;
+      rdfs:label "isDatabaseFamilyOf"^^xsd:string ;
+      skos:altLabel "Is Database Family Of"^^xsd:string ;
+      rdfs:comment """Associates DBMS Family with a Product, Product Family or Product Format."""@en ;
+      rdfs:domain oplsof:DbmsFamily ;
+      rdfs:range
+          oplpro:Product ,
+          oplpro:ProductFamily,
+          oplpro:ProductFormat .
+
+oplsof:hasComponent a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#hasComponents> ;
+      rdfs:label "hasComponent"^^xsd:string ;
+      skos:altLabel "Component"^^xsd:string ;
+      rdfs:comment """Has Component"""@en ;
+      rdfs:domain oplsof:DbmsEngine ;
+      rdfs:range oplsof:Component .
+
+oplsof:hasDbmsFamilyName a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsFamilyName> ;
+      rdfs:comment """Dbms Family Name"""@en ;
+      rdfs:label "hasDbmsFamilyName"^^xsd:string ;
+      skos:altLabel "Dbms Family Name"^^xsd:string ;
+      rdfs:domain oplsof:DbmsFamily  ;
+      rdfs:range xsd:string .
+
+oplsof:hasDbmsFamilyRating a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsFamilyRating> ;
+      rdfs:comment """Dbms Family Rating"""@en ;
+      rdfs:label "hasDbmsFamilyRating"^^xsd:string ;
+      skos:altLabel "Dbms Family Rating"^^xsd:string ;
+      rdfs:domain oplsof:DbmsFamily ;
+      rdfs:range xsd:integer .
+
+oplsof:hasDbmsEngineVersion a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsEngineVersion> ;
+      rdfs:comment """Database Engine Version"""@en ;
+      rdfs:label "hasDbmsEngineVersion"^^xsd:string ;
+      skos:altLabel "Database Engine Version"^^xsd:string ;
+      rdfs:domain oplsof:DbmsEngine ;
+      rdfs:range xsd:string .
+
+oplsof:hasDbmsEngineOldArchiveCode a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsEngineOldArchiveCode> ;
+      rdfs:comment """Database Engine Old Archive Code"""@en ;
+      rdfs:label "hasDbmsEngineOldArchiveCode"^^xsd:string ;
+      skos:altLabel "Database Engine Old Archive Code"^^xsd:string ;
+      rdfs:domain oplsof:DbmsEngine ;
+      rdfs:range xsd:string .
+
+oplsof:DbmsEngineUpwardCompatible a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsUpwardCompatible> ;
+      rdfs:comment """Database Engine Upward Compatible"""@en ;
+      rdfs:label "dbmsEngineUpwardCompatible"^^xsd:string ;
+      skos:altLabel "Database Engine Upward Compatible"^^xsd:string ;
+      rdfs:domain oplsof:DbmsEngine ;
+      rdfs:range xsd:boolean .
+
+oplsof:DbmsEngineDownwardCompatible a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsDownwardCompatible> ;
+      rdfs:comment """Database Engine Downward Compatible"""@en ;
+      rdfs:label "dbmsEngineDownwardCompatible"^^xsd:string ;
+      skos:altLabel """Database Engine Downward Compatible"""^^xsd:string ;
+      rdfs:domain oplsof:DbmsEngine ;
+      rdfs:range xsd:boolean .
+
+oplsof:hasDbmsEngineRating a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsEngineRating> ;
+      rdfs:comment """Database Engine Rating"""@en ;
+      rdfs:label "hasDbmsEngineRating"^^xsd:string ;
+      skos:altLabel """Has Database Engine Rating"""^^xsd:string ;
+      rdfs:domain oplsof:DbmsEngine ;
+      rdfs:range xsd:string .
+
+# used in DBMSFamilies.ttl ( to change to oplsof:hasDatabaseEngine )
+#oplsof:hasDatabase a owl:ObjectProperty, rdf:Property ;
+#      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+#      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isForDbmsEngine> ;
+#      rdfs:comment """Database Engine"""@en ;
+#      rdfs:label "hasDatabase"^^xsd:string ;
+#      skos:altLabel "Database Engine"^^xsd:string ;
+#      rdfs:domain oplpro:ProductFamily , oplpro:Product , opllic:ProductLicense , oplsof:Component , oplsof:DbmsFamily ;
+#      rdfs:range oplsof:DbmsEngine .
+
+# used in ProductReleases.ttl and Components.ttl ( to change to oplsof:hasDatabaseEngine )
+#oplsof:isForDbmsEngine a owl:ObjectProperty, rdf:Property ;
+#      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+#      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isForDbmsEngine> ;
+#      rdfs:comment """Associates a Product, Product Family , Component , Database Family or License with a Database Engine"""@en ;
+#      rdfs:label "hasDatabaseEngine"^^xsd:string ;
+#      skos:altLabel "Database Engine"^^xsd:string ;
+#      rdfs:domain oplpro:ProductFamily , oplpro:Product , opllic:ProductLicense , oplsof:Component , oplsof:DbmsFamily ;
+#      rdfs:range oplsof:DbmsEngine .
+
+
+
+
+
+# <--------- Operating System Types Objects ------- >
+
+# To fix oplweb:
+# fix <http://data.openlinksw.com/oplweb/opsys_type/wrkst#this> to be
+# subClassOf of OpenLink:OpsysType. (atm it is rdf:type relation )
+#:workstationOS a <http://data.openlinksw.com/oplweb/opsys_type/wrkst#this> ;
+#               rdfs:label "Workstation"^^xsd:string .
+# So we add directly the relation:
+
+oplsof:workstationOS a oplsof:OpsysType , <http://www.openlinksw.com/schemas/oplweb#OpsysType> ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+      rdfs:subClassOf oplsof:serverWorkstationOS                  ;
+      rdfs:label             "Workstation"^^xsd:string                  ;
+      schema:name            "Workstation"^^xsd:string                  ;
+      rdfs:comment           """An Operating System designed for deployment on Single-User Workstations"""@en                  ;
+      dcterms:description    """An Operating System designed for deployment on Single-User Workstations (e.g., macOS [client], Linux Workstation, Windows 7)"""@en .
+
+oplsof:WindowsDesktopEditions a oplsof:workstationOS ;
+                        rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+                        rdfs:label "Windows Workstation Desktop Edition"^^xsd:string .
+
+
+# To fix oplweb:
+# fix <http://data.openlinksw.com/oplweb/opsys_type/srv#this> to be
+# subClassOf of OpenLink:OpsysType. (atm it is rdf:type relation )
+#
+# :serverOS a <http://data.openlinksw.com/oplweb/opsys_type/srv#this> ;
+#          rdfs:label "Server Operating System"^^xsd:string .
+# So we add directly the relation:
+
+# <---------- Data Access Mechanism Classes ------------->
+
+oplsof:DataAccessProtocol a owl:Class ;
+      rdfs:label "Data Access Mechanism (Protocol)"^^xsd:string ;
+      rdfs:comment """Data Access Mechanism (Protocol)."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+# <---------- Data Access Mechanism Properties ------------->
+
+oplsof:DataAccessProtocolAny a owl:DatatypeProperty, rdf:Property ;
+      schema:name "Any Data Access Mechanism (Protocol)"^^xsd:string ;
+      rdfs:label "Any Data Access Mechanism (Protocol)"^^xsd:string ;
+      skos:altLabel "Any Data Access Mechanism (Protocol)"^^xsd:string ;
+      rdfs:comment """Any Data Access Mechanism (Protocol) for supported data access mechanisms for a given platform."""@en ;
+      rdfs:domain oplsof:DataAccessProtocol ;
+      rdfs:range xsd:string ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:hasDataAccessProtocolScope a owl:ObjectProperty, rdf:Property ;
+      rdfs:label "hasDataAccessProtocolScope"^^xsd:string ;
+      skos:altLabel "Data Access Protocol Scope"^^xsd:string ;
+      rdfs:comment """Data Access Mechanism (Protocol)."""@en ;
+      rdfs:domain oplpro:ProductLicense ;
+      rdfs:range oplsof:DataAccessProtocol ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:hasDataAccessProtocolType a owl:DatatypeProperty, rdf:Property ;
+      rdfs:label "hasDataAccessProtocolType"^^xsd:string ;
+      skos:altLabel "Data Access Protocol Type"^^xsd:string ;
+      rdfs:comment """Data Access Mechanism (Protocol) Type"""@en ;
+      rdfs:domain oplsof:DataAccessProtocol ;
+      rdfs:range xsd:string ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+
+
+oplsof:serverOS a <http://www.openlinksw.com/schemas/oplweb#OpsysType> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  rdfs:subClassOf oplsof:serverWorkstationOS                                            ;
+  schema:name """Server""" ;
+  rdfs:label "Server"^^xsd:string                  ;
+  rdfs:comment """An Operating System designed for deployment on Multi-User Servers"""@en                  ;
+  dcterms:description """An Operating System designed for deployment on Multi-User Servers (e.g., macOS Server, Linux Server, Windows Server 2008, Solaris, HP-UX, AIX)"""@en       .
+
+oplsof:serverWorkstationOS a <http://www.openlinksw.com/schemas/oplweb#OpsysType> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Server or Workstation""" ;
+  rdfs:label "Server or Workstation"^^xsd:string                   ;
+  rdfs:comment """An Operating System designed for deployment on Single-User Workstations and/or Multi-User Servers"""@en                  ;
+  dcterms:description """An Operating System designed for deployment on Single-User Workstations (e.g., macOS [client], Linux Workstation, Windows 7) and/or Multi-User Servers (e.g., macOS Server, Linux Server, Windows Server 2008, Solaris, HP-UX, AIX)"""@en                  .
+
+oplsof:AnyOS a <http://www.openlinksw.com/schemas/oplweb#OpsysType> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Any OS Type""" ;
+  rdfs:label "Any OS Type"^^xsd:string                   ;
+  rdfs:comment """Any Operating System"""@en                  ;
+  dcterms:description """Any Operating System"""@en                  .
+
+oplsof:WindowsServer a oplsof:serverOS ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Windows Server Edition""" ;
+  rdfs:label "Windows Server Edition"^^xsd:string .
+
+# <--------- Operating System Families Objects ------- >
+
+oplsof:OSFamilyAny a oplsof:OpsysFamily ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Any Operating System Family""" ;
+  rdfs:label "Any Operating System Family"^^xsd:string ;
+  schema:logo <https://www.macstadium.com/content/uploads/2016/01/OS-Support.svg> .
+
+oplsof:Windows a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Windows""" ;
+  rdfs:label "Windows"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "Win32" ;
+  oplsof:OpsysFamilyName "Windows" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/MicrosoftCorporation#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i686-generic-win-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-winsrv-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/ia64-intel-win-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/ia64-intel-winsrv-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-win-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-winsrv-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Microsoft_Windows> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Microsoft_Windows> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-windows.gif> .
+
+oplsof:GenericLinux a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Generic Linux""" ;
+  rdfs:label "Generic Linux"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "Linux" ;
+  oplsof:OpsysFamilyName "Generic Linux" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/OpenSource#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc2.4-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc2.5-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc21-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc22-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc23-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc24-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc25-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-linux-glibc26-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/ia64-intel-linux-gnu-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-amd-linux-glibc23-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-linux-glibc23-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-linux-glibc24-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-linux-glibc25-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Linux> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Linux> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-linux.gif> .
+
+oplsof:Solaris a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Solaris""" ;
+  rdfs:label "Solaris"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "Solaris" ;
+  oplsof:OpsysFamilyName "Solaris" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/SunMicrosystems#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i386-generic-solaris2.7-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/opteron-sun-solaris2.8-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.10-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.10-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.5.1-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.7-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.8-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.8-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.9-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/sparc-sun-solaris2.9-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-sun-solaris2.10-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-sun-solaris2.10-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Solaris_%28operating_system%29> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Solaris_%28operating_system%29> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-solaris.gif> .
+
+oplsof:AIX a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/AIX#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """AIX""" ;
+  rdfs:label "AIX"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "AIX" ;
+  oplsof:OpsysFamilyName "AIX" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/IBM#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/powerpc-ibm-aix4.2.0.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-ibm-aix4.3.0.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-ibm-aix5.2.0.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-ibm-aix5.2.0.0-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-ibm-aix5.3.0.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-ibm-aix5.3.0.0-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/rs6000-ibm-aix3.2.5-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/rs6000-ibm-aix4.3.0.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/rs6000-ibm-aix4.3.0.0-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/rs6000-ibm-aix4.3.3.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/rs6000-ibm-aix4.3.3.0-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/IBM_AIX_%28operating_system%29> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/IBM_AIX_%28operating_system%29> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-aix.gif> .
+
+oplsof:HPUX a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/HPUX#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """HPUX""" ;
+  rdfs:label "HPUX"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "HP/UX" ;
+  oplsof:OpsysFamilyName "HPUX" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/HewlettPackard#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/hppa1.1-hp-hpux10.20-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/hppa1.1-hp-hpux11.00-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/hppa1.1-hp-hpux11.00-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/hppa1.1-hp-hpux11.11-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/hppa2.0w-hp-hpux11.00-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/hppa2.0w-hp-hpux11.11-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/ia64-hp-hpux11.22-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/ia64-hp-hpux11.23-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/ia64-hp-hpux11.23-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/HP-UX> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/HP-UX> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-hpux.gif> .
+
+oplsof:Irix a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Irix#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Irix""" ;
+  rdfs:label "Irix"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "IRIX" ;
+  oplsof:OpsysFamilyName "Irix" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/SiliconGraphics#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/mips-sgi-irix6.5-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/mips-sgi-irix6.5-n32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/mips-sgi-irix6.5-o32#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Irix> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Irix> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-sgi.gif> .
+
+
+oplsof:MacOSClassic a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/MacOSClassic#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Mac OS Classic""" ;
+  rdfs:label "Mac OS Classic"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "Mac OS 9" ;
+  oplsof:OpsysFamilyName "Mac OS Classic" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/AppleComputer#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/m68k-apple-macos7.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macos-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macos8.0-32#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Macintosh_Classic> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Macintosh_Classic> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-macos.gif> .
+
+oplsof:FreeBSD a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/FreeBSD#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """FreeBSD""" ;
+  rdfs:label "FreeBSD"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "FreeBSD" ;
+  oplsof:OpsysFamilyName "FreeBSD" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/OpenSource#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i386-generic-freebsd4.5-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i386-generic-freebsd5.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i386-generic-freebsd5.4-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i386-generic-freebsdelf4.1-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-generic-freebsd5.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/ia64-intel-freebsd5.0-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-generic-freebsd5.0-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Free_bsd> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Free_bsd> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-freebsd.gif> .
+
+
+oplsof:DG-UX a oplsof:OpsysFamily ;
+    rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+    rdfs:label "DG-UX" ;
+    schema:name "DG-UX" ;
+    oplsof:OpsysFamilyLicenseCode "DG/UX" ;
+    oplsof:OpsysFamilyName "DG-UX" ;
+    oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/DataGeneral(EMC)#this> ;
+    oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i586-dg-dguxR4.11MU03-32#this>,
+                              <http://data.openlinksw.com/oplweb/opsys/i586-dg-dguxR4.11MU03-32-nothreads#this> ;
+    owl:sameAs <http://dbpedia.org/resource/DG_UX> ;
+    schema:mainEntityOfPage <http://dbpedia.org/resource/DG_UX> ;
+    schema:logo <http://download.openlinksw.com/download/images/icon-digital.gif> .
+
+oplsof:Ruby a oplsof:OpsysFamily ;
+    rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+    rdfs:label "Ruby" ;
+    schema:name "Ruby" ;
+    oplsof:OpsysFamilyLicenseCode "FreeBSD" ;
+    oplsof:OpsysFamilyName "Ruby" ;
+    oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/OpenSource#this> ;
+    oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/ruby#this> ;
+    owl:sameAs <http://dbpedia.org/resource/Ruby_programming_language> ;
+    schema:mainEntityOfPage <http://dbpedia.org/resource/Ruby_programming_language> ;
+    schema:logo <http://download.openlinksw.com/download/images/> .
+
+oplsof:Firefox a oplsof:OpsysFamily ;
+    rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+    rdfs:label "Firefox" ;
+    schema:name "Firefox" ;
+    oplsof:OpsysFamilyLicenseCode "firefox" ;
+    oplsof:OpsysFamilyName "Firefox" ;
+    oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/MozillaFoundation#this> ;
+    oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/firefox3.0#this> ;
+    schema:logo <http://download.openlinksw.com/download/images/> .
+
+oplsof:DynixPTX a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/DynixPTX#this> ;
+  schema:name "DynixPTX" ;
+  oplsof:OpsysFamilyLicenseCode "DYNIX/ptx" ;
+  oplsof:OpsysFamilyName "Dynix/PTX" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/IBM#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i386-sequent-sysv4-32#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Dynix> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Dynix> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-dynix.gif> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  rdfs:label "DynixPTX"^^xsd:string .
+  
+oplsof:WebOS a oplsof:OpsysFamily ;
+	owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/WebOS#this> ;
+	schema:name "WebOS" ;
+	# oplsof:OpsysFamilyLicenseCode "DYNIX/ptx" ;
+	oplsof:OpsysFamilyName "WebOS" ;
+	# oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/IBM#this> ;
+	# oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i386-sequent-sysv4-32#this> ;
+	skos:related <http://dbpedia.org/resource/World_Wide_Web> ;
+	schema:mainEntityOfPage <http://dbpedia.org/page/World_Wide_Web> ;
+	# schema:logo <http://download.openlinksw.com/download/images/icon-dynix.gif> ;
+	rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+    rdfs:label "WebOS"^^xsd:string .
+
+oplsof:MacOSX a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """macOS""" ;
+  rdfs:label "macOS"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "macOS" ;
+  oplsof:OpsysFamilyName "macOS" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/AppleComputer#this> ;
+  oplsof:hasOperatingSystem
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.7-32#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.7-64#this> ,
+
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.8-32#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.8-64#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-macosx10.8-32#this> ,
+
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.9-32#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.9-64#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-macosx10.9-32#this> ,
+
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.10-32#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.10-64#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-macosx10.10-32#this> ,
+
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.11-32#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.11-64#this> ,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-macosx10.11-32#this> ,
+
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-darwin8-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.4-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.5-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i686-apple-macosx10.6-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-darwin7-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-darwin8-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.1-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.2-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.3-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.4-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.5-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.5-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.6-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/powerpc-apple-macosx10.6-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-darwin8-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-macosx10.4-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-macosx10.5-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/universal-apple-macosx10.6-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.5-64#this>,
+      <http://data.openlinksw.com/oplweb/opsys/x86_64-apple-macosx10.6-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Mac_os_x> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Mac_os_x> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-mac-universal.gif> .
+
+oplsof:Tru64UNIX a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/Tru64UNIX#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Tru64 UNIX""" ;
+  rdfs:label "Tru64 UNIX"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "Digital Unix (OSF/1)" ;
+  oplsof:OpsysFamilyName "Tru64 UNIX" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/HewlettPackard#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/alpha-dec-osf4.0e-64#this>,
+         <http://data.openlinksw.com/oplweb/opsys/alphaev6-dec-osf5.0-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Tru64> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Tru64> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-tru64.gif> .
+
+oplsof:SCOOpenServer a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/SCOOpenServer#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """SCO Open Server""" ;
+  rdfs:label "SCO Open Server"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "SCO OpenServer" ;
+  oplsof:OpsysFamilyName "SCO OpenServer" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/SCOGroup#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i386-generic-sco3.2v5.0.5-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i386-generic-sco3.2v5.0.7-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i486-generic-sco3.2v5.0.0-32#this> ;
+  owl:sameAs <http://dbpedia.org/resource/SCO_OpenServer> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/SCO_OpenServer> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-scoopenserver.gif> .
+
+
+oplsof:NETCLR a oplsof:OpsysFamily ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  skos:altLabel ".NET CLR" ;
+  schema:name ".NET CLR" ;
+  oplsof:OpsysFamilyLicenseCode "DotNET" ;
+  oplsof:OpsysFamilyName ".NET CLR" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/MicrosoftCorporation#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/clr-microsoft-dotnet1.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/clr-microsoft-dotnet1.1-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/clr-microsoft-dotnet2.0-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/clr-microsoft-dotnet2.0-64#this> ;
+  owl:sameAs <http://dbpedia.org/resource/.NET_Framework> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/.NET_Framework> ;
+  schema:logo <http://download.openlinksw.com/download/images/> .
+
+
+oplsof:UnixWare a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/UnixWare#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """UnixWare""" ;
+  rdfs:label "UnixWare"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "SCO UNIX" ;
+  oplsof:OpsysFamilyName "UnixWare" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/SCOGroup#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/i586-sco-sysv5uw7-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/i586-sco-sysv5uw7-32-nothreads#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Unixware> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Unixware> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-unixware.gif> .
+
+oplsof:MonoCLR a oplsof:OpsysFamily ;
+    rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+    skos:altLabel "Mono CLR" ;
+    schema:name "Mono CLR" ;
+    oplsof:OpsysFamilyLicenseCode "Mono CLR" ;
+    oplsof:OpsysFamilyName "Mono CLR" ;
+    oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/OpenSource#this> ;
+    oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/clr-ecma-mono1.0-32#this>,
+        <http://data.openlinksw.com/oplweb/opsys/clr-ecma-mono1.1-32#this>,
+        <http://data.openlinksw.com/oplweb/opsys/clr-ecma-mono2.0-32#this>,
+        <http://data.openlinksw.com/oplweb/opsys/clr-ecma-mono2.0-64#this> ;
+    owl:sameAs <http://dbpedia.org/resource/Mono_%28software%29> ;
+    schema:mainEntityOfPage <http://dbpedia.org/resource/Mono_%28software%29> ;
+    schema:logo <http://download.openlinksw.com/download/images/icon-mono.gif> .
+
+oplsof:JavaVirtualMachine a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/JavaVirtualMachine#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Java Virtual Machine""" ;
+  rdfs:label "Java Virtual Machine"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "Java Virtual Machine" ;
+  oplsof:OpsysFamilyName "Java Virtual Machine" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/SunMicrosystems#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/jvm-sun-java1.1-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/jvm-sun-java1.2-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/jvm-sun-java1.3-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/jvm-sun-java1.4-32#this>,
+      <http://data.openlinksw.com/oplweb/opsys/jvm-sun-java1.5-32#this> ;
+  owl:sameAs <http://dbpedia.org/resource/Java_virtual_machine> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/Java_virtual_machine> ;
+  schema:logo <http://download.openlinksw.com/download/images/icon-java.gif> .
+
+oplsof:LynxOS a oplsof:OpsysFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/opsys_family/LynxOS#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Lynx OS""" ;
+  rdfs:label "Lynx OS"^^xsd:string ;
+  oplsof:OpsysFamilyLicenseCode "Lynx OS 5" ;
+  oplsof:OpsysFamilyName "Lynx OS" ;
+  oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/OpenSource#this> ;
+  oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/powerpc-lynxos5-32#this> ;
+  owl:sameAs <http://dbpedia.org/resource/LynxOS> ;
+  schema:mainEntityOfPage <http://dbpedia.org/resource/LynxOS> ;
+  schema:logo <http://newdata.es/wp-content/uploads/2016/04/lynxos-newdata-400x185.jpg> .
+
+oplsof:Linux-EC2-OpenLink
+ a oplsof:OpsysFamily ,
+    <http://data.openlinksw.com/oplweb/Opsys#this> ,
+    <http://data.openlinksw.com/oplweb/OpsysFamily#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  oplsof:hasOperatingSystemFamily oplsof:GenericLinux , <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+  schema:name """Generic Linux EC2""" ;
+  rdfs:label "Generic Linux EC2"^^xsd:string .
+
+oplsof:Windows-EC2-OpenLink
+ a oplsof:OpsysFamily ,
+    <http://data.openlinksw.com/oplweb/Opsys#this> ,
+    <http://data.openlinksw.com/oplweb/OpsysFamily#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  oplsof:hasOperatingSystemFamily oplsof:Windows , <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+  schema:name """Windows EC2""" ;
+  rdfs:label "Windows EC2"^^xsd:string .
+
+
+oplweb:isOfOpsysFamily owl:equivalentProperty rdfs:subClassOf .
+
+
+# <--------- DBMS Families Objects ------- >
+oplsof:FoxPRO a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/FoxPRO#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Visual Fox Pro Database Family""" ;
+  rdfs:label "Visual Fox Pro Database Family"^^xsd:string .
+
+oplsof:ACCESS a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/ACCESS#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft Access Database Family""" ;
+  rdfs:label "Microsoft Access Database Family"^^xsd:string .
+
+oplsof:FileMaker a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/FileMaker#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """File Maker Database Family""" ;
+  rdfs:label "File Maker Database Family"^^xsd:string .
+
+oplsof:DBFamilyAny a oplsof:DbmsFamily ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Any Database Family""" ;
+  rdfs:label "Any Database Family"^^xsd:string .
+
+oplsof:OpenLinkVirtuoso a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/OpenLinkVirtuoso#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """OpenLink Virtuoso Database Family""" ;
+  rdfs:label "OpenLink Virtuoso Database Family"^^xsd:string .
+
+oplsof:Ingres a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Ingres#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres Database Family""" ;
+  rdfs:label "Ingres Database Family"^^xsd:string .
+
+oplsof:Oracle a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Oracle#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle Database Family""" ;
+  rdfs:label "Oracle Database Family"^^xsd:string .
+
+oplsof:PrestoDB a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/PrestoDB#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PrestoDB Database Family""" ;
+  rdfs:label "PrestoDB Database Family"^^xsd:string .
+
+oplsof:Firebird a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Firebird#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Firebird Database Family""" ;
+  rdfs:label "Firebird Database Family"^^xsd:string .
+
+oplsof:PostgreSQL a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/PostgreSQL#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL Database Family""" ;
+  rdfs:label "PostgreSQL Database Family"^^xsd:string .
+
+oplsof:DB2 a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/DB2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 Database Family""" ;
+  rdfs:label "DB2 Database Family"^^xsd:string .
+
+oplsof:WorldWideWeb a oplsof:DbmsFamily ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """World Wide Web Database Family""" ;
+  rdfs:label "World Wide Web Database Family"^^xsd:string .
+
+oplsof:SQLServer a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/SQLServer#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """SQL Server Database Family""" ;
+  rdfs:label "SQL Server Database Family"^^xsd:string .
+
+oplsof:MySQL a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/MySQL#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """MySQL Database Family""" ;
+  rdfs:label "MySQL Database Family"^^xsd:string .
+
+oplsof:Sybase a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Sybase#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Sybase Database Family""" ;
+  rdfs:label "Sybase Database Family"^^xsd:string .
+
+oplsof:Informix a oplsof:DbmsFamily ;
+  # owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Informix#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix Database Family""" ;
+  rdfs:label "Informix Database Family"^^xsd:string .
+
+oplsof:Progress a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Progress#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress Database Family""" ;
+  rdfs:label "Progress Database Family"^^xsd:string .
+
+# oplsof:ADONETBridge a oplsof:DbmsFamily ;
+#   owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/ADO.NetBridge#this> ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+#   schema:name """ADO.NET Bridge""" ;
+#   rdfs:label "ADO.NET Bridge"^^xsd:string .
+
+oplsof:ODBCBridge a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/ODBCBridge#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """ODBC Data Sources""" ;
+  rdfs:label "ODBC Data Sources"^^xsd:string .
+
+oplsof:JDBCBridge a oplsof:DbmsFamily ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/JDBCBridge#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """JDBC Data Sources""" ;
+  rdfs:label "JDBC Data Sources"^^xsd:string .
+
+# oplsof:OLEDBBridge a oplsof:DbmsFamily ;
+#   owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/OLEDBBridge#this> ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+#   schema:name """OLEDB Bridge""" ;
+#   rdfs:label "OLEDB Bridge"^^xsd:string .
+
+
+# <--------- Database Engines Objects ------- >
+
+oplsof:DBEngineAny a oplsof:DbmsEngine ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Any Database Engine""" ;
+  rdfs:label "Any Database Engine"^^xsd:string .
+
+oplsof:DBEngineVersionAny a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Any Database Engine Version""" ;
+  rdfs:label "Any Database Engine Version"^^xsd:string .
+
+oplsof:Ingres2 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ing20#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres 2.x Database Engine""" ;
+  rdfs:label "Ingres 2.x Database Engine"^^xsd:string .
+
+oplsof:Virtuoso63 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:OpenLinkVirtuoso ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Virtuoso 6.3 Database Engine""" ;
+  rdfs:label "Virtuoso 6.3 Database Engine"^^xsd:string .
+
+oplsof:Virtuoso70 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:OpenLinkVirtuoso ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Virtuoso 7.0 Database Engine""" ;
+  rdfs:label "Virtuoso 7.0 Database Engine"^^xsd:string .
+
+oplsof:Virtuoso80 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:OpenLinkVirtuoso ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Virtuoso 8.0 Database Engine""" ;
+  rdfs:label "Virtuoso 8.0 Database Engine"^^xsd:string .
+
+
+oplsof:Ingres3 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ing3#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres 3.x Database Engine""" ;
+  rdfs:label "Ingres 3.x Database Engine"^^xsd:string .
+
+oplsof:Ingres64 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ing64#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres 6.4.x Database Engine""" ;
+  rdfs:label "Ingres 6.4.x Database Engine"^^xsd:string .
+
+oplsof:Ingres6 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ing6#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres 6.x Database Engine""" ;
+  rdfs:label "Ingres 6.x Database Engine"^^xsd:string .
+
+oplsof:Ingres8 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ing8#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres 8.x Database Engine""" ;
+  rdfs:label "Ingres 8.x Database Engine"^^xsd:string .
+
+oplsof:Ingres9 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ing9#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres 9.x Database Engine""" ;
+  rdfs:label "Ingres 9.x Database Engine"^^xsd:string .
+
+oplsof:Ingres10 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres 10 Database Engine""" ;
+  rdfs:label "Ingres 10 Database Engine"^^xsd:string .
+
+oplsof:Ingresii a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Ingres ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ingii#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Ingres II Database Engine""" ;
+  rdfs:label "Ingres II Database Engine"^^xsd:string .
+
+oplsof:Presto01 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PrestoDB ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/presto#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PrestoDB 0.1xx Database Engine""" ;
+  rdfs:label "PrestoDB 0.1xx Database Engine"^^xsd:string .
+
+oplsof:Oracle7 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora7#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 7.x Database Engine""" ;
+  rdfs:label "Oracle 7.x Database Engine"^^xsd:string .
+
+oplsof:Oracle8 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora8#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 8.x Database Engine""" ;
+  rdfs:label "Oracle 8.x Database Engine"^^xsd:string .
+
+oplsof:Oracle9 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora9#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 9.x Database Engine""" ;
+  rdfs:label "Oracle 9.x Database Engine"^^xsd:string .
+
+oplsof:Oracle91 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora91#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 9.1 Database Engine""" ;
+  rdfs:label "Oracle 9.1 Database Engine"^^xsd:string .
+
+oplsof:Oracle10 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora10#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 10.x Database Engine""" ;
+  rdfs:label "Oracle 10.x Database Engine"^^xsd:string .
+
+oplsof:Oracle10i a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora10#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 10.i Database Engine""" ;
+  rdfs:label "Oracle 10.i Database Engine"^^xsd:string .
+
+oplsof:Oracle11 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora11#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 11.x Database Engine""" ;
+  rdfs:label "Oracle 11.x Database Engine"^^xsd:string .
+
+oplsof:Oracle12 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Oracle ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/ora12#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Oracle 12.x Database Engine""" ;
+  rdfs:label "Oracle 12.x Database Engine"^^xsd:string .
+
+oplsof:frb a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Firebird ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/frb#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Firebird Database Engine""" ;
+  rdfs:label "Firebird Database Engine"^^xsd:string .
+
+oplsof:PostgreSQL6 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PostgreSQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pos6#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL 6.x Database Engine""" ;
+  rdfs:label "PostgreSQL 6.x Database Engine"^^xsd:string .
+
+oplsof:PostgreSQL7 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PostgreSQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pos7#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL 7.x Database Engine""" ;
+  rdfs:label "PostgreSQL 7.x Database Engine"^^xsd:string .
+
+oplsof:PostgreSQL8 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PostgreSQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pos8#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL 8.x Database Engine""" ;
+  rdfs:label "PostgreSQL 8.x Database Engine"^^xsd:string .
+
+oplsof:PostgreSQL9 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PostgreSQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pos9#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL 9.x Database Engine""" ;
+  rdfs:label "PostgreSQL 9.x Database Engine"^^xsd:string .
+
+oplsof:db2 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:DB2 ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/db2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 Database Engine""" ;
+  rdfs:label "DB2 Database Engine"^^xsd:string .
+
+
+oplsof:db26 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:DB2 ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/db2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 6.x Database Engine""" ;
+  rdfs:label "DB2 6.x Database Engine"^^xsd:string .
+
+oplsof:db27 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:DB2 ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/db2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 7.x Database Engine""" ;
+  rdfs:label "DB2 7.x Database Engine"^^xsd:string .
+
+oplsof:db28 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:DB2 ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/db2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 8.x Database Engine""" ;
+  rdfs:label "DB2 8.x Database Engine"^^xsd:string .
+
+oplsof:db29 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:DB2 ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/db2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 9.x Database Engine""" ;
+  rdfs:label "DB2 9.x Database Engine"^^xsd:string .
+
+oplsof:db210 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:DB2 ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/db2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 10.x Database Engine""" ;
+  rdfs:label "DB2 10.x Database Engine"^^xsd:string .
+
+oplsof:db211 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:DB2 ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/db2#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """DB2 11.x Database Engine""" ;
+  rdfs:label "DB2 11.x Database Engine"^^xsd:string .
+
+oplsof:SQLServer6 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/sql6#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 6.x Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 6.x Database Engine"^^xsd:string .
+
+oplsof:SQLServer7 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/sql7#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 7.x Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 7.x Database Engine"^^xsd:string .
+
+oplsof:SQLServer2008 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/sql7#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 2008 (v10.00.x) Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 2008 (v10.00.x) Database Engine"^^xsd:string .
+
+oplsof:SQLServer2008R2 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/sql7#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 2008 R2 (v10.50.x) Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 2008 R2 (v10.50.x) Database Engine"^^xsd:string .
+
+oplsof:SQLServer2012 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 2012 (v11.00.x) Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 2012 (v11.00.x) Database Engine"^^xsd:string .
+
+oplsof:SQLServer2014 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 2014 (v12.00.x) Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 2014 (v12.00.x) Database Engine"^^xsd:string .
+
+oplsof:SQLServer2000 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 2000 (v8.00.x) Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 2000 (v8.00.x) Database Engine"^^xsd:string .
+
+oplsof:SQLServer2005 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:SQLServer ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Microsoft SQL Server 2005 (v9.00.x) Database Engine""" ;
+  rdfs:label "Microsoft SQL Server 2005 (v9.00.x) Database Engine"^^xsd:string .
+
+oplsof:MySQL3 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:MySQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/mys3#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """MySQL 3.x Database Engine""" ;
+  rdfs:label "MySQL 3.x Database Engine"^^xsd:string .
+
+oplsof:MySQL4 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:MySQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/mys4#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """MySQL 4.x Database Engine""" ;
+  rdfs:label "MySQL 4.x Database Engine"^^xsd:string .
+
+oplsof:MySQL5 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:MySQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/mys5#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """MySQL 5.x Database Engine""" ;
+  rdfs:label "MySQL 5.x Database Engine"^^xsd:string .
+
+oplsof:Sybase10 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Sybase ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/syb10#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Sybase 10.x Database Engine""" ;
+  rdfs:label "Sybase 10.x Database Engine"^^xsd:string .
+
+oplsof:Sybase11 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Sybase ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/syb11#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Sybase 11.x Database Engine""" ;
+  rdfs:label "Sybase 11.x Database Engine"^^xsd:string .
+
+oplsof:Sybase12 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Sybase ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/syb12#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Sybase 12.x Database Engine""" ;
+  rdfs:label "Sybase 12.x Database Engine"^^xsd:string .
+
+oplsof:Sybase15 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Sybase ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/syb15#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Sybase 15.x Database Engine""" ;
+  rdfs:label "Sybase 15.x Database Engine"^^xsd:string .
+
+oplsof:Informix7 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf7#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 7.x Database Engine""" ;
+  rdfs:label "Informix 7.x Database Engine"^^xsd:string .
+
+oplsof:Informix5 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf5#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 5.x Database Engine""" ;
+  rdfs:label "Informix 5.x Database Engine"^^xsd:string .
+
+oplsof:Informix71 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf71#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 7.1 Database Engine""" ;
+  rdfs:label "Informix 7.1 Database Engine"^^xsd:string .
+
+oplsof:Informix72 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf72#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 7.2 Database Engine""" ;
+  rdfs:label "Informix 7.2 Database Engine"^^xsd:string .
+
+oplsof:Informix73 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf73#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 7.3 Database Engine""" ;
+  rdfs:label "Informix 7.3 Database Engine"^^xsd:string .
+
+oplsof:Informix9 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf9#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 9.x Database Engine""" ;
+  rdfs:label "Informix 9.x Database Engine"^^xsd:string .
+
+oplsof:Informix10 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf10#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 10.x Database Engine""" ;
+  rdfs:label "Informix 10.x Database Engine"^^xsd:string .
+
+oplsof:Informix11 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Informix ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/inf11#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Informix 11.x Database Engine""" ;
+  rdfs:label "Informix 11.x Database Engine"^^xsd:string .
+
+oplsof:Progress7 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro7#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 7.x Database Engine""" ;
+  rdfs:label "Progress 7.x Database Engine"^^xsd:string .
+
+oplsof:Progress73c a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro73c#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 7.3C Database Engine""" ;
+  rdfs:label "Progress 7.3C Database Engine"^^xsd:string .
+
+oplsof:Progress73d a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro73d#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 7.3D Database Engine""" ;
+  rdfs:label "Progress 7.3D Database Engine"^^xsd:string .
+
+oplsof:Progress73e a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro73e#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 7.3E Database Engine""" ;
+  rdfs:label "Progress 7.3E Database Engine"^^xsd:string .
+
+oplsof:Progress8 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro8#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 8.x Database Engine""" ;
+  rdfs:label "Progress 8.x Database Engine"^^xsd:string .
+
+oplsof:Progress81a a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro81a#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 8.1A Database Engine""" ;
+  rdfs:label "Progress 8.1A Database Engine"^^xsd:string .
+
+oplsof:Progress82a a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro82a#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 8.2A Database Engine""" ;
+  rdfs:label "Progress 8.2A Database Engine"^^xsd:string .
+
+oplsof:Progress82c a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro82c#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 8.2C Database Engine""" ;
+  rdfs:label "Progress 8.2C Database Engine"^^xsd:string .
+
+oplsof:Progress83a a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro83a#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 8.3A Database Engine""" ;
+  rdfs:label "Progress 8.3A Database Engine"^^xsd:string .
+
+oplsof:Progress83b a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro83b#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 8.3B Database Engine""" ;
+  rdfs:label "Progress 8.3B Database Engine"^^xsd:string .
+
+oplsof:Progress83c a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro83c#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress 8.3C Database Engine""" ;
+  rdfs:label "Progress 8.3C Database Engine"^^xsd:string .
+
+oplsof:Progress9 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro9#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.x Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.x Database Engine"""^^xsd:string .
+
+oplsof:Progress90a a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro90a#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.0.a (SQL-89) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.0.a (SQL-89) Database Engine"""^^xsd:string .
+
+oplsof:Progress90b a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro90b#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.0.b (SQL-89) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.0.b (SQL-89) Database Engine"""^^xsd:string .
+
+oplsof:Progress91 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pros91#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.1.x (SQL-92) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.1.x (SQL-92) Database Engine"""^^xsd:string .
+
+oplsof:Progress91a a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro91a#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.1.a (SQL-89) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.1.a (SQL-89) Database Engine"""^^xsd:string .
+
+oplsof:Progress91b a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro91b#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.1.b (SQL-89) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.1.b (SQL-89) Database Engine"""^^xsd:string .
+
+oplsof:Progress91c a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro91c#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.1.c (SQL-89) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.1.c (SQL-89) Database Engine"""^^xsd:string .
+
+oplsof:Progress91d a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro91d#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.1.d (SQL-89) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.1.d (SQL-89) Database Engine"""^^xsd:string .
+
+oplsof:Progress91e a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro91e#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 9.1.e (SQL-89) Database Engine""" ;
+  rdfs:label """Progress OpenEdge 9.1.e (SQL-89) Database Engine"""^^xsd:string .
+
+oplsof:Progress10 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro10#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 10.x Database Engine""" ;
+  rdfs:label """Progress OpenEdge 10.x Database Engine"""^^xsd:string .
+
+oplsof:Progress10A a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pro10#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 10.x A Database Engine""" ;
+  rdfs:label """Progress OpenEdge 10.x A Database Engine"""^^xsd:string .
+
+oplsof:Progress11 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:Progress ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pros11#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """Progress OpenEdge 11 Database Engine""" ;
+  rdfs:label """Progress OpenEdge 11 Database Engine"""^^xsd:string .
+
+oplsof:odbc a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/odbc#this> ;
+  oplsof:hasDatabaseFamily oplsof:ODBCBridge ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """ODBC 3.5.x Drivers and Higher""" ;
+  rdfs:label "ODBC 3.5.x Drivers and Higher"^^xsd:string .
+
+oplsof:jdbc a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/jdbc#this> ;
+  oplsof:hasDatabaseFamily oplsof:JDBCBridge ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """JDBC 4.x Drivers and Higher""" ;
+  rdfs:label "JDBC 4.x Drivers and Higher"^^xsd:string .
+
+oplsof:DataAccessODBC a oplsof:DataAccessProtocol ;
+  schema:name """ODBC Data Access Mechanism (Protocol)""" ;
+  rdfs:label "ODBC Data Access Mechanism (Protocol)"^^xsd:string ;
+  skos:altLabel "Open Database Connectivity (ODBC) Data Access Mechanism (Protocol)"^^xsd:string ;
+  rdfs:comment """Open Database Connectivity Mechanism (Protocol)"""@en ;
+  oplsof:hasDataAccessProtocolType "ODBC"^^xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:DataAccessJDBC a oplsof:DataAccessProtocol ;
+  schema:name """JDBC Data Access Mechanism (Protocol)""" ;
+  rdfs:label "JDBC Data Access Mechanism (Protocol)"^^xsd:string ;
+  skos:altLabel "Java Database Connectivity (JDBC) Data Access Mechanism (Protocol)"^^xsd:string ;
+  rdfs:comment """Java Database Connectivity Mechanism (Protocol)"""@en ;
+  oplsof:hasDataAccessProtocolType "JDBC"^^xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:DataAccessADONET a oplsof:DataAccessProtocol ;
+  schema:name """ADO.NET Data Access Mechanism (Protocol)""" ;
+  rdfs:label "ADO.NET Data Access Mechanism (Protocol)"^^xsd:string ;
+  skos:altLabel "ActiveX Data Objects for .NET (ADO.NET) Data Access Mechanism (Protocol)"^^xsd:string ;
+  rdfs:comment """ActiveX Data Objects for .NET Connectivity Mechanism (Protocol)"""@en ;
+  oplsof:hasDataAccessProtocolType "DOTNET"^^xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+oplsof:DataAccessOLEDB a oplsof:DataAccessProtocol ;
+  schema:name """OLEDB Data Access Mechanism (Protocol)""" ;
+  rdfs:label "OLEDB Data Access Mechanism (Protocol)"^^xsd:string ;
+  skos:altLabel "Object Linking and Embedding Database (OLEDB) Data Access Mechanism (Protocol)"^^xsd:string ;
+  rdfs:comment """Object Linking and Embedding Database Connectivity Mechanism (Protocol)"""@en ;
+  oplsof:hasDataAccessProtocolType "OLEDB"^^xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> .
+
+
+xhv:related owl:equivalentProperty rdfs:seeAlso .
+
+foaf:primaryTopic owl:inverseOf xhv:describedby , wdrs:describedby .
+
+wdrs:describedby owl:equivalentProperty xhv:describedby .
+
+rdfs:subClassOf a owl:TransitiveProperty .
+
+
+
+
+
+
