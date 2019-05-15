@@ -1,0 +1,482 @@
+@prefix schema:  <http://schema.org/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix cvocab:  <http://open-services.net/ns/core#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix oplweb:  <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix siocs:   <http://rdfs.org/sioc/services#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:    <http://www.w3.org/2007/05/powder-s#> .
+@prefix prodont: <http://www.productontology.org/id/> .
+@prefix xhv:     <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix odbc:    <http://www.openlinksw.com/ontology/odbc#> .
+@prefix oplpro:  <http://www.openlinksw.com/ontology/products#> .
+@prefix oplsof:  <http://www.openlinksw.com/ontology/software#> .
+@prefix opllic:  <http://www.openlinksw.com/ontology/licenses#> .
+@prefix oplben:  <http://www.openlinksw.com/ontology/benefits#> .
+@prefix opl:     <http://www.openlinksw.com/schema/attribution#> .
+@prefix cc:      <http://creativecommons.org/ns#> .
+
+<http://www.openlinksw.com/dataspace/organization/openlink#this>
+   a <http://www.w3.org/ns/org#Organization> , schema:Organization;
+   rdfs:label "OpenLink Software" ;
+   schema:name "OpenLink Software" ;
+   schema:logo <http://www.openlinksw.com/images/openlink150.gif> ;
+   foaf:logo <http://www.openlinksw.com/images/openlink150.gif> ;
+   dcterms:description """OpenLink Software is a privately held company founded in 1992 by its President & CEO, Kingsley
+   Idehen. The company is an industry acclaimed technology innovator in the following areas: ODBC, ODBC, ADO.NET, and OLE-DB
+   compliant Data Access Drivers for Oracle,SQL Server, DB2, Informix, Ingres, Sybase, Progress, MySQL, and PostgreSQL;
+   Object-Relational Database Technology; Data Integration Middleware (Virtual Database Engine Technology); Hybrid Data Servers
+   for SQL, XML, RDF, and Full Text data sources; Web Application Server Technology Application Integration Middleware (Web
+   Services Platforms and Service Oriented Architecture); Business Process Management & Integration; Distributed Collaborative
+   Applications Platforms (Weblogs, Wikis, Feed Aggregation and Syndication, Web File Systems, Discussion Forums etc.)"""@en ;
+   rdfs:comment """OpenLink Software is an acclaimed technology innovator and leading vendor of industry
+   standards compliant data access, integration, and management technology. """@en ;
+   schema:email "sales@openlinksw.com";
+   schema:about <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+   schema:url <http://www.openlinksw.com/> ;
+   schema:addressLocality "Burlington" ;
+   schema:postOfficeBoxNumber "Suite 265" ;
+   schema:addressCountry "US" ;
+   schema:postalCode "MA-01803" ;
+   schema:streetAddress "10 Burlington Mall Road" ;
+   schema:telephone "+1 781 273 0900" ;
+   schema:faxNumber "+1 781 229 8030" .
+
+
+<http://www.openlinksw.com/ontology/odbc#> a owl:Ontology ;
+  rdfs:label """OpenLink ODBC Driver Ontology of Terms"""^^xsd:string ;
+  dcterms:title """OpenLink ODBC Driver Ontology of Terms"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe odbc drivers. Examples include
+  connectivity methods, various application programs etc. """@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/odbc> ;
+  dcterms:created "2019-04-24T11:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2019-04-24T11:00:00-05:00"^^xsd:dateTime ;
+  foaf:depiction <https://s-media-cache-ak0.pinimg.com/originals/ef/b2/7e/efb27e54ef098c18a93aa8a074d5817d.jpg> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  owl:versionInfo "1.0.0"^^xsd:string ;
+  <http://open.vocab.org/terms/defines>
+      odbc:OpenDatabaseConnectivityDriver ,
+      odbc:DBVendorNativeNetworkConnectivity,
+      odbc:DBVendorProvidedNetworkConnectivity,
+      odbc:DBVendorIndependentNetworkConnectivity,
+      odbc:isOpsysArchitectureCompliant,
+      odbc:isUsableWith,
+      odbc:hasOSAvailability,
+      odbc:hasDBMSReleaseSupport,
+      odbc:isODBCLevelCompliant,
+      odbc:hasScrollableCursorTypeSupport,
+      odbc:hasDistributedTransactionMonitorSupport,
+      odbc:hasMultipleActiveStatementsSupport ,
+      odbc:hasDataTransmissionEncryptionSupport,
+      odbc:hasFineGrainedAccessControls,
+      odbc:hasDatabaseNetworkConnectivityMethod,
+      odbc:hasProtocolSupport ,
+      odbc:StaticScrollableCursor ,
+      odbc:ScrollableCursor ,
+      odbc:DistributedTransactionMonitor ,
+      odbc:DynamicScrollableCursor ,
+      odbc:KeySetScrollableCursor ,
+      odbc:MixedScrollableCursor ,
+      odbc:isChangeSenstive ,
+      odbc:hasCursorSupport ,
+      odbc:isFullyChangeSenstive ,
+      odbc:isKeySetDriven ,
+      odbc:isDynamicKeySetDriven ,
+      odbc:hasConnectionPoolingSupport ,
+      odbc:hasRealApplicationClustorSupport ,
+      odbc:hasMultipleActiveStatementsSupport ;
+   schema:about
+      odbc:OpenDatabaseConnectivityDriver ,
+      odbc:DBVendorNativeNetworkConnectivity,
+      odbc:DBVendorProvidedNetworkConnectivity,
+      odbc:DBVendorIndependentNetworkConnectivity,
+      odbc:isOpsysArchitectureCompliant,
+      odbc:isUsableWith,
+      odbc:hasOSAvailability,
+      odbc:hasDBMSReleaseSupport,
+      odbc:isODBCLevelCompliant,
+      odbc:hasScrollableCursorTypeSupport,
+      odbc:hasDistributedTransactionMonitorSupport,
+      odbc:hasDataTransmissionEncryptionSupport,
+      odbc:hasMultipleActiveStatementsSupport ,
+      odbc:hasFineGrainedAccessControls,
+      odbc:hasDatabaseNetworkConnectivityMethod,
+      odbc:hasProtocolSupport ,
+      odbc:StaticScrollableCursor ,
+      odbc:ScrollableCursor ,
+      odbc:DistributedTransactionMonitor ,
+      odbc:DynamicScrollableCursor ,
+      odbc:KeySetScrollableCursor ,
+      odbc:MixedScrollableCursor ,
+      odbc:isChangeSenstive ,
+      odbc:hasCursorSupport ,
+      odbc:isFullyChangeSenstive ,
+      odbc:isKeySetDriven ,
+      odbc:isDynamicKeySetDriven ,
+      odbc:hasConnectionPoolingSupport ,
+      odbc:hasRealApplicationClustorSupport ,
+      odbc:hasMultipleActiveStatementsSupport .
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/odbc.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink ODBC Driver Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for ODBC Driver. """@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/odbc#> ;
+  dcterms:created "2019-04-24T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2019-04-24T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/odbc> ;
+  xhv:describes <http://www.openlinksw.com/ontology/odbc#> ;
+  schema:about <http://www.openlinksw.com/ontology/odbc#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/odbc#> .
+
+<http://www.openlinksw.com/data/turtle/odbc.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink ODBC Driver Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2019-04-24T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2019-04-24T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe OpenLink ODBC Driver Ontology. """@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/odbc#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/odbc> ;
+  xhv:describes <http://www.openlinksw.com/ontology/odbc#> ;
+  schema:about <http://www.openlinksw.com/ontology/odbc#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/odbc#> .
+
+<http://www.openlinksw.com/ontology/odbc>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink ODBC Driver Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2019-04-24T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2019-04-24T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink ODBC Driver Ontology. """@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/odbc#> ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/odbc#> ;
+  foaf:topic
+      odbc:OpenDatabaseConnectivityDriver ,
+      odbc:DBVendorNativeNetworkConnectivity,
+      odbc:DBVendorProvidedNetworkConnectivity,
+      odbc:DBVendorIndependentNetworkConnectivity,
+      odbc:isOpsysArchitectureCompliant,
+      odbc:isUsableWith,
+      odbc:hasOSAvailability,
+      odbc:hasDBMSReleaseSupport,
+      odbc:isODBCLevelCompliant,
+      odbc:hasScrollableCursorTypeSupport,
+      odbc:hasMultipleActiveStatementsSupport ,
+      odbc:hasDistributedTransactionMonitorSupport,
+      odbc:hasDataTransmissionEncryptionSupport,
+      odbc:hasFineGrainedAccessControls,
+      odbc:hasDatabaseNetworkConnectivityMethod,
+      odbc:hasProtocolSupport ,
+      odbc:StaticScrollableCursor ,
+      odbc:ScrollableCursor ,
+      odbc:DistributedTransactionMonitor ,
+      odbc:DynamicScrollableCursor ,
+      odbc:KeySetScrollableCursor ,
+      odbc:MixedScrollableCursor ,
+      odbc:isChangeSenstive ,
+      odbc:hasCursorSupport ,
+      odbc:isFullyChangeSenstive ,
+      odbc:isKeySetDriven ,
+      odbc:isDynamicKeySetDriven ,
+      odbc:hasConnectionPoolingSupport ,
+      odbc:hasRealApplicationClustorSupport ,
+      odbc:hasMultipleActiveStatementsSupport .
+
+# <-------------- ODBC Ontology --------------> #
+
+# <-------------- ODBC Ontology Classes --------------> #
+
+odbc:DistributedTransactionMonitor a owl:Class ;
+   rdfs:label "Distributed Transaction Monitor"@en ;
+   rdfs:comment """Technology for managing Atomicity, Consistency, Isolation, and Durability of transactions across machine boundaries, on a distributed network. """@en ;
+   skos:altLabel "ODBC Driver"@en  ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:ScrollableCursor a owl:Class ;
+   rdfs:label "Scrollable Cursor"@en ;
+   rdfs:comment """Data paging and scrolling [sliding window] mechanism with varying levels of change sensitivity in regards to query resultset [solution] row membership, order, and values. """@en ;
+   skos:altLabel "ODBC Driver"@en  ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:StaticScrollableCursor a owl:Class ;
+   rdfs:subClassOf odbc:ScrollableCursor ;
+   rdfs:label "Static Scrollable Cursor"@en ;
+   rdfs:comment """	Data paging and scrolling [sliding window] mechanism that's insensitive to changes (membership, order, and values) that occur to a query resultset (solution) after it has been created. """@en ;
+   skos:altLabel "ODBC Driver"@en  ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:DynamicScrollableCursor a owl:Class ;
+  rdfs:subClassOf odbc:ScrollableCursor ;
+  rdfs:label "Dynamic Scrollable Cursor"@en ;
+  rdfs:comment """Data paging and scrolling [sliding window]mechanism that's sensitive to changes (membership, order, and values) that occur
+					to a query resultset (solution) after it has been created. This behaviour is achieved by creating
+					keysets afresh [from tables used to drive a query resultset or solution] prior to each scroll (paging) operation. """@en ;
+  skos:altLabel "ODBC Driver"@en  ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:KeySetScrollableCursor a owl:Class ;
+  rdfs:subClassOf odbc:ScrollableCursor ;
+  rdfs:label "Keyset Driven Scrollable Cursor"@en ;
+  rdfs:comment """Data paging and scrolling [sliding window] mechanism that's sensitive to row value changes while being partially sensitive to
+				changes in membership and order, once opened. This behaviour is the result of keysets being created from primary keys of tables used to derive a query resultset (solution). """@en ;
+  skos:altLabel "ODBC Driver"@en  ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:MixedScrollableCursor a owl:Class ;
+  rdfs:subClassOf odbc:ScrollableCursor ;
+  rdfs:label "Mixed Scrollable Cursor"@en ;
+  rdfs:comment """Data paging and scrolling [sliding window] mechanism that's partially sensitive to row value changes while also being partially sensitive to
+				changes in membership and order, once opened. This behaviour is the result of keysets [with fixed sizes] being created
+				from primary keys of tables used to derive a query resultset (solution). """@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:OpenDatabaseConnectivityDriver  a owl:Class ;
+   rdfs:subClassOf oplsof:ApplicationProgram, schema:SoftwareApplication ;
+   rdfs:label "Open Database Connectivity Driver"@en ;
+   skos:altLabel "ODBC Driver"@en  ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+oplsof:DatabaseNetworkConnectivityMethod a owl:Class ;
+   rdfs:subClassOf <http://sw.opencyc.org/concept/Mx4rvWMjUJwpEbGdrcN5Y29ycA> ;
+   rdfs:label "Database Network Connectivity Method"@en ;
+   rdfs:comment """How a driver connects to a DBMS over a network. """@en ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:DBVendorNativeNetworkConnectivity a owl:Class ;
+   rdfs:subClassOf <http://sw.opencyc.org/concept/Mx4rvWMjUJwpEbGdrcN5Y29ycA>, oplsof:DatabaseNetworkConnectivityMethod ;
+   rdfs:label "DBVendorNativeNetworkConnectivity"@en  ;
+   skos:altLabel "Database Vendor Provided Native Network Connectivity"@en ;
+   rdfs:comment """In this form of DBMS connectivity, a driver leverages built-in network connectivity to a DBMS using
+			a library provided by the target DBMS vendor, that's pre-installed as part of the DBMS product packaging.
+			It has the advantage of providing a convenient installation and configuration experience to driver users.
+			It has the disadvantage of delivering unpredictable experience and sophistication in areas such as cost-effective
+			administration, privacy, security, and fine-grained access controls. """@en ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:DBVendorProvidedNetworkConnectivity a owl:Class ;
+   rdfs:subClassOf <http://sw.opencyc.org/concept/Mx4rvWMjUJwpEbGdrcN5Y29ycA>, oplsof:DatabaseNetworkConnectivityMethod ;
+   rdfs:label "DBVendorProvidedNetworkConnectivity"@en  ;
+   skos:altLabel "Database Vendor Provided Network Client Connectivity"@en  ;
+   rdfs:comment """In this form of DBMS connectivity, a driver depends on client networking services provided the vendor of
+			a DBMS targeted by a driver. It has the disadvantage of introducing preinstallation and configuration
+			as driver usage prequisites. It has the advantage of providing a high-performance networking layer [in many cases]
+			that's fine-tuned for its target DBMS. """@en  ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+
+odbc:DBVendorIndependentNetworkConnectivity a owl:Class ;
+   rdfs:subClassOf <http://sw.opencyc.org/concept/Mx4rvWMjUJwpEbGdrcN5Y29ycA>, oplsof:DatabaseNetworkConnectivityMethod ;
+   rdfs:label "DBVendorIndependentNetworkConnectivity"@en  ;
+   skos:altLabel "Database Vendor Independent Network Connectivity"@en  ;
+   rdfs:comment """In this form of DBMS connectivity, a driver uses its own networking functionality to connect to a
+			3rd party DBMS. It has the advantage of providing innovations [as part of the driver] in critical
+			areas such as privacy,security, and cost-effective adminsitration. """@en  ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+
+# <-------------- ODBC Ontology Instances of Class --------------> #
+
+odbc:PHP a oplsof:ApplicationProgram ;
+   rdfs:label "PHP"@en  ;
+   rdfs:seeAlso dbpedia:PHP ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+
+# <-------------- ODBC Ontology Properties --------------> #
+
+odbc:hasCursorSupport a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "hasScrollableCursorSupport"@en  ;
+   skos:altLabel "Scrollable Cursor Support"@en  ;
+   rdfs:comment """ODBC Drivers support of Scrollable Cursors. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range odbc:ScrollableCursor ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:isChangeSenstive a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "isChangeSenstive"@en  ;
+   skos:altLabel "Is Change Sensitive"@en  ;
+   rdfs:comment """Change sensitivity of an ODBC Drivers Scrollable Cursor implementation. """@en  ;
+   rdfs:domain odbc:StaticScrollableCursor, odbc:KeySetScrollableCursor;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:isFullyChangeSenstive a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "isFullyChangeSenstive"@en  ;
+   skos:altLabel "Is Fully Change Sensitive"@en  ;
+   rdfs:comment """Change sensitivity of an ODBC Drivers Scrollable Cursor implementation. """@en  ;
+   rdfs:domain odbc:DynamicScrollableCursor;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:isKeySetDriven a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "isKeySetDriven"@en  ;
+   skos:altLabel "Keyset Driven"@en  ;
+   rdfs:comment """Static Keyset based mechanism used to determine order and membership of an ODBC Driver's Scrollable Cursor implementation. """@en  ;
+   rdfs:domain odbc:KeySetScrollableCursor ;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:isDynamicKeySetDriven a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "isDynamicKeySetDriven"@en  ;
+   skos:altLabel "Dynamic Keyset Driven"@en  ;
+   rdfs:comment """Dynamic Keyset based mechanism used to determine order and membership of an ODBC Driver's Scrollable Cursor implementation. """@en  ;
+   rdfs:domain odbc:MixedScrollableCursor;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasConnectionPoolingSupport a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "hasConnectionPoolingSupport"@en  ;
+   skos:altLabel "Connection Pooling Support"@en  ;
+   rdfs:comment """ODBC Driver's ability to support pooled DBMX connnections that can be shared across many ODBC applications. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasRealApplicationClustorSupport a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "hasRealApplicationClustorSupport"@en  ;
+   skos:altLabel "Real Application Cluster Support"@en  ;
+   rdfs:comment """ODBC Driver's ability to support DBMS shared-nothing cluster configurations. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasMultipleActiveStatementsSupport a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "hasMultipleActiveStatementsSupport"@en  ;
+   skos:altLabel "Multiple Active Statements Support"@en  ;
+   rdfs:comment """ODBC Driver's ability to support multiple active statements on a single DBMS connection. This
+				   capability is less resource intensive than opening up a new connection per statement. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:isOpsysArchitectureCompliant a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "isOpsysArchitectureCompliant"@en  ;
+   skos:altLabel "Operating System Architecture Compliance"@en  ;
+   rdfs:comment """Computer host operating system architecture supported e.g., 32-Bit, 64-Bit etc.. """@en  ;
+   xhv:related dbpedia:64-bit_computing, dbpedia:32-bit_computing ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range oplsof:OperatingSystem ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:isUsableWith a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "isUsableWith"@en  ;
+   skos:altLabel "ODBC Application Compatibility"@en  ;
+   rdfs:comment """ODBC Compliant Applications that driver works with, post-installation. Basically, applications that have been certified to work by driver vendor. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range oplsof:ApplicationProgram ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasOSAvailability a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "hasOSAvailability"@en  ;
+   skos:altLabel "Supported Operating Systems"@en  ;
+   owl:equivalentProperty oplsof:hasOperatingSystem  ;
+   rdfs:comment """Operating Systems on which an ODBC Driver is available. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range oplsof:OperatingSystem ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasDBMSReleaseSupport a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "hasDBMSReleaseSupport"@en  ;
+   owl:equivalentProperty oplsof:hasDatabaseEngine ;
+   skos:altLabel "SQL RDBMS Release Support"@en  ;
+   rdfs:comment """SQL Relational Database Management System Releases supported by an ODBC Driver. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range oplsof:DbmsEngine ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:isODBCLevelCompliant a rdf:Property , owl:DatatypeProperty ;
+   rdfs:label "isODBCLevelCompliant"@en  ;
+   skos:altLabel "ODBC Compliance Level"@en  ;
+   rdfs:comment """ODBC Compliance levels supported by an ODBC Driver. """@en  ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range xsd:decimal ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+
+odbc:hasScrollableCursorTypeSupport a rdf:Property , owl:ObjectProperty;
+   rdfs:label "hasScrollableCursorTypeSupport"@en  ;
+   skos:altLabel "Scrollable Cursor Type Support"@en  ;
+   rdfs:comment """Types of Scrollable Cursors supported by an ODBC Driver. This feature
+				determines the types of record paging and change-sensitivity combinations
+				that a driver provides to ODBC compliant applications. """@en  ;
+   xhv:related dbpedia:Scrollable_cursors ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range odbc:StaticScrollableCursor ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasMultipleActiveStatementsSupport a rdf:Property , owl:ObjectProperty;
+   rdfs:label "hasMultipleActiveStatementsSupport"@en  ;
+   skos:altLabel "Supports Multiple Active Statements"@en  ;
+   rdfs:comment """Multiple Active Statements supported by an ODBC Driver. """@en  ;
+   xhv:related dbpedia:Distributed_transaction, dbpedia:Transaction_processing_system ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range odbc:DistributedTransactionMonitor ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasDistributedTransactionMonitorSupport a rdf:Property , owl:ObjectProperty;
+   rdfs:label "hasDistributedTransactionMonitorSupport"@en  ;
+   skos:altLabel "Scrollable Cursor Type Support"@en  ;
+   rdfs:comment """Distributed Transaction Monitors supported by an ODBC Driver. This feature
+				determines the transaction monitor and associated distributed transaction functionality
+				that a driver provides to ODBC compliant applications. """@en  ;
+   xhv:related dbpedia:Distributed_transaction, dbpedia:Transaction_processing_system ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range odbc:DistributedTransactionMonitor ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasDataTransmissionEncryptionSupport a rdf:Property , owl:DatatypeProperty ;
+   rdfs:label "hasDataTransmissionEncryptionSupport"@en  ;
+   skos:altLabel "Supports Encrypted Data Transmission"@en  ;
+   rdfs:comment """Ability of an ODBC Driver to securely exchange data with an RDBMS using encryption. Ideally,
+				this would be based on open standards such as Public Key Infrastructure (PKI) and Transport Layer Security (TLS). """@en  ;
+   xhv:related dbpedia:Public_key_infrastructure, dbpedia:Transport_Layer_Security ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasFineGrainedAccessControls a rdf:Property , owl:DatatypeProperty ;
+   rdfs:label "hasFineGrainedAccessControls"@en  ;
+   skos:altLabel "Supports Fine-grained Access Controls"@en  ;
+   rdfs:comment """Ability of an ODBC Driver to provide controlled access to RDBMS server hosted data using
+				fine-grained attribute based access controls scoped to identity principals. These controls
+				as driven a combination of open standards associated with verifiable identity, identity authentication
+				protocols, and rules for controlling query, create, update, insert, and delete operations. """@en  ;
+   xhv:related dbpedia:Attribute-based_access_control, dbpedia:Public_key_infrastructure,
+			dbpedia:Transport_Layer_Security ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range xsd:boolean ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasDatabaseNetworkConnectivityMethod a rdf:Property , owl:ObjectProperty ;
+   rdfs:label "hasDatabaseNetworkConnectivityMethod"@en  ;
+   skos:altLabel "Database Connectivity Method over Network"@en  ;
+   rdfs:comment """How an ODBC Driver connects to a target RDBMS. Fundamentally, this is achieved using
+				one of the following methods: wire-protocol [native], RDBMS vendor provided client networking product [for use by 3rd parties],
+				or RDBMS vendor independent networking built into a driver. """@en  ;
+   xhv:related odbc:DBVendorNativeNetworkConnectivity, odbc:DBVendorProvidedNetworkConnectivity, odbc:DBVendorIndependentNetworkConnectivity ;
+   xhv:related dbpedia:Public_key_infrastructure, dbpedia:Transport_Layer_Security ;
+   rdfs:domain odbc:OpenDatabaseConnectivityDriver ;
+   rdfs:range oplsof:DatabaseNetworkConnectivityMethod ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
+odbc:hasProtocolSupport a rdf:Property, owl:ObjectProperty ;
+   rdfs:label "hasProtocolSupport" ;
+   skos:altLabel "Has Protocol Support" ;
+   rdfs:domain oplsof:DatabaseNetworkConnectivityMethod  ;
+   rdfs:range oplsof:NetworkTransportProtocol ;
+   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/odbc#> .
+
