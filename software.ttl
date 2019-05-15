@@ -1405,7 +1405,7 @@ oplsof:Ruby a oplsof:OpsysFamily ;
     oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/OpenSource#this> ;
     oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/ruby#this> ;
     owl:sameAs <http://dbpedia.org/resource/Ruby_programming_language> ;
-#   schema:logo <https://www.openlinksw.com/images/> ;
+    schema:logo <https://www.openlinksw.com/images/icon-ruby.png> ;
     schema:mainEntityOfPage <http://dbpedia.org/resource/Ruby_programming_language> .
 
 oplsof:Firefox a oplsof:OpsysFamily ;
@@ -1415,7 +1415,7 @@ oplsof:Firefox a oplsof:OpsysFamily ;
     oplsof:OpsysFamilyLicenseCode "firefox" ;
     oplsof:OpsysFamilyName "Firefox" ;
     oplsof:OpsysFamilyVendor <http://data.openlinksw.com/oplweb/vendor/MozillaFoundation#this> ;
-#   schema:logo <https://www.openlinksw.com/images/> ;
+    schema:logo <https://www.openlinksw.com/images/icon-firefox.png> ;
     oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/firefox3.0#this> .
 
 oplsof:DynixPTX a oplsof:OpsysFamily ;
@@ -1599,7 +1599,7 @@ oplsof:LynxOS a oplsof:OpsysFamily ;
   oplsof:hasOperatingSystem <http://data.openlinksw.com/oplweb/opsys/powerpc-lynxos5-32#this> ;
   owl:sameAs <http://dbpedia.org/resource/LynxOS> ;
   schema:mainEntityOfPage <http://dbpedia.org/resource/LynxOS> ;
-  schema:logo <http://newdata.es/wp-content/uploads/2016/04/lynxos-newdata-400x185.jpg> .
+  schema:logo <https://www.openlinksw.com/images/icon-lynxos.png> .
 
 oplsof:Linux-EC2-OpenLink
  a oplsof:OpsysFamily ,
