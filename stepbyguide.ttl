@@ -1,0 +1,230 @@
+@prefix schema:  <http://schema.org/> .
+@prefix cvocab:  <http://open-services.net/ns/core#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix sioct:   <http://rdfs.org/sioc/types#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix siocs:   <http://rdfs.org/sioc/services#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:    <http://www.w3.org/2007/05/powder-s#> .
+@prefix xhv:     <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix olo:	   <http://purl.org/ontology/olo/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oplinst: <http://www.openlinksw.com/ontology/installers#> .
+@prefix sbguide: <http://www.openlinksw.com/ontology/stepbyguide#> .
+@prefix cc:      <http://creativecommons.org/ns#> .
+
+<http://www.openlinksw.com/ontology/stepbyguide#> a owl:Ontology  ;
+  rdfs:label """OpenLink Step By Guide Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe OpenLink Step By Guide."""^^xsd:string ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/stepbyguide> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  owl:versionInfo "1.0.0"^^xsd:string  ;
+  owl:imports <http://purl.org/goodrelations/v1>  ,
+              <http://xmlns.com/foaf/0.1/> ,
+              <http://www.w3.org/2002/07/owl#> ,
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+              <http://purl.org/dc/terms/> ,
+              <http://purl.org/ontology/olo/core#> ,
+              <http://www.w3.org/ns/activitystreams#> ,
+              <http://www.w3.org/ns/prov#> ,
+              <http://www.openlinksw.com/ontology/installers#> ;
+  <http://open.vocab.org/terms/defines>
+    sbguide:StepByGuide ,
+    sbguide:Step ,
+    sbguide:ActionItem ,
+    sbguide:ActionItemActivity ,
+    sbguide:hasIndex ,
+    sbguide:hasActionItem ,
+    sbguide:hasActionItemActivity ,
+    sbguide:hasLength ,
+    sbguide:hasNext ,
+    sbguide:hasPrevious ,
+    sbguide:hasStep ,
+    sbguide:hasStepByGuide ,
+    sbguide:isInstallerStepByGuideOf ;
+  schema:about
+    sbguide:StepByGuide ,
+    sbguide:Step ,
+    sbguide:ActionItem ,
+    sbguide:ActionItemActivity ,
+    sbguide:hasIndex ,
+    sbguide:hasActionItem ,
+    sbguide:hasActionItemActivity ,
+    sbguide:hasLength ,
+    sbguide:hasNext ,
+    sbguide:hasPrevious ,
+    sbguide:hasStep ,
+    sbguide:hasStepByGuide ,
+    sbguide:isInstallerStepByGuideOf .
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/stepbyguide.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label "OpenLink Step By Guide Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Step By Guide."""^^xsd:string ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/stepbyguide> ;
+  xhv:describes <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  schema:about <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/stepbyguide#> .
+
+<http://www.openlinksw.com/data/turtle/stepbyguide.ttl>
+  a foaf:Document  ;
+  rdfs:label "OpenLink Step By Guide Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/>  ;
+  schema:creator <http://www.openlinksw.com/#this>  ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe Step By Guide Ontology."""^^xsd:string  ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/stepbyguide> ;
+  xhv:describes <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  schema:about <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/stepbyguide#> .
+
+<http://www.openlinksw.com/ontology/stepbyguide>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Step By Guide Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Step By Guide Ontology."""^^xsd:string ;
+  dcterms:subject <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  foaf:topic sbguide:StepByGuide ,
+             sbguide:Step ,
+             sbguide:ActionItem ,
+             sbguide:ActionItemActivity ,
+             sbguide:hasIndex ,
+             sbguide:hasActionItem ,
+             sbguide:hasActionItemActivity ,
+             sbguide:hasLength ,
+             sbguide:hasNext ,
+             sbguide:hasPrevious ,
+             sbguide:hasStep ,
+             sbguide:hasStepByGuide ,
+             sbguide:isInstallerStepByGuideOf .
+
+
+# <-------------- Step By Guide --------------> #
+
+# <-------------- Step By Guide Classes --------------> #
+
+sbguide:StepByGuide
+  a owl:Class ;
+  rdfs:label "StepByGuide"^^xsd:string  ;
+  rdfs:comment "A sequence of steps that has a fixed index size (i.e. number of steps)."@en;
+  rdfs:subClassOf olo:OrderedList, schema:ItemList ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> .
+
+sbguide:Step
+  a owl:Class ;
+  rdfs:label "Step"^^xsd:string  ;
+  rdfs:comment "A step in a sequence of steps that has a fixed index size (i.e. number of steps)."@en;
+  rdfs:subClassOf olo:Slot, schema:ListItem ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> .
+
+sbguide:ActionItem
+ a owl:Class ;
+ rdfs:label "ActionItem"^^xsd:string  ;
+ rdfs:subClassOf schema:Action ;
+ rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> .
+
+sbguide:ActionItemActivity
+ a owl:Class ;
+ rdfs:label "ActionItemActivity"^^xsd:string  ;
+ rdfs:subClassOf <http://www.w3.org/ns/activitystreams#Activity> ,
+                 <http://www.w3.org/ns/prov#Activity> ;
+ rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> .
+
+# <-------------- Step By Guide Properties --------------> #
+sbguide:hasIndex
+  a owl:DatatypeProperty , rdf:Property ;
+  rdfs:subPropertyOf olo:index, schema:position ;
+  rdfs:label "hasIndex"^^xsd:string  ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  rdfs:domain sbguide:Step ;
+  rdfs:range xsd:positiveInteger .
+
+sbguide:hasActionItem
+  a owl:ObjectProperty , rdf:Property ;
+  rdfs:subPropertyOf olo:item ;
+  rdfs:label "hasActionItem"^^xsd:string  ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  rdfs:domain sbguide:Step , schema:Action ;
+  rdfs:range sbguide:ActionItem .
+
+sbguide:hasActionItemActivity
+  rdfs:subPropertyOf schema:action  ;
+  a owl:ObjectProperty , rdf:Property ;
+  rdfs:comment """Associates an action Item with an actual activity that performs a specific action."""@en ;
+  rdfs:label "hasActionItemActivity "^^xsd:string  ;
+  rdfs:domain sbguide:ActionItem ;
+  rdfs:range  sbguide:ActionItemActivity .
+
+sbguide:hasLength
+  a owl:DatatypeProperty , rdf:Property ;
+  rdfs:label "hasLength"^^xsd:string  ;
+  rdfs:subPropertyOf olo:length, schema:numberOfItems ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  rdfs:domain sbguide:StepByGuide ;
+  rdfs:range xsd:positiveInteger .
+
+sbguide:hasNext
+  a owl:ObjectProperty , rdf:Property ;
+  rdfs:label "hasNext"^^xsd:string  ;
+  rdfs:subPropertyOf olo:next, schema:nextItem ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  owl:inverseOf sbguide:hasPrevious ;
+  rdfs:domain sbguide:Step ;
+  rdfs:range sbguide:Step .
+
+sbguide:hasPrevious
+  a owl:ObjectProperty , rdf:Property ;
+  rdfs:label "hasPrevious"^^xsd:string  ;
+  rdfs:subPropertyOf olo:previous, schema:previousItem ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  owl:inverseOf sbguide:hasNext ;
+  rdfs:domain sbguide:Step ;
+  rdfs:range sbguide:Step .
+
+sbguide:hasStep
+  a owl:ObjectProperty , rdf:Property ;
+  rdfs:subPropertyOf olo:slot, schema:itemListElement ;
+  rdfs:label "hasStep"^^xsd:string  ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  owl:inverseOf sbguide:hasStepByGuide ;
+  rdfs:domain sbguide:StepByGuide ;
+  rdfs:range sbguide:Step .
+
+sbguide:hasStepByGuide
+  a owl:ObjectProperty , rdf:Property ;
+  rdfs:subPropertyOf olo:ordered_list ;
+  rdfs:label "hasStepByGuide"^^xsd:string  ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> ;
+  owl:inverseOf sbguide:hasStep ;
+  rdfs:domain sbguide:Step ;
+  rdfs:range sbguide:StepByGuide .
+
+sbguide:isInstallerStepByGuideOf
+  a owl:ObjectProperty , rdf:Property ;
+  rdfs:label "isInstallerStepByGuideOf" ;
+  skos:altLabel "Is Installer Step By Guide Of" ;
+  owl:inverseOf oplinst:hasInstallerStepByGuide ;
+  rdfs:comment """Associates an Installer Archive with Step By Guide"""@en ;
+  rdfs:range sbguide:StepByGuide ;
+  rdfs:domain  oplinst:InstallerArchive;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> .
