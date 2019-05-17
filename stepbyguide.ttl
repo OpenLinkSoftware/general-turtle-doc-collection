@@ -228,3 +228,12 @@ sbguide:isInstallerStepByGuideOf
   rdfs:range sbguide:StepByGuide ;
   rdfs:domain  oplinst:InstallerArchive;
   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/stepbyguide#> .
+
+
+## Equivalence Relations for Schema.org Mapping ##
+
+sbguide:StepByGuide rdfs:subClassOf owl:equivalentClass . 
+sbguide:hasStepByGuide rdfs:subPropertyOf schema:step . 
+sbguide:hasIndex rdfs:subPropertyOf schema:position . 
+sbguide:hasNext rdfs:subPropertyOf schema:nextItem.
+sbguide:hasPrevious rdfs:subPropertyOf schema:previousItem .
