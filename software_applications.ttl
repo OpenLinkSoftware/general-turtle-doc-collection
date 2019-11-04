@@ -1,0 +1,348 @@
+@prefix schema: <http://schema.org/> .
+@prefix software: <http://www.openlinksw.com/ontology/software#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+
+<>
+a schema:CreativeWork, foaf:Document ;
+schema:name "software_applications.ttl" ;
+skos:prefLabel "Software Applications Descriptions Collection" ;
+schema:fileFormat "text/turtle" ;
+schema:description """Description of a collection of Software Applications""" ;
+schema:about <https://www.tableau.com/products/desktop#this>, <https://www.sap.com/products/bi-platform#this>,
+			 <http://www.crystalreports.com/#this>, <http://www.qlik.com/us/products/qlik-sense#this>, 
+			 <http://www.qlik.com/us/products/qlikview#this>, <https://www.microstrategy.com/#this>, 
+			 <https://www.ibm.com/analytics/us/en/technology/spss/#this>, <https://dandelion.eu/products/datatxt/#this>,
+			 <http://www.filemaker.com/#this>, <https://www.google.com/sheets/about/#this>,
+			 <https://www.informatica.com/products.html#this>, <http://products.office.com/access#this>, 
+			 <http://products.office.com/excel#this>, <http://data.openlinksw.com/oplweb/product/row-store-cl#this>,
+			 <https://www.sas.com/#this>, <http://spotfire.tibco.com/#this>, <https://www.mongodb.com/products/bi-connector#this>,
+			 <https://www.alteryx.com/#this> , <http://yellowfinbi.com#this> , <http://products.office.com/access#this>,
+			 <http://products.office.com/excel#this> .  
+
+## Software Applications Descriptions
+
+## Anypoint -- Mulesoft ESB Middleware 
+
+<https://www.mulesoft.com/platform/enterprise-integration#app>
+a schema:SoftwareApplication ;
+schema:name "Anypoint Platform" ;
+schema:brand "Mulesoft Anypoint" ;
+schema:operatingSystem "Windows, macOS, Linux" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>, 
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>;
+software:DataAccessProtocolAny "JDBC", "HTTP" ;
+schema:category <http://dbpedia.org/resource/Enterprise_service_bus> ;
+schema:mainEntityOfPage <https://www.mulesoft.com/platform/enterprise-integration#>, <https://www.mulesoft.com/case-studies#> ;
+skos:related <https://www.mulesoft.com/integration-partner/>, <https://forums.mulesoft.com/>,
+ 			<https://docs.mulesoft.com/>, 
+			<https://docs.mulesoft.com/mule-user-guide/v/3.9/database-connector#docs> ;
+schema:publisher <http://dbpedia.org/resource/Mule_(software)> ;
+wdrs:describedby <> . 
+
+## Tableau 
+
+<https://www.tableau.com/products/desktop#this> 
+a schema:SoftwareApplication ;
+schema:name "Tableau Desktop" ;
+schema:brand "Tableau Desktop" ;
+schema:operatingSystem "Windows, macOS" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>;
+software:DataAccessProtocolAny "ODBC", "JDBC" ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <https://www.tableau.com/products/desktop> , <http://blog.cognetik.com/author/sebastian_stan/>;
+skos:related <https://community.tableau.com/community/forums#this>, <https://www.tableau.com/solutions#this>,
+ 			<https://www.tableau.com/solutions/banking-capital-asset-analytics>, 
+			<https://www.tableau.com/solutions/customer/charles-schwab-equips-more-12000-employees-tableau-advance-data-driven-culture>, 
+			<https://www.tableau.com/solutions/customer/storytelling-big-data-wells-fargo>,
+			<https://www.tableau.com/solutions/customer/bnp-paribas-creates-single-source-truth-2000-corporate-bankers-tableau>,
+			<https://www.tableau.com/solutions/sports-management-analytics>, 
+			<http://blog.cognetik.com/2017/10/12/nissan-case-study-live-from-tc17-the-challenges-and-solutions-of-implementing-tableau-from-scratch-in-one-year-we-went-from-0-to-1500-users/> ;
+schema:publisher <https://www.tableau.com/#publisher> ;
+wdrs:describedby <> . 
+
+<https://www.tableau.com/#publisher> 
+a schema:Organization ;
+schema:name "Tableau Software" ;
+schema:mainEntityOfPage 
+<http://investors.tableau.com/investor-news/investor-news-details/2018/Tableau-Reports-First-Quarter-2018-Financial-Results/default.aspx> ;
+owl:sameAs <http://dbpedia.org/resource/Tableau_Software> ;
+wdrs:describedby <> . 
+
+<http://products.office.com/access#this> 
+a schema:SoftwareApplication ;
+schema:name "Microsoft Access" ;
+schema:brand "Microsoft Access" ;
+schema:operatingSystem "Windows" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <http://products.office.com/access> ;
+schema:publisher dbpedia:Microsoft ;
+owl:sameAs <http://dbpedia.org/resource/Microsoft_Access> ;
+wdrs:describedby <> . 
+	
+<http://products.office.com/excel#this> 
+a schema:SoftwareApplication ;
+schema:name "Microsoft Excel" ;
+schema:brand "Microsoft Excel" ;
+schema:operatingSystem "Windows, macOS, iOS" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <http://products.office.com/excel> ;
+schema:publisher dbpedia:Microsoft ;
+owl:sameAs <http://dbpedia.org/resource/Microsoft_Excel> ;
+wdrs:describedby <> . 
+
+<https://www.ibm.com/analytics/us/en/technology/spss/#this>
+a schema:SoftwareApplication ;
+schema:brand "SPSS" ;
+schema:name "SPSS" ;
+schema:operatingSystem "Windows, macOS, Linux" ;  
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+owl:sameAs <http://dbpedia.org/resource/SPSS> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <https://www.ibm.com/analytics/us/en/technology/spss/> ;
+schema:publisher dbpedia:IBM ;
+wdrs:describedby <> . 
+
+
+## SAP
+
+<https://www.sap.com/#this>
+a schema:Organization ;
+owl:sameAs <http://dbpedia.org/resource/SAP_SE> . 
+
+<https://www.sap.com/products/bi-platform#this> 
+a schema:SoftwareApplication ;
+schema:name "SAP Business Objects" ;
+schema:brand "SAP Business Objects" ;
+schema:operatingSystem "Windows, Linux" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <https://www.sap.com/products/bi-platform.html> ;
+skos:related <sap.com/community/topic/bi-platform.html>, <https://www.sap.com/products/bi-platform.html#support> ;
+schema:publisher <https://www.sap.com/#this> ;
+owl:sameAs <http://dbpedia.org/resource/BusinessObjects> ;
+wdrs:describedby <> . 
+
+<http://www.crystalreports.com/#this>  
+a schema:SoftwareApplication ;
+schema:name "SAP Crystal Reports" ;
+schema:brand "SAP Crystal Reports" ;
+schema:operatingSystem "Windows, Linux" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <http://www.crystalreports.com/> ;
+schema:publisher <https://www.sap.com/#this> ;
+skos:related <http://www.crystalreports.com/server/#this>, <http://www.crystalreports.com/dashboard/#this>  ;
+owl:sameAs <http://dbpedia.org/resource/Crystal_Reports> ;
+wdrs:describedby <> . 
+
+## Qlik
+
+<http://dbpedia.org/resource/Qlik> owl:sameAs <http://www.qlik.com/#publisher> .
+
+<http://www.qlik.com/us/products/qlik-sense#this> 
+a schema:SoftwareApplication ;
+schema:name "Qlik Sense" ;
+schema:brand "Qlik Sense" ;
+schema:operatingSystem "Windows, Cloud" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <http://www.qlik.com/us/products/qlik-sense> ;
+schema:publisher <http://www.qlik.com/#publisher> ;
+wdrs:describedby <> . 
+
+## Start Here re. emulating what's above re:
+## additing missing rdf:type relations i.e. 	a schema:SoftwareApplication ;
+## 2. reducing relations where object is identified using a literal rather than a URI. 
+
+<http://www.qlik.com/us/products/qlikview#this> 
+a schema:SoftwareApplication ;
+schema:name "QlikView" ;
+schema:brand "QlikView" ;
+schema:operatingSystem "Windows, Cloud" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <http://www.qlik.com/us/products/qlikview> ;
+skos:related <http://www.qlik.com/partners#this>, <http://www.qlik.com/services#this>, <https://community.qlik.com/#this> ;
+schema:publisher <http://dbpedia.org/resource/Qlik> ;
+wdrs:describedby <> . 
+
+## Microstrategy 
+
+<https://www.microstrategy.com/#this> 
+a schema:SoftwareApplication ;
+schema:name "MicroStrategy" ;
+schema:brand "MicroStrategy" ;
+schema:operatingSystem "Windows, macOS, Linux" ;  
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+owl:sameAs <http://dbpedia.org/resource/MicroStrategy_Analytics> ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <https://www.microstrategy.com/>, <https://www.microstrategy.com/us/blog/stories> ;
+schema:publisher <http://dbpedia.org/resource/MicroStrategy> ;
+wdrs:describedby <> . 
+
+<https://dandelion.eu/products/datatxt/#this>
+a schema:SoftwareApplication ;
+schema:name "Dandelion API" ;
+schema:description "Entity Extraction Service" ;
+schema:mainEntityOfPage <https://dandelion.eu/products/> ;
+schema:publisher <https://dandelion.eu/#company> ;
+wdrs:describedby <> . 
+
+<http://www.filemaker.com/#this> 
+a schema:SoftwareApplication ;
+schema:name "Filemaker Pro" ;
+schema:brand "Filemaker Pro" ;
+schema:operatingSystem "Windows, macOS" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <http://www.filemaker.com/> ;
+schema:publisher <http://dbpedia.org/resource/FileMaker_Inc.> ;
+owl:sameAs <http://dbpedia.org/resource/FileMaker> ;
+wdrs:describedby <> . 
+
+<https://www.google.com/sheets/about/#this> 
+a schema:SoftwareApplication ;
+schema:name "Google Spreadsheet" ;
+schema:brand "Google Spreadsheet" ;
+schema:operatingSystem "Web" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/WebOS#this> ;
+software:DataAccessProtocolAny "HTTP" ;
+schema:mainEntityOfPage <https://www.google.com/sheets/about/> ;
+schema:publisher dbpedia:Google ;
+owl:sameAs <http://dbpedia.org/resource/Google_Docs,_Sheets,_and_Slides> ;
+wdrs:describedby <> . 
+
+<https://www.informatica.com/products.html#this> 
+a schema:SoftwareApplication ;
+schema:name "Informatica" ;
+schema:brand "Informatica" ;
+schema:operatingSystem "Linux, Windows, Unix" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <https://www.informatica.com/products.html> ;
+schema:publisher  <http://dbpedia.org/resource/Informatica> ;
+wdrs:describedby <> . 
+
+<http://products.office.com/access#this> 
+a schema:SoftwareApplication ;
+schema:name "Microsoft Access" ;
+schema:brand "Microsoft Access" ;
+schema:operatingSystem "Windows" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <http://products.office.com/access> ;
+schema:publisher dbpedia:Microsoft ;
+owl:sameAs <http://dbpedia.org/resource/Microsoft_Access> ;
+wdrs:describedby <> . 
+
+<http://products.office.com/excel#this> 
+a schema:SoftwareApplication ;
+schema:name "Microsoft Excel" ;
+schema:brand "Microsoft Excel" ;
+schema:operatingSystem "Windows, macOS, iOS" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <http://products.office.com/excel> ;
+schema:publisher dbpedia:Microsoft ;
+owl:sameAs <http://dbpedia.org/resource/Microsoft_Excel> ;
+wdrs:describedby <> . 
+
+<http://data.openlinksw.com/oplweb/product/row-store-cl#this> 
+a schema:SoftwareApplication ;
+schema:name "OpenLink Virtuoso" ;
+schema:brand "OpenLink Virtuoso" ;
+schema:operatingSystem "Windows, macOS, Linux, Solaris, AIX, HP-UX, Cloud" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <https://virtuoso.openlinksw.com/> ;
+schema:publisher <http://www.openlinksw.com/#this> ;
+owl:sameAs <http://dbpedia.org/resource/Virtuoso_Universal_Server> ;
+wdrs:describedby <> . 
+
+
+<https://www.sas.com/#this> 
+a schema:SoftwareApplication ;
+schema:name "SAS" ;
+schema:brand "SAS" ;
+schema:operatingSystem "Linux, Windows" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <https://www.sas.com/> ;
+schema:publisher <http://dbpedia.org/resource/SAS_(software)> ;
+wdrs:describedby <> . 
+
+
+<http://spotfire.tibco.com/#this> 
+a schema:SoftwareApplication ;
+schema:name "Tibco Spotfire Desktop" ;
+schema:brand "Tibco Spotfire Desktop" ;
+schema:operatingSystem "Windows" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <http://spotfire.tibco.com/> ;
+schema:publisher dbpedia:TIBCO_Software  ;
+wdrs:describedby <> . 
+
+<https://www.mongodb.com/products/bi-connector#this> 
+a schema:SoftwareApplication ;
+schema:name "MongoDB" ;
+schema:brand "MongoDB Bi-Connector" ;
+schema:operatingSystem "macOS" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <https://www.mongodb.com/products/bi-connector> ;
+schema:publisher <http://dbpedia.org/resource/MongoDB_Inc.> ;
+wdrs:describedby <> . 
+
+<https://www.alteryx.com/#this> 
+a schema:SoftwareApplication ;
+schema:name "Alteryx" ;
+schema:brand "Alteryx" ;
+schema:operatingSystem "Windows" ;
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+software:DataAccessProtocolAny "ODBC" ;
+schema:mainEntityOfPage <https://www.alteryx.com/> ;
+schema:publisher dbpedia:Alteryx ;
+wdrs:describedby <> . 
+
+<http://yellowfinbi.com#this> 
+a schema:SoftwareApplication ;
+schema:name "Yellowfin" ;
+schema:brand "Yellowfin" ;
+schema:operatingSystem "Windows, macOS, Linux" ;  
+software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
+	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
+								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
+software:DataAccessProtocolAny "JDBC" ;
+schema:category <http://dbpedia.org/resource/Business_intelligence> ;
+schema:mainEntityOfPage <http://yellowfinbi.com> ;
+schema:publisher dbpedia:Yellowfin_Business_Intelligence ;
+wdrs:describedby <> . 
+	
