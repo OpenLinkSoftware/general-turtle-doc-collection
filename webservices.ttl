@@ -1,351 +1,562 @@
-@prefix schema: <http://schema.org/> .
-@prefix software: <http://www.openlinksw.com/ontology/software#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
-@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix sparqldescr:  <http://www.w3.org/ns/sparql-service-description#> .
+@prefix sioct:        <http://rdfs.org/sioc/types#> .
+@prefix xhv:          <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix schema:       <http://schema.org/> .
+@prefix cvocab:       <http://open-services.net/ns/core#> .
+@prefix sioc:         <http://rdfs.org/sioc/ns#> .
+@prefix oplweb:       <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:          <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:          <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:          <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:           <http://purl.org/goodrelations/v1#> .
+@prefix siocs:        <http://rdfs.org/sioc/services#> .
+@prefix foaf:         <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:         <http://www.w3.org/2007/05/powder-s#> .
+@prefix xhv:          <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:         <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:      <http://purl.org/dc/terms/> .
+@prefix cc:           <http://creativecommons.org/ns#> .
+@prefix olo:            <http://purl.org/ontology/olo/core#> .
+@prefix oplacl:       <http://www.openlinksw.com/ontology/acl#> .
+@prefix cartr:        <http://www.openlinksw.com/ontology/cartridges#> .
+@prefix oplwebsrv:    <http://www.openlinksw.com/ontology/webservices#> .
+@prefix hydracore:    <http://www.w3.org/ns/hydra/core#> .
 
-<>
-a schema:CreativeWork, foaf:Document ;
-schema:name "software_applications.ttl" ;
-skos:prefLabel "Software Applications Descriptions Collection" ;
-schema:author <http://www.openlinksw.com#this> ;
-schema:dateCreated "2018-05-18T13:00:00-05:00"^^xsd:dateTime ; 
-schema:dateModified "2019-11-04T13:00:00-05:00"^^xsd:dateTime ; 
-schema:fileFormat "text/turtle" ;
-schema:description """Description of a collection of Software Applications""" ;
-schema:about <https://www.tableau.com/products/desktop#this>, <https://www.sap.com/products/bi-platform#this>,
-			 <http://www.crystalreports.com/#this>, <http://www.qlik.com/us/products/qlik-sense#this>, 
-			 <http://www.qlik.com/us/products/qlikview#this>, <https://www.microstrategy.com/#this>, 
-			 <https://www.ibm.com/analytics/us/en/technology/spss/#this>, <https://dandelion.eu/products/datatxt/#this>,
-			 <http://www.filemaker.com/#this>, <https://www.google.com/sheets/about/#this>,
-			 <https://www.informatica.com/products.html#this>, <http://products.office.com/access#this>, 
-			 <http://products.office.com/excel#this>, <http://data.openlinksw.com/oplweb/product/row-store-cl#this>,
-			 <https://www.sas.com/#this>, <http://spotfire.tibco.com/#this>, <https://www.mongodb.com/products/bi-connector#this>,
-			 <https://www.alteryx.com/#this> , <http://yellowfinbi.com#this> , <http://products.office.com/access#this>,
-			 <http://products.office.com/excel#this> .  
+<http://www.openlinksw.com/ontology/webservices#>  a owl:Ontology ;
+  rdfs:label """OpenLink Web Services Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe web services . Examples include web services,
+  uri templates, uri parameters etc."""@en ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  dcterms:modified "2018-07-09T07:38:00-05:00"^^xsd:dateTime ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/webservices> ;
+  owl:versionInfo "1.0.0"^^xsd:string ;
+  owl:imports <http://www.w3.org/2002/07/owl#> ,
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+              <http://purl.org/dc/terms/> ,
+              <http://rdfs.org/sioc/services#> ,
+              <http://www.w3.org/ns/hydra/core#> ,
+              <http://www.openlinksw.com/ontology/acl#> ,
+              <http://www.openlinksw.com/ontology/cartridges#> ,
+              <http://www.w3.org/ns/sparql-service-description#> ,
+              <http://purl.org/ontology/olo/core#> ;
+  <http://open.vocab.org/terms/defines>
+              oplwebsrv:WebService ,
+              oplwebsrv:Method ,
+              oplwebsrv:Process ,
+              oplwebsrv:WebServiceParameter ,
+              oplwebsrv:ProcessSlot  ,
+              oplwebsrv:ParameterType ,
+              oplwebsrv:hasParameter ,
+              oplwebsrv:parameterName ,
+              oplwebsrv:parameterType ,
+              oplwebsrv:parameterValue ,
+              oplwebsrv:parameterExampleValue ,
+              oplwebsrv:parameterValueDefault ,
+              oplwebsrv:parameterDataType ,
+              oplwebsrv:isRequired ,
+              oplwebsrv:hasProcessItem  ,
+              oplwebsrv:hasProcessSlot ,
+              oplwebsrv:isIdempotent  ,
+              oplwebsrv:hasProtocol   ,
+              oplwebsrv:usageExample ,
+              oplwebsrv:hasResponseCode   ,
+              oplwebsrv:isWebServiceOf ,
+              oplwebsrv:hasWebService ,
+              oplwebsrv:hasMethod ,
+              oplwebsrv:uriTemplate ,
+              oplwebsrv:exampleValue ,
+              oplwebsrv:endpointURLString ,
+              oplwebsrv:endpointURL,
+              oplwebsrv:hasActionWord ;
+  schema:about
+              sparqldescr:Service ,
+              oplwebsrv:WebService ,
+              oplwebsrv:Method ,
+              oplwebsrv:Process ,
+              oplwebsrv:WebServiceParameter ,
+              oplwebsrv:ParameterType ,
+              oplwebsrv:ProcessSlot  ,
+              oplwebsrv:hasParameter ,
+              oplwebsrv:parameterName ,
+              oplwebsrv:parameterType ,
+              oplwebsrv:parameterValue ,
+              oplwebsrv:parameterExampleValue ,
+              oplwebsrv:parameterValueDefault ,
+              oplwebsrv:parameterDataType ,
+              oplwebsrv:isRequired ,
+              oplwebsrv:hasProcessItem  ,
+              oplwebsrv:hasProcessSlot ,
+              oplwebsrv:isIdempotent  ,
+              oplwebsrv:hasProtocol   ,
+              oplwebsrv:usageExample ,
+              oplwebsrv:hasResponseCode   ,
+              oplwebsrv:isWebServiceOf ,
+              oplwebsrv:hasWebService ,
+              oplwebsrv:hasMethod ,
+              oplwebsrv:uriTemplate ,
+              oplwebsrv:exampleValue ,
+              oplwebsrv:endpointURLString ,
+              oplwebsrv:endpointURL,
+              oplwebsrv:hasActionWord .
 
-## Software Applications Descriptions
+              # oplwebsrv:serviceContext ,
+              # oplwebsrv:serviceType ,
+              # oplwebsrv:serviceURL ,
+              # oplwebsrv:servicePotentialActionType ,
+              # oplwebsrv:servicePotentialActionTarget ,
+              # oplwebsrv:servicePotentialActionQueryInput .
 
-## Anypoint -- Mulesoft ESB Middleware 
+<http://www.openlinksw.com/data/turtle/webservices.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Web Services Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Web Services"""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/webservices#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/webservices> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2018-07-09T07:38:00-05:00"^^xsd:dateTime ;
+  xhv:describes <http://www.openlinksw.com/ontology/webservices#> ;
+  schema:about <http://www.openlinksw.com/ontology/webservices#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/webservices#> .
 
-<https://www.mulesoft.com/platform/enterprise-integration#app>
-a schema:SoftwareApplication ;
-schema:name "Anypoint Platform" ;
-schema:brand "Mulesoft Anypoint" ;
-schema:operatingSystem "Windows, macOS, Linux" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>, 
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>;
-software:DataAccessProtocolAny "JDBC", "HTTP" ;
-schema:category <http://dbpedia.org/resource/Enterprise_service_bus> ;
-schema:mainEntityOfPage <https://www.mulesoft.com/platform/enterprise-integration#>, <https://www.mulesoft.com/case-studies#> ;
-skos:related <https://www.mulesoft.com/integration-partner/>, <https://forums.mulesoft.com/>,
- 			<https://docs.mulesoft.com/>, 
-			<https://docs.mulesoft.com/mule-user-guide/v/3.9/database-connector#docs> ;
-schema:publisher <http://dbpedia.org/resource/Mule_(software)> ;
-wdrs:describedby <> . 
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
 
-## Tableau 
+<http://www.openlinksw.com/DAV/data/turtle/webservices.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Web Services Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe OpenLink Web Services Ontology."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/webservices#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/webservices> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2018-07-09T07:38:00-05:00"^^xsd:dateTime ;
+  xhv:describes <http://www.openlinksw.com/ontology/webservices#> ;
+  schema:about <http://www.openlinksw.com/ontology/webservices#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/webservices#> .
 
-<https://www.tableau.com/products/desktop#this> 
-a schema:SoftwareApplication ;
-schema:name "Tableau Desktop" ;
-schema:brand "Tableau Desktop" ;
-schema:operatingSystem "Windows, macOS" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>;
-software:DataAccessProtocolAny "ODBC", "JDBC" ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <https://www.tableau.com/products/desktop> , <http://blog.cognetik.com/author/sebastian_stan/>;
-skos:related <https://community.tableau.com/community/forums#this>, <https://www.tableau.com/solutions#this>,
- 			<https://www.tableau.com/solutions/banking-capital-asset-analytics>, 
-			<https://www.tableau.com/solutions/customer/charles-schwab-equips-more-12000-employees-tableau-advance-data-driven-culture>, 
-			<https://www.tableau.com/solutions/customer/storytelling-big-data-wells-fargo>,
-			<https://www.tableau.com/solutions/customer/bnp-paribas-creates-single-source-truth-2000-corporate-bankers-tableau>,
-			<https://www.tableau.com/solutions/sports-management-analytics>, 
-			<http://blog.cognetik.com/2017/10/12/nissan-case-study-live-from-tc17-the-challenges-and-solutions-of-implementing-tableau-from-scratch-in-one-year-we-went-from-0-to-1500-users/> ;
-schema:publisher <https://www.tableau.com/#publisher> ;
-wdrs:describedby <> . 
-
-<https://www.tableau.com/#publisher> 
-a schema:Organization ;
-schema:name "Tableau Software" ;
-schema:mainEntityOfPage 
-<http://investors.tableau.com/investor-news/investor-news-details/2018/Tableau-Reports-First-Quarter-2018-Financial-Results/default.aspx> ;
-owl:sameAs <http://dbpedia.org/resource/Tableau_Software> ;
-wdrs:describedby <> . 
-
-<http://products.office.com/access#this> 
-a schema:SoftwareApplication ;
-schema:name "Microsoft Access" ;
-schema:brand "Microsoft Access" ;
-schema:operatingSystem "Windows" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <http://products.office.com/access> ;
-schema:publisher dbpedia:Microsoft ;
-owl:sameAs <http://dbpedia.org/resource/Microsoft_Access> ;
-wdrs:describedby <> . 
-	
-<http://products.office.com/excel#this> 
-a schema:SoftwareApplication ;
-schema:name "Microsoft Excel" ;
-schema:brand "Microsoft Excel" ;
-schema:operatingSystem "Windows, macOS, iOS" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <http://products.office.com/excel> ;
-schema:publisher dbpedia:Microsoft ;
-owl:sameAs <http://dbpedia.org/resource/Microsoft_Excel> ;
-wdrs:describedby <> . 
-
-<https://www.ibm.com/analytics/us/en/technology/spss/#this>
-a schema:SoftwareApplication ;
-schema:brand "SPSS" ;
-schema:name "SPSS" ;
-schema:operatingSystem "Windows, macOS, Linux" ;  
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-owl:sameAs <http://dbpedia.org/resource/SPSS> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <https://www.ibm.com/analytics/us/en/technology/spss/> ;
-schema:publisher dbpedia:IBM ;
-wdrs:describedby <> . 
-
-
-## SAP
-
-<https://www.sap.com/#this>
-a schema:Organization ;
-owl:sameAs <http://dbpedia.org/resource/SAP_SE> . 
-
-<https://www.sap.com/products/bi-platform#this> 
-a schema:SoftwareApplication ;
-schema:name "SAP Business Objects" ;
-schema:brand "SAP Business Objects" ;
-schema:operatingSystem "Windows, Linux" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <https://www.sap.com/products/bi-platform.html> ;
-skos:related <sap.com/community/topic/bi-platform.html>, <https://www.sap.com/products/bi-platform.html#support> ;
-schema:publisher <https://www.sap.com/#this> ;
-owl:sameAs <http://dbpedia.org/resource/BusinessObjects> ;
-wdrs:describedby <> . 
-
-<http://www.crystalreports.com/#this>  
-a schema:SoftwareApplication ;
-schema:name "SAP Crystal Reports" ;
-schema:brand "SAP Crystal Reports" ;
-schema:operatingSystem "Windows, Linux" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <http://www.crystalreports.com/> ;
-schema:publisher <https://www.sap.com/#this> ;
-skos:related <http://www.crystalreports.com/server/#this>, <http://www.crystalreports.com/dashboard/#this>  ;
-owl:sameAs <http://dbpedia.org/resource/Crystal_Reports> ;
-wdrs:describedby <> . 
-
-## Qlik
-
-<http://dbpedia.org/resource/Qlik> owl:sameAs <http://www.qlik.com/#publisher> .
-
-<http://www.qlik.com/us/products/qlik-sense#this> 
-a schema:SoftwareApplication ;
-schema:name "Qlik Sense" ;
-schema:brand "Qlik Sense" ;
-schema:operatingSystem "Windows, Cloud" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <http://www.qlik.com/us/products/qlik-sense> ;
-schema:publisher <http://www.qlik.com/#publisher> ;
-wdrs:describedby <> . 
-
-## Start Here re. emulating what's above re:
-## additing missing rdf:type relations i.e. 	a schema:SoftwareApplication ;
-## 2. reducing relations where object is identified using a literal rather than a URI. 
-
-<http://www.qlik.com/us/products/qlikview#this> 
-a schema:SoftwareApplication ;
-schema:name "QlikView" ;
-schema:brand "QlikView" ;
-schema:operatingSystem "Windows, Cloud" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <http://www.qlik.com/us/products/qlikview> ;
-skos:related <http://www.qlik.com/partners#this>, <http://www.qlik.com/services#this>, <https://community.qlik.com/#this> ;
-schema:publisher <http://dbpedia.org/resource/Qlik> ;
-wdrs:describedby <> . 
-
-## Microstrategy 
-
-<https://www.microstrategy.com/#this> 
-a schema:SoftwareApplication ;
-schema:name "MicroStrategy" ;
-schema:brand "MicroStrategy" ;
-schema:operatingSystem "Windows, macOS, Linux" ;  
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-owl:sameAs <http://dbpedia.org/resource/MicroStrategy_Analytics> ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <https://www.microstrategy.com/>, <https://www.microstrategy.com/us/blog/stories> ;
-schema:publisher <http://dbpedia.org/resource/MicroStrategy> ;
-wdrs:describedby <> . 
-
-<https://dandelion.eu/products/datatxt/#this>
-a schema:SoftwareApplication ;
-schema:name "Dandelion API" ;
-schema:description "Entity Extraction Service" ;
-schema:mainEntityOfPage <https://dandelion.eu/products/> ;
-schema:publisher <https://dandelion.eu/#company> ;
-wdrs:describedby <> . 
-
-<http://www.filemaker.com/#this> 
-a schema:SoftwareApplication ;
-schema:name "Filemaker Pro" ;
-schema:brand "Filemaker Pro" ;
-schema:operatingSystem "Windows, macOS" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <http://www.filemaker.com/> ;
-schema:publisher <http://dbpedia.org/resource/FileMaker_Inc.> ;
-owl:sameAs <http://dbpedia.org/resource/FileMaker> ;
-wdrs:describedby <> . 
-
-<https://www.google.com/sheets/about/#this> 
-a schema:SoftwareApplication ;
-schema:name "Google Spreadsheet" ;
-schema:brand "Google Spreadsheet" ;
-schema:operatingSystem "Web" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/WebOS#this> ;
-software:DataAccessProtocolAny "HTTP" ;
-schema:mainEntityOfPage <https://www.google.com/sheets/about/> ;
-schema:publisher dbpedia:Google ;
-owl:sameAs <http://dbpedia.org/resource/Google_Docs,_Sheets,_and_Slides> ;
-wdrs:describedby <> . 
-
-<https://www.informatica.com/products.html#this> 
-a schema:SoftwareApplication ;
-schema:name "Informatica" ;
-schema:brand "Informatica" ;
-schema:operatingSystem "Linux, Windows, Unix" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <https://www.informatica.com/products.html> ;
-schema:publisher  <http://dbpedia.org/resource/Informatica> ;
-wdrs:describedby <> . 
-
-<http://products.office.com/access#this> 
-a schema:SoftwareApplication ;
-schema:name "Microsoft Access" ;
-schema:brand "Microsoft Access" ;
-schema:operatingSystem "Windows" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <http://products.office.com/access> ;
-schema:publisher dbpedia:Microsoft ;
-owl:sameAs <http://dbpedia.org/resource/Microsoft_Access> ;
-wdrs:describedby <> . 
-
-<http://products.office.com/excel#this> 
-a schema:SoftwareApplication ;
-schema:name "Microsoft Excel" ;
-schema:brand "Microsoft Excel" ;
-schema:operatingSystem "Windows, macOS, iOS" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <http://products.office.com/excel> ;
-schema:publisher dbpedia:Microsoft ;
-owl:sameAs <http://dbpedia.org/resource/Microsoft_Excel> ;
-wdrs:describedby <> . 
-
-<http://data.openlinksw.com/oplweb/product/row-store-cl#this> 
-a schema:SoftwareApplication ;
-schema:name "OpenLink Virtuoso" ;
-schema:brand "OpenLink Virtuoso" ;
-schema:operatingSystem "Windows, macOS, Linux, Solaris, AIX, HP-UX, Cloud" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <https://virtuoso.openlinksw.com/> ;
-schema:publisher <http://www.openlinksw.com/#this> ;
-owl:sameAs <http://dbpedia.org/resource/Virtuoso_Universal_Server> ;
-wdrs:describedby <> . 
+<http://www.openlinksw.com/ontology/webservices>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Web Services Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Web Services Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/webservices#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2018-07-09T07:38:00-05:00"^^xsd:dateTime ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/webservices#> ;
+  foaf:topic  oplwebsrv:WebService ,
+              oplwebsrv:Method ,
+              oplwebsrv:Process ,
+              oplwebsrv:WebServiceParameter ,
+              oplwebsrv:ParameterType ,
+              oplwebsrv:isIdempotent  ,
+              oplwebsrv:ProcessSlot  ,
+              oplwebsrv:hasParameter ,
+              oplwebsrv:parameterName ,
+              oplwebsrv:parameterType ,
+              oplwebsrv:parameterValue ,
+              oplwebsrv:parameterExampleValue ,
+              oplwebsrv:parameterValueDefault ,
+              oplwebsrv:parameterDataType ,
+              oplwebsrv:isRequired ,
+              oplwebsrv:hasProcessItem  ,
+              oplwebsrv:hasProcessSlot ,
+              oplwebsrv:hasProtocol   ,
+              oplwebsrv:usageExample ,
+              oplwebsrv:hasResponseCode   ,
+              oplwebsrv:isWebServiceOf ,
+              oplwebsrv:hasWebService ,
+              oplwebsrv:hasMethod ,
+              oplwebsrv:uriTemplate ,
+              oplwebsrv:exampleValue ,
+              oplwebsrv:endpointURLString ,
+              oplwebsrv:endpointURL .
 
 
-<https://www.sas.com/#this> 
-a schema:SoftwareApplication ;
-schema:name "SAS" ;
-schema:brand "SAS" ;
-schema:operatingSystem "Linux, Windows" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <https://www.sas.com/> ;
-schema:publisher <http://dbpedia.org/resource/SAS_(software)> ;
-wdrs:describedby <> . 
+              # oplwebsrv:serviceContext ,
+              # oplwebsrv:serviceType ,
+              # oplwebsrv:serviceURL ,
+              # oplwebsrv:servicePotentialActionType ,
+              # oplwebsrv:servicePotentialActionTarget ,
+              # oplwebsrv:servicePotentialActionQueryInput .
 
 
-<http://spotfire.tibco.com/#this> 
-a schema:SoftwareApplication ;
-schema:name "Tibco Spotfire Desktop" ;
-schema:brand "Tibco Spotfire Desktop" ;
-schema:operatingSystem "Windows" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <http://spotfire.tibco.com/> ;
-schema:publisher dbpedia:TIBCO_Software  ;
-wdrs:describedby <> . 
+# <-------------- Web Services Endpoints--------------> #
 
-<https://www.mongodb.com/products/bi-connector#this> 
-a schema:SoftwareApplication ;
-schema:name "MongoDB" ;
-schema:brand "MongoDB Bi-Connector" ;
-schema:operatingSystem "macOS" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <https://www.mongodb.com/products/bi-connector> ;
-schema:publisher <http://dbpedia.org/resource/MongoDB_Inc.> ;
-wdrs:describedby <> . 
+# <-------------- Web Services Endpoints Classes --------------> #
 
-<https://www.alteryx.com/#this> 
-a schema:SoftwareApplication ;
-schema:name "Alteryx" ;
-schema:brand "Alteryx" ;
-schema:operatingSystem "Windows" ;
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
-software:DataAccessProtocolAny "ODBC" ;
-schema:mainEntityOfPage <https://www.alteryx.com/> ;
-schema:publisher dbpedia:Alteryx ;
-wdrs:describedby <> . 
+oplwebsrv:WebService
+      a owl:Class ;
+      rdfs:label "WebService";
+      rdfs:subClassOf siocs:Service, hydracore:Operation, schema:EntryPoint ;
+      skos:altLabel "Web Service" ;
+      rdfs:comment """An operation associated with an Action. This is a kind of Web Document [Resource]
+                        that's generated dynamically using query parameters, using a variety of methods
+                      [GET (which has sub-methods: SEARCH and QUERY), POST, PATCH, PUT, DELETE]. Thus, unlike a typical Web Document,
+                      this kind of Web Document is identified by an HTTP URL with a query component that has at
+                      least one parameter.
+                   """@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
 
-<http://yellowfinbi.com#this> 
-a schema:SoftwareApplication ;
-schema:name "Yellowfin" ;
-schema:brand "Yellowfin" ;
-schema:operatingSystem "Windows, macOS, Linux" ;  
-software:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Windows#this>, 
-	 							 <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this> ,
-								 <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this> ;
-software:DataAccessProtocolAny "JDBC" ;
-schema:category <http://dbpedia.org/resource/Business_intelligence> ;
-schema:mainEntityOfPage <http://yellowfinbi.com> ;
-schema:publisher dbpedia:Yellowfin_Business_Intelligence ;
-wdrs:describedby <> . 
-	
+sparqldescr:Service
+      a owl:Class ;
+      rdfs:label "Service";
+      wdrs:isDescribedBy <http://www.openlinksw.com/ontology/webservices#> ;
+      rdfs:comment "An instance of sd:Service represents a SPARQL service made available via the SPARQL Protocol." ;
+      rdfs:subClassOf oplwebsrv:WebService .
+
+oplwebsrv:Method
+      a owl:Class ;
+      rdfs:label "Method";
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:Process
+      a owl:Class ;
+      rdfs:label "Process";
+      rdfs:subClassOf olo:OrderedList ;
+      rdfs:comment "List of processes to be executed in a specific order" ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:WebServiceParameter
+  a owl:Class ;
+  rdfs:label "WebServiceParameter" ;
+  skos:altLabel "Web Service Parameter" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .  
+  
+oplwebsrv:ParameterType
+  a owl:Class ;
+  rdfs:subClassOf schema:Enumeration ;
+  rdfs:label "ParameterType" ;
+  skos:altLabel "Parameter Type" ;
+  rdfs:comment """A specialization for indicating where a parameter value is inserted into an HTTP request. 
+                                  Permitted enumerations are: oplwebsrv:QueryStringParameter, oplwebsrv:PathParameter, oplwebsrv:HeaderParameter, oplwebsrv:BodyParameter,
+                                  oplwebsrv:UriParameter.""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .  
+
+dcterms:isPartOf schema:rangeIncludes oplwebsrv:Process .
+
+oplwebsrv:ProcessSlot
+  a owl:Class ;
+  rdfs:subClassOf olo:Slot ;
+  rdfs:label "ProcessSlot";
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:comment """Placement point for a Web Service that's part of a process [list of services to be invoked in a specific sequence]."""@en .
+
+# oplwebsrv:Operation a owl:Class ;
+#       rdfs:label "Operation"^^xsd:string ;
+#       rdfs:subClassOf hydracore:Operation ;
+#       rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+#
+# <-------------- Web Services Parameter Type Enumerations --------------> #
+#
+
+oplwebsrv:QueryStringParameter
+  a oplwebsrv:ParameterType ;
+  rdfs:label "Query String Parameter" ;
+  skos:altLabel "query" ;
+  schema:comment """Indicates the parameter value is supplied in the action URL query string""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:PathParameter
+  a oplwebsrv:ParameterType ;
+  rdfs:label "Path Parameter" ;
+  skos:altLabel "path" ;
+  schema:comment """Indicates the parameter value is a URI path segment forming part of an HTTP request URL""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:HeaderParameter
+  a oplwebsrv:ParameterType ;
+  rdfs:label "Header Parameter" ;
+  skos:altLabel "header" ;
+  schema:comment """Indicates a parameter supplied as a header accompanying an HTTP request""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:BodyParameter
+  a oplwebsrv:ParameterType ;
+  rdfs:label "Body Parameter" ;
+  skos:altLabel "body" ;
+  schema:comment """Indicates the parameter's value is sent as the body of an HTTP request""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:UriParameter
+  a oplwebsrv:ParameterType ;
+  rdfs:label "Uri Parameter" ;
+  skos:altLabel "uri" ;
+  schema:comment """Indicates the parameter's value sets the URL of an HTTP request""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+  
+# <-------------- Web Services Endpoints Properties --------------> #
+
+oplwebsrv:hasActionWord
+  a rdf:Property, owl:DatatypeProperty  ;
+  schema:name "hasActionWord" ;
+  rdfs:range xsd:literal ;
+  rdfs:domain schema:Action ;
+  rdfs:comment """Associates a WebService [an HTTP Endpoint] with an Action Word or Phrase that can be used to trigger invocation."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:hasProcessSlot
+  a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "hasProcessSlot" ;
+  rdfs:comment """Associates a Process with a Process Slot."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:range oplwebsrv:ProcessSlot ;
+  rdfs:domain oplwebsrv:Process .
+
+
+oplwebsrv:hasProcessItem
+  a rdf:Property, owl:ObjectProperty ;
+  rdfs:subPropertyOf olo:Item;
+  rdfs:label "hasProcessItem" ;
+  rdfs:comment """Associates a Process Slot with an item [specially an instance of a Service or WebService Class]."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:range oplwebsrv:WebService, sioct:Service ;
+  rdfs:domain oplwebsrv:ProcessSlot .
+
+oplwebsrv:hasParameter
+  a rdfs:Property, owl:ObjectProperty ;
+  rdfs:subPropertyOf hydracore:expects ;
+  rdfs:label "hasParameter" ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:range oplwebsrv:WebServiceParameter ;
+  schema:comment """Property that associates a Web Service with one or more invocation parameters [name=value pairs]""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+  
+
+## Removed 
+# oplwebsrv:parameter
+#  a rdf:Property, owl:DatatypeProperty ;
+#  rdfs:label "parameter" ;
+#  skos:altLabel "Paramenter" ;
+#  rdfs:domain oplwebsrv:WebService ;
+#  rdfs:range xsd:literal ;
+#  schema:comment """Web Service invocation Parameter that's paired with a Parameter Value.""" ;
+#  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+  
+oplwebsrv:parameterType
+  a rdf:Property ;
+  rdfs:subPropertyOf hydracore:expects ;
+  rdfs:label "parameterType" ;
+  skos:altLabel "Parameter Type" ;
+  rdfs:comment """Indicates acceptable parameter types. 'query', 'path', 'header', 'body', 'uri' are the accepted literals (in addition to the enums)""";
+  rdfs:domain oplwebsrv:WebServiceParameter ;
+  schema:rangeIncludes oplwebsrv:ParameterType, xsd:string ;
+  schema:domainIncludes oplwebsrv:WebServiceParameter ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+  
+oplwebsrv:parameterValue
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "parameterValue" ;
+  skos:altLabel "Paramenter Value" ;
+  rdfs:domain oplwebsrv:WebServiceParameter ;
+  schema:rangeIncludes xsd:string, xsd:anyURI ;
+  schema:comment """Web Service invocation Parameter Value that's paired with a Parameter Name""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:isRequired
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "isRequired" ;
+  skos:altLabel "isMandatory" ;
+  rdfs:domain oplwebsrv:WebServiceParameter ;
+  rdfs:range xsd:boolean ;
+  schema:comment """Indicates parameter is mandatory (i.e., required) with regards to associated Action invocation""" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:isIdempotent
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "isIdempotent" ;
+  rdfs:range xsd:boolean ;
+  rdfs:domain oplwebsrv:Method ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:comment "Determines if method alters target resource state e.g., HTTP get methods are Idempotent. "@en .
+
+oplwebsrv:hasProtocol
+  a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "hasProtocol" ;
+  rdfs:range xsd:anyURI ;
+  rdfs:domain oplwebsrv:Method ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:comment "Protocol associated with a Method ".
+
+oplwebsrv:usageExample
+  a rdf:Property, owl:ObjectProperty ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  schema:name "usageExample" ;
+  skos:prefLabel "Usage Example" ;
+  rdfs:label "Usage Example";
+  schema:rangeIncludes schema:URL,  xsd:anyURI ;
+  schema:domainIncludes oplwebsrv:WebService, oplwebsrv:WebServiceParameter , schema:EntryPoint;
+  rdfs:comment """Associates a Web Service with an actual usage example URL (as opposed to template). """ .
+
+oplwebsrv:hasResponseCode
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "hasResponseCode" ;
+  rdfs:range xsd:integer ;
+  rdfs:domain oplwebsrv:Method ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:comment "Expected response code for method invocation".
+
+# oplwebsrv:hasOperation
+#       a owl:ObjectProperty, rdf:Property ;
+#       rdfs:label "hasOperation"^^xsd:string ;
+#       skos:altLabel "Operation"^^xsd:string ;
+#       rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+#       rdfs:domain schema:Action ;
+#       rdfs:range oplwebsrv:Operation .
+
+oplwebsrv:isWebServiceOf
+  a rdf:Property , owl:ObjectProperty ;
+  rdfs:label "isWebServiceOf"^^xsd:string ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:range schema:Action , cartr:ExtractorCartridge , cartr:MetaCartridge ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:comment """Property that associates an Action with a Web Service."""@en ;
+  owl:inverseOf oplwebsrv:hasWebService ;
+  skos:altLabel "Is Web Service Of"^^xsd:string .
+
+oplwebsrv:hasWebService
+  a rdf:Property , owl:ObjectProperty ;
+  rdfs:label "hasWebService"^^xsd:string ;
+  rdfs:domain schema:Action , cartr:ExtractorCartridge , cartr:MetaCartridge ;
+  rdfs:range oplwebsrv:WebService ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:comment """Property that associates a Web Service with an Action."""@en ;
+  skos:altLabel "Has Web Service"^^xsd:string ;
+  owl:subPropertyOf schema:instrument , siocs:has_service .
+
+oplwebsrv:hasMethod
+  a rdf:Property , owl:ObjectProperty ;
+  rdfs:label "hasMethod"^^xsd:string ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:range oplwebsrv:Method ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  rdfs:comment """Property that associates a Web Service with an Method e.g., POST, GET, DELETE, PATCH."""@en ;
+  skos:altLabel "Has Method"^^xsd:string .
+
+oplwebsrv:uriTemplate
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:label "uriTemplate"^^xsd:string ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf schema:target ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  skos:altLabel "URI Template"^^xsd:string .
+
+oplwebsrv:parameterName
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:label "parameterName"^^xsd:string ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:comment """Web Service parameter name."""@en ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  skos:altLabel "parameter name"^^xsd:string .
+
+oplwebsrv:parameterValueDefault
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "parameterValueDefault" ;
+  skos:altLabel "parameter value default" ;
+  rdfs:domain oplwebsrv:WebServiceParameter ;
+  schema:rangeIncludes xsd:literal, schema:Thing, schema:Text ;
+  schema:comment """Declares the value of a parameter that the web service will use if none is provided"""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:parameterDataType
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "parameterDataType" ;
+  skos:altLabel "parameter data type" ;
+  rdfs:domain oplwebsrv:WebServiceParameter ;
+  schema:rangeIncludes xsd:literal, schema:Text ;
+  schema:comment """A display string used for indicating the notional data type of the parameter. e.g. 'boolean', 'integer' etc. The supported data types are determined by the web service."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:parameterExampleValue
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "parameterExampleValue" ;
+  skos:altLabel "parameter example value" ;
+  rdfs:domain oplwebsrv:WebServiceParameter ;
+  schema:rangeIncludes xsd:literal, schema:Text ;
+  schema:comment """A display string which can be used for prepopulating an input field with an example value of the parameter."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> .
+
+oplwebsrv:exampleValue
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:label "exampleValue"^^xsd:string ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  skos:altLabel "Example Value"^^xsd:string .
+
+oplwebsrv:endpointURLString
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:label "endpointURLString"^^xsd:string ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  skos:altLabel "Web Service Endpoint URL String"^^xsd:string .
+
+oplwebsrv:endpointURL
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:subPropertyOf schema:serviceUrl ;
+  rdfs:label "endpointURL"^^xsd:string ;
+  rdfs:domain oplwebsrv:WebService ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+  skos:altLabel "Web Service Endpoint URL"^^xsd:string .
+
+hydracore:template rdfs:subPropertyOf oplwebsrv:uriTemplate .
+
+
+# oplwebsrv:serviceContext
+#   a rdf:Property , owl:DatatypeProperty ;
+#   rdfs:label "serviceContext"^^xsd:string ;
+#   rdfs:domain oplwebsrv:WebService ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+#   skos:altLabel "Web Service Context"^^xsd:string .
+#
+# oplwebsrv:serviceType
+#   a rdf:Property , owl:DatatypeProperty ;
+#   rdfs:label "serviceType"^^xsd:string ;
+#   rdfs:domain oplwebsrv:WebService ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+#   skos:altLabel "Web Service Type"^^xsd:string .
+#
+# oplwebsrv:serviceURL
+#   a rdf:Property , owl:DatatypeProperty ;
+#   rdfs:label "serviceURL"^^xsd:string ;
+#   rdfs:domain oplwebsrv:WebService ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+#   skos:altLabel "Web Service URL"^^xsd:string .
+#
+# oplwebsrv:servicePotentialActionType
+#   a rdf:Property , owl:DatatypeProperty ;
+#   rdfs:label "servicePotentialActionType"^^xsd:string ;
+#   rdfs:domain oplwebsrv:WebService ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+#   skos:altLabel "Web Service Potential Action Type"^^xsd:string .
+#
+# oplwebsrv:servicePotentialActionTarget
+#   a rdf:Property , owl:DatatypeProperty ;
+#   rdfs:label "servicePotentialActionTarget"^^xsd:string ;
+#   rdfs:domain oplwebsrv:WebService ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+#   skos:altLabel "Web Service Potential Action Target"^^xsd:string .
+#
+# oplwebsrv:servicePotentialActionQueryInput
+#   a rdf:Property , owl:DatatypeProperty ;
+#   rdfs:label "servicePotentialActionQueryInput"^^xsd:string ;
+#   rdfs:domain oplwebsrv:WebService ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/webservices#> ;
+#   skos:altLabel "Web Service Potential Action Query Input"^^xsd:string .
+#
+#
+
