@@ -9,6 +9,9 @@
 a schema:CreativeWork, foaf:Document ;
 schema:name "software_applications.ttl" ;
 skos:prefLabel "Software Applications Descriptions Collection" ;
+schema:author <http://www.openlinksw.com#this> ;
+schema:dateCreated "2018-05-18T13:00:00-05:00"^^xsd:dateTime ; 
+schema:dateModified "2019-11-04T13:00:00-05:00"^^xsd:dateTime ; 
 schema:fileFormat "text/turtle" ;
 schema:description """Description of a collection of Software Applications""" ;
 schema:about <https://www.tableau.com/products/desktop#this>, <https://www.sap.com/products/bi-platform#this>,
