@@ -158,7 +158,10 @@
       oplsof:PostgreSQL6                ,
       oplsof:PostgreSQL7                ,
       oplsof:PostgreSQL8                ,
-      oplsof:PostgreSQL9 ,
+      oplsof:PostgreSQL9                ,
+      oplsof:PostgreSQL10               ,
+      oplsof:PostgreSQL11               ,
+      oplsof:PostgreSQL12               ,
       oplsof:db2                        ,
       oplsof:db26                       ,
       oplsof:db27                       ,
@@ -343,7 +346,10 @@
       oplsof:PostgreSQL6                ,
       oplsof:PostgreSQL7                ,
       oplsof:PostgreSQL8                ,
-      oplsof:PostgreSQL9 ,
+      oplsof:PostgreSQL9                ,
+      oplsof:PostgreSQL10               ,
+      oplsof:PostgreSQL11               ,
+      oplsof:PostgreSQL12               ,
       oplsof:db2                        ,
       oplsof:db26                       ,
       oplsof:db27                       ,
@@ -569,7 +575,10 @@
       oplsof:PostgreSQL6                ,
       oplsof:PostgreSQL7                ,
       oplsof:PostgreSQL8                ,
-      oplsof:PostgreSQL9 ,
+      oplsof:PostgreSQL9                ,
+      oplsof:PostgreSQL10               ,
+      oplsof:PostgreSQL11               ,
+      oplsof:PostgreSQL12               ,
       oplsof:db2                        ,
       oplsof:db26                       ,
       oplsof:db27                       ,
@@ -1958,6 +1967,29 @@ oplsof:PostgreSQL9 a oplsof:DbmsEngine ;
   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
   schema:name """PostgreSQL 9.x Database Engine""" ;
   rdfs:label "PostgreSQL 9.x Database Engine"^^xsd:string .
+
+oplsof:PostgreSQL10 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PostgreSQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pos10#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL 10.x Database Engine""" ;
+  rdfs:label "PostgreSQL 10.x Database Engine"^^xsd:string .
+
+oplsof:PostgreSQL11 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PostgreSQL ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_engine/pos11#this> ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL 11.x Database Engine""" ;
+  rdfs:label "PostgreSQL 11.x Database Engine"^^xsd:string .
+
+oplsof:PostgreSQL12 a oplsof:DbmsEngine ;
+  oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
+  oplsof:hasDatabaseFamily oplsof:PostgreSQL ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
+  schema:name """PostgreSQL 12.x Database Engine""" ;
+  rdfs:label "PostgreSQL 12.x Database Engine"^^xsd:string .
 
 oplsof:db2 a oplsof:DbmsEngine ;
   oplpro:hasCategory <http://data.openlinksw.com/oplweb/product_category/SqlRdbms#this> ;
