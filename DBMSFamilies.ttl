@@ -251,7 +251,7 @@ source: a schema:CreativeWork ;
     #    <http://data.openlinksw.com/oplweb/product/virtuoso-uim-vdbms-ent#this>,
     #    <http://data.openlinksw.com/oplweb/product/virtuoso-uim-vdbms-psnl#this>,
     #    <http://data.openlinksw.com/oplweb/product/virtuoso-uim-xmldb-psnl#this> ;
-    schema:logo <https://upload.wikimedia.org/wikipedia/commons/3/3f/Virtuoso-logo-sm.png .
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/3/3f/Virtuoso-logo-sm.png> .
 
 <http://data.openlinksw.com/oplweb/dbms_family/Oracle#this> a oplsof:DbmsFamily ;
     wdrs:describedby source: ;
