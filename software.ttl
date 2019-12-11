@@ -1722,7 +1722,7 @@ oplsof:Sybase a oplsof:DbmsFamily ;
   rdfs:label "Sybase Database Family"^^xsd:string .
 
 oplsof:Informix a oplsof:DbmsFamily ;
-  # owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Informix#this> ;
+  owl:sameAs <http://data.openlinksw.com/oplweb/dbms_family/Informix#this> ;
   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/software#> ;
   schema:name """Informix Database Family""" ;
   rdfs:label "Informix Database Family"^^xsd:string .
