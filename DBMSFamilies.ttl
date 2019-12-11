@@ -154,7 +154,7 @@ source: a schema:CreativeWork ;
     #     <http://data.openlinksw.com/oplweb/product/odbc-ingres-mt#this>,
     #     <http://data.openlinksw.com/oplweb/product/odbc-ingres-st#this> ;
     owl:sameAs <http://dbpedia.org/resource/Ingres> ;
-    schema:logo <http://www.pervasive.com/portals/5/images/Actian-Ingres-4C-logotype.png> .
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/5/59/Ingres_Logo.svg> .
 
 <http://data.openlinksw.com/oplweb/dbms_family/JDBCBridge#this> a oplsof:DbmsFamily ;
     wdrs:describedby source: ;
@@ -185,7 +185,7 @@ source: a schema:CreativeWork ;
     #     <http://data.openlinksw.com/oplweb/product/odbc-mysql-mt#this>,
     #     <http://data.openlinksw.com/oplweb/product/odbc-mysql-st#this> ;
     owl:sameAs <http://dbpedia.org/resource/MySQL> ;
-    schema:logo <http://www.hortongroup.com/sites/default/files/mysql-logo.jpg> .
+    schema:logo <https://upload.wikimedia.org/wikipedia/en/6/62/MySQL.svg> .
 
 <http://data.openlinksw.com/oplweb/dbms_family/PrestoDB#this> a oplsof:DbmsFamily ;
     wdrs:describedby source: ;
@@ -251,7 +251,7 @@ source: a schema:CreativeWork ;
     #    <http://data.openlinksw.com/oplweb/product/virtuoso-uim-vdbms-ent#this>,
     #    <http://data.openlinksw.com/oplweb/product/virtuoso-uim-vdbms-psnl#this>,
     #    <http://data.openlinksw.com/oplweb/product/virtuoso-uim-xmldb-psnl#this> ;
-     schema:logo <https://www.semantic-web.at/sites/default/files/styles/kundenlogo/public/virtuoso-universal-server-320x142.jpg?itok=ELqj1qh7> .
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/3/3f/Virtuoso-logo-sm.png
 
 <http://data.openlinksw.com/oplweb/dbms_family/Oracle#this> a oplsof:DbmsFamily ;
     wdrs:describedby source: ;
