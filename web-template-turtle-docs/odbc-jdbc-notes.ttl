@@ -1,0 +1,269 @@
+## ODBC and JDBC  Notes
+@prefix : <#> . 
+@prefix cc: <http://creativecommons.org/ns#> . 
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> . 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> . 
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix schema: <http://schema.org/> . 
+@prefix dbpedia: <http://dbpedia.org/resource/> . 
+@prefix dbpedia-live: <http://dbpedia-live.openlinksw.com/resource/> .
+@prefix dbc: <http://dbpedia-live.openlinksw.com/resource/Category:> . 
+@prefix wikidata: <http://www.wikidata.org/entity/> .  
+@prefix dbpedia-live-fct: <http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_> . 
+@prefix kbpedia: <http://kbpedia.org/kko/rc/> . 
+@prefix odbc: <http://data.openlinksw.com/oplweb/glossary-term/ODBC#> .
+@prefix jdbc: <http://data.openlinksw.com/oplweb/glossary-term/JDBC#> .
+@prefix linkeddata: <http://data.openlinksw.com/oplweb/glossary-term/LinkedData#> .
+@prefix knowledge-graph: <http://data.openlinksw.com/oplweb/glossary-term/KnowledgeGraph#> .
+@prefix lod-cloud: <http://data.openlinksw.com/oplweb/glossary-term/LODCloud#> . 
+@prefix data-wrangling: <http://data.openlinksw.com/oplweb/glossary-term/DataWrangling#> . 
+@prefix virtuoso: <http://data.openlinksw.com/oplweb/product/Virtuoso#this> . 
+@prefix virtuoso-83: <http://data.openlinksw.com/oplweb/product_release/VirtuosoRelease83x#this> . 
+@prefix sparql-query-community-posts: <https://tinyurl.com/y9rvpmug#> .
+@prefix odi-jdbc-odbc: <https://community.openlinksw.com/t/using-the-oracle-data-integrator-odi-12-2-1-with-microsoft-excel-data-via-the-openlink-jdbc-to-odbc-bridge-drivers/1041#> . 
+@prefix paid-odbc-jdbc: <https://community.openlinksw.com/t/why-do-i-need-to-pay-for-odbc-jdbc-and-ado-net-drivers/1162#> . 
+@prefix odbc-lod-covid19: <https://community.openlinksw.com/t/odbc-and-jdbc-access-to-the-lod-cloud-knowledge-graph-for-covid19/1630#> . 
+@prefix odbc-jdbc-qlick: <https://community.openlinksw.com/t/using-openlink-s-odbc-jdbc-bridge-to-access-jdbc-data-sources-with-qlikview-and-qlik-sense/1042#> . 
+@prefix free-lod-driver: <https://community.openlinksw.com/t/free-90-day-lod-connectivity-license-for-odbc-and-jdbc-apps-to-the-lod-cloud-knowledge-graph/1621#> . 
+@prefix virt-odbc-lod-cloud: <https://community.openlinksw.com/t/virtuoso-odbc-jdbc-and-ado-net-drivers-for-the-lod-cloud-knowledge-graph/1550#> . 
+@prefix odbc-mysql-macos-azure: <https://community.openlinksw.com/t/howto-making-an-odbc-connection-from-macos-to-mysql-on-azure/1212#> . 
+@prefix odbc-postgres-macos-azure: <https://community.openlinksw.com/t/howto-making-an-odbc-connection-from-macos-to-postgresql-on-azure/1211#> . 
+@prefix odbc-sqlserver-macos-azure: <https://community.openlinksw.com/t/howto-making-an-odbc-connection-from-macos-to-microsoft-sql-server-on-azure/1213#> . 
+@prefix odbc-sap-hana-macos: <https://medium.com/openlink-odbc-jdbc-ado-net-data-access-drivers#> . 
+@prefix odbc-web-page: <http://www.openlinksw.com/odbc/> . 
+@prefix jdbc-web-page: <http://www.openlinksw.com/jdbc/> . 
+@prefix uda-web-site: <http://uda.openlinksw.com/> . 
+@prefix virtuoso-web-site: <http://virtuoso.openlinksw.com/> . 
+@prefix openlink-web: <http://www.openlinksw.com/> . 
+@prefix      source: <http://www.openlinksw.com/data/turtle/general/odbc-jdbc-notes.ttl> .
+@prefix   sourceDAV: <http://www.openlinksw.com/DAV/data/turtle/general/odbc-jdbc-notes.ttl> .
+
+sourceDAV:
+a foaf:Document, schema:CreativeWork ;
+owl:sameAs source:  ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-27T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "ODBC and JDBC Notes -- Turtle Document"@en ;
+schema:hasPart :this .
+
+
+source:
+a foaf:Document, schema:CreativeWork ;
+owl:sameAs sourceDAV: ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-27T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "ODBC and JDBC Notes -- Turtle Document"@en ;
+schema:hasPart odbc-web-page:this .
+
+
+## Web Pages 
+
+odbc-web-page:
+a schema:CreativeWork, schema:WebPage ;
+schema:author  <http://www.openlinksw.com/#this>  ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-27T16:30:00-05:00"^^xsd:dateTime ;
+schema:name "OpenLink Web Site ODBC Index Page"@en ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:description """Index of documents related to OpenLink Open Database Connectivity (ODBC) Drivers and Connectors"""@en ;
+schema:about odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this, odbc-sap-hana-macos:this, free-lod-driver:this ;
+skos:related data-wrangling:this, linkeddata:this, knowledge-graph:this, lod-cloud:this ;
+schema:relatedLink virtuoso-web-site:, uda-web-site: ;
+cc:attributionURL odbc-web-page:this . 
+
+jdbc-web-page:
+a schema:CreativeWork, schema:WebPage ;
+schema:author  <http://www.openlinksw.com/#this>  ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-27T16:30:00-05:00"^^xsd:dateTime ;
+schema:name "OpenLink Web Site JDBC Index Page"@en ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:description """Index of documents related to OpenLink Java Database Connectivity (JDBC) Drivers and Connectors"""@en ;
+schema:about odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this, odbc-sap-hana-macos:this, free-lod-driver:this ;
+skos:related data-wrangling:this, linkeddata:this, knowledge-graph:this, lod-cloud:this ;
+schema:relatedLink virtuoso-web-site:, uda-web-site: ;
+cc:attributionURL jdbc-web-page:this .
+
+
+## Posts
+
+odbc-sap-hana-macos:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://miro.medium.com/max/1400/1*cvYoGGTWOl8VzJkTJYcEzg.png> ;
+schema:name "SAP HANA, Microsoft Excel, and the OpenLink ODBC to JDBC Bridge Driver"@en ;
+schema:description """Connecting to SAP HANA using Microsoft Excel for macOS via the Openlink JDBC to ODBC Bridge Drivers."""@en ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this ;
+schema:url odbc-sap-hana-macos: ;
+schema:mainEntityOfPage odbc-sap-hana-macos: .
+
+odi-jdbc-odbc:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity jdbc:this;
+schema:image <https://cdn-images-1.medium.com/max/1600/1*cgCL2U4AOpmAMY7WvTicug.png> ;
+schema:name "Oracle ODI, Microsoft Excel, and the OpenLink ODBC to JDBC Bridge Driver"@en ;
+schema:description """Using the Oracle Data-Integrator (ODI) version 12-2-1 with Microsoft Excel via the Openlink JDBC to ODBC Bridge Drivers."""@en ;
+owl:sameAs <https://linkeddata.uriburner.com/proxy-iri/b6e57cf9a09b67ce474a548c6879f33f6ca2fb5b> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odbc-sap-hana-macos:this ;
+schema:url odi-jdbc-odbc: ;
+schema:mainEntityOfPage odi-jdbc-odbc: .
+
+paid-odbc-jdbc:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://i.pinimg.com/originals/ed/95/14/ed9514178ecf89849402af1c48942412.png> ;
+schema:name "Why Should I Pay for ODBC or JDBC Drivers (Connectors)?"@en ;
+schema:description """A post about characteristics that differentiate Free ODBC and JDBC Drivers from their commercial equivalents. It covers important areas such as:
+                      <ul>
+                      <li>Security -- using a sophisticated profile matrix to control data access based on user identity, machine identity, application identity, ip address, 
+                      or any combination of the aformentioned combined with additional custom factors, if need be</li> 
+                      <li>Application Support -- exploit the power and promise of open data connectivity using a wide variety applications rather than a select few; features like
+                      scrollable cursors offer sophisticated functionality in a variety of forms (keyset or dynamic) that ultimately affect application behavior and cost-effectiveness</li>
+                      <li>Performance & Scalability -- ensuring that performance and scalability are never impediments to open data connectivity exploitation</li> 
+                      <li>Flexible License -- paying for the value provided by way of sophisticated licensing, based on CPU Affinity (rather than all the CPUs available in a given host machine) and 
+                           concurrent users.</li>
+                      </ul>
+                    """@en ;
+owl:sameAs <https://linkeddata.uriburner.com/proxy-iri/9c19fd90f39ba34ff11f3a797a6c8a5e398b7866> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             odi-jdbc-odbc:this, odbc-sap-hana-macos:this ;
+schema:url paid-odbc-jdbc: ;
+schema:mainEntityOfPage paid-odbc-jdbc: .
+
+odbc-lod-covid19:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://community.openlinksw.com/uploads/default/original/2X/2/2ba7e8a6d868079539bc9e5dd6a959290b78f999.jpeg> ;
+schema:name "ODBC and JDBC access to the LOD Cloud Knowledge Graph for COVID19"@en ;
+schema:description """Here's a note about extending Data Connectivity to existing ODBC and JDBC compliant applications and services ie Dashboard."""@en;
+#schema:description """A post about configuring ODBC and JDBC connections from existing tools (e.g., Excel, Tableau, DBeaver, DB Visualizer, and any other compliant tool) 
+#                      to the LOD Cloud KnowledgeGraph for COVID19 using Virtuoso's secure, lightweight, and high-performance ODBC and JDBC Drivers (Connectors)."""@en ;
+owl:sameAs <https://linkeddata.uriburner.com/proxy-iri/6b5d301379aed78555289b45c723a75c95df3d84> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, paid-odbc-jdbc:this, 
+             odi-jdbc-odbc:this, odbc-sap-hana-macos:this, virtuoso-83:, virtuoso:this ;
+schema:url odbc-lod-covid19: ;
+schema:mainEntityOfPage odbc-lod-covid19:.
+
+odbc-jdbc-qlick:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://cdn-images-1.medium.com/max/1600/1*D53ga9whxoGzPWFPb7wemA.png> ;
+schema:name "Connecting QlikView and QlikSense to JDBC-accessible Data Sources via the OpenLink ODBC-JDBC Bridge Driver (Connector)"@en ;
+schema:description """QlikView and QlikSense from Qlik both provide native support for ODBC, which provides access to numerous data sources. 
+                      However, it doesnÃÂ¢ÃÂÃÂt provide access to data sources that are only JDBC-accessible, which leaves this genre of data source 
+                      inaccessible without appropriate middleware in the form of our ODBC-JDBC Bridge Drivers."""@en ;
+owl:sameAs <https://linkeddata.uriburner.com/proxy-iri/997fffdf5f63e4f8d3f90283a9e907f9fdaee683> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this, odbc-sap-hana-macos:this ;
+schema:url odbc-jdbc-qlick: ;
+schema:mainEntityOfPage odbc-jdbc-qlick: .
+
+
+free-lod-driver:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://community.openlinksw.com/uploads/default/original/1X/9f0d06cfa10194c70b4921883ed61dac5eff120f.png> ;
+schema:name "Free 90 Day ODBC and JDBC Drivers for LOD Cloud Knowledge Graph Connectivity re COVID19"@en ;
+schema:description """About our ODBC and/or JDBC Drivers for COVID19 Knowledge Graph access using existing applications and services."""@en ;
+owl:sameAs <http://linkeddata.uriburner.com/proxy-iri/0a8965664b1e167f11d0fd34064f7997c153346b> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this, odbc-sap-hana-macos:this, odbc-lod-covid19:this, 
+             knowledge-graph:this ;
+schema:url free-lod-driver: ;
+schema:mainEntityOfPage free-lod-driver: .
+
+odbc-mysql-macos-azure:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://cdn-images-1.medium.com/max/800/1*WynCqbWiz8FIS60wG8MIfg.png> ;
+schema:name "Making a connection to MySQL on Microsoft Azure from an OpenLink ODBC Driver (Connector)"@en ;
+schema:description """About the installation and configuration of ODBC connectivity to MySQL on Microsoft's Azure Cloud 
+                      Platform using the OpenLink ODBC Drivers for macOS from a variety of applications, including 
+                      Microsoft Excel."""@en ;
+owl:sameAs <https://linkeddata.uriburner.com/proxy-iri/710e15ed6fbdf1c160e001aed5baecbbf66ee097> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this, odbc-postgres-macos-azure:this, 
+             odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this, odbc-sap-hana-macos:this ;
+schema:url odbc-mysql-macos-azure: ;
+schema:mainEntityOfPage odbc-mysql-macos-azure: .
+
+odbc-postgres-macos-azure:this 
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://cdn-images-1.medium.com/max/800/1*7j8NlGSJFUw9FwJKJSCj-Q.png> ;
+schema:name "Making a connection to PostgreSQL on Microsoft Azure from an OpenLink ODBC Driver (Connector)"@en ;
+schema:description """About the installation and configuration of ODBC connectivity to PostgreSQL on Microsoft's Azure Cloud 
+                      Platform using the OpenLink ODBC Drivers for macOS from a variety of applications, including 
+                      Microsoft Excel."""@en ;
+owl:sameAs <https://linkeddata.uriburner.com/proxy-iri/56bd25dbc8ee8e26ccb26730c7f09d64e039a74c> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-sqlserver-macos-azure:this,  odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this, odbc-sap-hana-macos:this ;
+schema:url odbc-postgres-macos-azure: ;
+schema:mainEntityOfPage odbc-postgres-macos-azure: .
+
+odbc-sqlserver-macos-azure:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity odbc:this ;
+schema:image <https://cdn-images-1.medium.com/max/800/1*nn3hBGPceas-2bEg423zEQ.png> ;
+schema:name "Making a connection to SQL Server on Microsoft Azure from an OpenLink ODBC Driver (Connector)"@en ;
+schema:description """About the installation and configuration of ODBC connectivity to SQL Server on Microsoft's Azure Cloud 
+                      Platform using the OpenLink ODBC Drivers for macOS from a variety of applications, including 
+                      Microsoft Excel."""@en ;
+owl:sameAs <https://linkeddata.uriburner.com/proxy-iri/bfeec5d26ec0468c98d2135b5cbdb47d9b9047d4> ;
+skos:related odbc:this, jdbc:this, sparql-query-community-posts:this,
+             odbc-postgres-macos-azure:this, 
+             odbc-mysql-macos-azure:this, odbc-jdbc-qlick:this, odbc-lod-covid19:this,
+             paid-odbc-jdbc:this, odi-jdbc-odbc:this, odbc-sap-hana-macos:this ;
+schema:url odbc-sqlserver-macos-azure: ;
+schema:mainEntityOfPage odbc-sqlserver-macos-azure: .
+
+
+## SPARQL Queries ##
+
+sparql-query-community-posts:this
+a schema:CreativeWork ;
+schema:name "SPARQL Query Listing Posts related to ODBC and JDBC"@en ;
+schema:description """SPARQL Query Listing Posts related to ODBC and JDBC. The query 
+                    results include Linked Data Proxy URIs generated by our URIBurner
+                    Middleware Service."""@en ;
+schema:url sparql-query-community-posts: ;
+schema:image <https://cdn-images-1.medium.com/max/1600/1*cgCL2U4AOpmAMY7WvTicug.png> ;
+skos:related odbc:this, jdbc:this ;
+schema:mainEntityOfPage sparql-query-community-posts: .
+
+
