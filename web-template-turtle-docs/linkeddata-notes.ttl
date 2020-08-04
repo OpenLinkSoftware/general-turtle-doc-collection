@@ -1,0 +1,240 @@
+## Turtle Start ##
+
+## Linked Data Notes
+@prefix : <#> . 
+@prefix cc: <http://creativecommons.org/ns#> . 
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> . 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> . 
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix schema: <http://schema.org/> . 
+@prefix dbpedia: <http://dbpedia.org/resource/> . 
+@prefix dbpedia-live: <http://dbpedia-live.openlinksw.com/resource/> .
+@prefix dbc: <http://dbpedia-live.openlinksw.com/resource/Category:> . 
+@prefix wikidata: <http://www.wikidata.org/entity/> .  
+@prefix dbpedia-live-fct: <http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_> . 
+@prefix kbpedia: <http://kbpedia.org/kko/rc/> . 
+@prefix odbc: <http://data.openlinksw.com/oplweb/glossary-term/ODBC#> .
+@prefix jdbc: <http://data.openlinksw.com/oplweb/glossary-term/JDBC#> .
+@prefix linkeddata: <http://data.openlinksw.com/oplweb/glossary-term/LinkedData#> .
+@prefix knowledge-graph: <http://data.openlinksw.com/oplweb/glossary-term/KnowledgeGraph#> .
+@prefix lod-cloud: <http://data.openlinksw.com/oplweb/glossary-term/LODCloud#> . 
+@prefix data-wrangling: <http://data.openlinksw.com/oplweb/glossary-term/DataWrangling#> . 
+@prefix sparql-query-lang: <http://data.openlinksw.com/oplweb/glossary-term/SPARQL#> . 
+@prefix virtuoso: <http://data.openlinksw.com/oplweb/product/Virtuoso#this> . 
+@prefix virtuoso-83: <http://data.openlinksw.com/oplweb/product_release/VirtuosoRelease83x#this> . 
+@prefix sparql-query-linkeddata-posts: <https://tinyurl.com/y9rvpmug#> .
+@prefix odbc-sap-hana-macos: <https://medium.com/openlink-odbc-jdbc-ado-net-data-access-drivers#> . 
+@prefix linkeddata-web-page: <http://www.openlinksw.com/linkeddata/> . 
+@prefix uda-web-site: <http://uda.openlinksw.com/> . 
+@prefix virtuoso-web-site: <http://virtuoso.openlinksw.com/> . 
+@prefix linkeddata-deployment-ttl: <https://medium.com/openlink-software-blog/simple-linked-data-deployment-tutorial-a532e568c82f#> . 
+@prefix linkeddata-deployment-jsonld: <https://medium.com/@kidehen/simple-linked-data-deployment-tutorial-using-json-ld-notation-3e753a5d44a3#> . 
+@prefix what-is-a-sparql-endpoint: <https://medium.com/virtuoso-blog/what-is-a-virtuoso-sparql-endpoint-and-why-is-it-important-5244df738a3e#> . 
+@prefix what-is-lod-cloud: <https://medium.com/virtuoso-blog/what-is-the-linked-open-data-cloud-and-why-is-it-important-1901a7cb7b1f#> . 
+@prefix openlink-web: <http://www.openlinksw.com/> . 
+@prefix what-is-virtuoso-sponger:<https://medium.com/virtuoso-blog/what-is-the-virtuoso-sponger-middleware-about-and-why-is-it-important-293546b32a32#>.
+@prefix virtuoso-sponger-web-page: <http://www.openlinksw.com/virtuososponger/> . 
+@prefix virtsponger-image: <https://miro.medium.com/max/1400/1*31Bq6WkSEYrMDawGqTbzNw.png> . 
+@prefix spongercartidgemarvel-image: <https://community.openlinksw.com/uploads/default/original/1X/49f1641555e4d22afba8da7e6b0523ccc7c7febf.png>.
+@prefix sponger-cartidge-marvel:<https://community.openlinksw.com/t/linked-data-middleware-sponger-cartridge-marvel-universe/924#>.
+@prefix sponger-covid-demo:<https://community.openlinksw.com/t/lod-cloud-knowledge-graph-usage-demo-structured-data-sniffer-super-links-uriburner-live-virtuoso-sponger-instance/1628#>.
+@prefix sponger-covid-demo-image: <https://community.openlinksw.com/uploads/default/optimized/1X/2c2cb76e3eb6dd765220548ad2ce87a912df8a6f_2_1380x928.jpeg>.
+@prefix kg-covid-demo-image: <https://community.openlinksw.com/uploads/default/optimized/1X/a73a701ef9ac4ae23c43cbbd43d9ce9226ba18e6_2_1380x896.jpeg>.
+@prefix virtuoso-meta-cartridge:<https://community.openlinksw.com/t/named-entity-extraction-and-virtuoso-meta-cartridges/1582#>.
+@prefix extractor-cartidge-image: <https://community.openlinksw.com/uploads/default/original/1X/6f2d179af603d96739844e13acf781b22ea8c534.png>.
+@prefix      source: <http://www.openlinksw.com/data/turtle/general/linkeddata-notes.ttl> .
+@prefix   sourceDAV: <http://www.openlinksw.com/DAV/data/turtle/general/linkeddata-notes.ttl> .
+
+sourceDAV:
+a foaf:Document, schema:CreativeWork ;
+owl:sameAs source:  ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-31T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "Linked Data Notes -- Turtle Document"@en ;
+schema:about openlink-web:linkeddata .
+
+
+source:
+a foaf:Document, schema:CreativeWork ;
+owl:sameAs sourceDAV: ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-31T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "Linked Data Notes -- Turtle Document"@en ;
+schema:about openlink-web:linkeddata .
+
+
+## Web Pages 
+
+linkeddata-web-page:
+a schema:CreativeWork, schema:WebPage ;
+schema:author  <http://www.openlinksw.com/#this>  ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-27T16:30:00-05:00"^^xsd:dateTime ;
+schema:name "Linked Data Index Page"@en ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:description """Index of documents related to Linked Data"""@en ;
+schema:about linkeddata-deployment-ttl:this, linkeddata-deployment-jsonld:this, what-is-a-sparql-endpoint:this,
+              what-is-lod-cloud:this ;
+skos:related data-wrangling:this, linkeddata:this, knowledge-graph:this, lod-cloud:this ;
+schema:relatedLink virtuoso-web-site:, uda-web-site: ;
+cc:attributionURL linkeddata-web-page:this .
+
+virtuoso-sponger-web-page:
+a schema:CreativeWork, schema:WebPage ;
+schema:author  <http://www.openlinksw.com/#this>  ;
+schema:dateCreated "2020-06-30T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-06-30T16:30:00-05:00"^^xsd:dateTime ;
+schema:name "Virtuoso Sponger Index Page"@en ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:description """Index of documents related to Virtuoso Sponger"""@en ;
+schema:about virtuoso-sponger-web-page:this ;
+skos:related data-wrangling:this, linkeddata:this, knowledge-graph:this, lod-cloud:this ;
+schema:relatedLink virtuoso-web-site:, uda-web-site: ;
+cc:attributionURL virtuoso-sponger-web-page:this .
+
+
+## Blog Posts
+
+## Linked Data HowTos 
+
+linkeddata-deployment-ttl:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity linkeddata:this ;
+# schema:image <https://i.pinimg.com/originals/fc/bd/42/fcbd42b40c13b33f664f4986a3c152c5.png> ;
+schema:image <https://i.pinimg.com/originals/6c/31/27/6c31271602e50d21b55748aa58b7e6f3.png> ;
+schema:name "Simple Linked Data Deployment using RDF-Turtle Documents"@en ;
+schema:description """A post about a simple approach to deploying RDF documents using Linked Data principles, 
+                      courtesy of RDF-Turtle documents."""@en ;
+skos:related linkeddata:this, knowledge-graph:this, lod-cloud:this ;
+schema:url linkeddata-deployment-ttl: ;
+schema:mainEntityOfPage linkeddata-deployment-ttl: .
+
+linkeddata-deployment-jsonld:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity linkeddata:this ;
+# schema:image <https://i.pinimg.com/originals/fc/bd/42/fcbd42b40c13b33f664f4986a3c152c5.png> ;
+schema:image <https://i.pinimg.com/originals/19/3c/e7/193ce70298076b28fda47ad213e5fda1.png> ;
+schema:name "Simple Linked Data Deployment using JSON-LD Documents"@en ;
+schema:description """A post about a simple approach to deploying RDF documents using Linked Data principles, 
+                      courtesy of JSON-LD documents."""@en ;
+skos:related linkeddata:this, knowledge-graph:this, lod-cloud:this ;
+schema:url linkeddata-deployment-jsonld: ;
+schema:mainEntityOfPage linkeddata-deployment-jsonld: .
+
+what-is-a-sparql-endpoint:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity linkeddata:this ;
+schema:image <https://miro.medium.com/max/1400/1*Mv6-hB_HWQgc-nE38xqPpA.png> ;
+schema:name "What is a Virtuoso SPARQL Endpoint, and Why is it Important? "@en ;
+schema:description """A post about the power and sophistication that a Viruoso SPARQL Query Service endpoint brings 
+to apps and services that operate on data using the SQL or SPARQL Query Languages."""@en ;
+skos:related linkeddata:this, knowledge-graph:this, lod-cloud:this, sparql-query-lang:this ;
+schema:url what-is-a-sparql-endpoint: ;
+schema:mainEntityOfPage what-is-a-sparql-endpoint: .
+
+## Sponger Related 
+
+virtuoso-sponger-web-page:
+a schema:CreativeWork, schema:WebPage ;
+schema:author  <http://www.openlinksw.com/#this>  ;
+schema:dateCreated "2020-06-30T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-06-30T16:30:00-05:00"^^xsd:dateTime ;
+schema:name "Virtuoso Sponger Index Page"@en ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:description """Index of documents related to Virtuoso Sponger"""@en ;
+schema:about virtuoso-sponger-web-page:this ;
+skos:related data-wrangling:this, linkeddata:this, knowledge-graph:this, lod-cloud:this ;
+schema:relatedLink virtuoso-web-site:, uda-web-site: ;
+cc:attributionURL virtuoso-sponger-web-page:this .
+
+### What is the Sponger? 
+virtuoso-meta-cartridge:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity linkeddata:this ;
+schema:image extractor-cartidge-image:   ;
+schema:name "What are Virtuoso's Sponger Middleware layer Extractor and Meta Cartridges?"@en ;
+# schema:description """A post explaining VirtuosoÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs Sponger Middleware layer Extractor and Meta Cartridges used for for driving its Extract, Transform, and Load (ETL) functionality."""@en ;
+#schema:description """A post that describes Virtuoso's Sponger Middleware Module. This module comprises a variety of Cartridges (Data Access Drivers or Connectors) that perform Extract, Transform, and Load (ETL) operations on a variety of Web-accessible Data Sources (or #Resources). 
+#Cartridge Types include:
+#
+#Extractor Cartridges -- these perform basic Extract, Transform, and Load operations on target Data Sources (just like ODBC or JDBC Drives, 
+#but the end product produces Structured Data Represented as Knowledge Graphs rather than Tables).
+#
+#Lookup-up Meta Cartridges -- these perform additional Knowledge Graph enhancement by looking-up and incorporating additional Structured Data 
+#to the progressively enhanced local Knowledge Graph from the massive LOD Cloud and other sources (e.g., the local host DBMS instance and other 
+#Virtuoso or SPARQL-accessible Data Sources).
+#
+#Named Entity Extraction (NER) and Natural Language (NLP) Meta Cartridges --  that perform NER and NLP operations on the data transformed by Extractor Cartridges 
+#en route final storage in the progressively enhanced local Knowledge Graph managed by a Virtuoso DBMS instance.
+#
+#"""@en ;
+
+schema:description """<p>A post that describes Virtuoso's Sponger Middleware Module. This module comprises a variety of Cartridges (Data Access Drivers or Connectors) that perform Extract, Transform, and Load (ETL) operations on a variety of Web-accessible Data Sources (or Resources). 
+Cartridge Types include:</p>
+
+<p>Extractor Cartridges -- these perform basic Extract, Transform, and Load operations on target Data Sources (just like ODBC or JDBC Drives, 
+but the end product produces Structured Data Represented as Knowledge Graphs rather than Tables).</p>
+
+<p>Lookup-up Meta Cartridges -- these perform additional Knowledge Graph enhancement by looking-up and incorporating additional Structured Data 
+to the progressively enhanced local Knowledge Graph from the massive LOD Cloud and other sources (e.g., the local host DBMS instance and other 
+Virtuoso or SPARQL-accessible Data Sources).</p>
+
+<p>Named Entity Extraction (NER) and Natural Language (NLP) Meta Cartridges --  that perform NER and NLP operations on the data transformed by Extractor Cartridges 
+en route final storage in the progressively enhanced local Knowledge Graph managed by a Virtuoso DBMS instance.</p> """@en;
+
+
+skos:related linkeddata:this, knowledge-graph:this, lod-cloud:this, sparql-query-lang:this ;
+schema:url virtuoso-meta-cartridge: ;
+schema:mainEntityOfPage virtuoso-meta-cartridge: .
+
+### Sponger Cartridges 
+sponger-cartidge-marvel:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity linkeddata:this ;
+schema:image spongercartidgemarvel-image:   ;
+schema:name "Linked Data Middleware Sponger Cartridge: Marvel Universe"@en ;
+schema:description """A post about an update to Virtuoso Sponger Cartridge for pages from the Marvel Comics Universe to handle the growing use of https: scheme URIs. Includes examples from live URIBurner."""@en ;
+skos:related linkeddata:this, knowledge-graph:this, lod-cloud:this, sparql-query-lang:this, what-is-virtuoso-sponger:this ;
+schema:url sponger-cartidge-marvel: ;
+schema:mainEntityOfPage sponger-cartidge-marvel: .
+
+### Sponger and COVID19
+sponger-covid-demo:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity linkeddata:this ;
+schema:image sponger-covid-demo-image:  , kg-covid-demo-image: ;
+schema:name "Virtuoso Sponger, URIBurner Service, and Structured Data Sniffer for Progressive Knowledge Graph enhancement"@en ;
+schema:description "How the Virtuoso Sponger, URIBurner Service, and Structured Data Sniffer Browser Extension interoperate en route to simplifying progressive LOD Cloud KnowledgeGraph integration from any HTML doc?"@en ;
+# schema:description """A post about how our Virtuoso Sponger, URIBurner Service, and OpenLink Structured Data Sniffer interoperate en route to simplifying progressive LOD Cloud KnowledgeGraph integration from any HTML doc. Includes examples from live URIBurner."""@en ;
+skos:related linkeddata:this, knowledge-graph:this, lod-cloud:this, sparql-query-lang:this, what-is-virtuoso-sponger:this, sponger-cartidge-marvel:this ;
+schema:url sponger-covid-demo: ;
+schema:mainEntityOfPage sponger-covid-demo: .
+
+## SPARQL Queries ##
+
+sparql-query-linkeddata-posts:this
+a schema:CreativeWork ;
+schema:name "SPARQL Query Listing Posts related to Linked Data "@en ;
+schema:description """SPARQL Query Listing Posts related to ODBC and JDBC. The query 
+                    results include Linked Data Proxy URIs generated by our URIBurner
+                    Middleware Service."""@en ;
+schema:url sparql-query-linkeddata-posts: ;
+schema:image <https://cdn-images-1.medium.com/max/1600/1*cgCL2U4AOpmAMY7WvTicug.png> ;
+skos:related odbc:this, jdbc:this, sparql-query-lang:this ;
+schema:mainEntityOfPage sparql-query-linkeddata-posts: .
+
+## Turtle End ##
