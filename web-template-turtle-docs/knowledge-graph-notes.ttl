@@ -1,0 +1,205 @@
+## Turtle Start ##
+
+## DBMS Notes
+@prefix : <#> . 
+@prefix cc: <http://creativecommons.org/ns#> . 
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> . 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> . 
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix schema: <http://schema.org/> . 
+@prefix dbpedia: <http://dbpedia.org/resource/> . 
+@prefix dbpedia-live: <http://dbpedia-live.openlinksw.com/resource/> .
+@prefix dbc: <http://dbpedia-live.openlinksw.com/resource/Category:> . 
+@prefix wikidata: <http://www.wikidata.org/entity/> .  
+@prefix dbpedia-live-fct: <http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_> . 
+@prefix kbpedia: <http://kbpedia.org/kko/rc/> . 
+@prefix odbc: <http://data.openlinksw.com/oplweb/glossary-term/ODBC#> .
+@prefix jdbc: <http://data.openlinksw.com/oplweb/glossary-term/JDBC#> .
+@prefix linkeddata: <http://data.openlinksw.com/oplweb/glossary-term/LinkedData#> .
+@prefix rdbms: <http://data.openlinksw.com/oplweb/glossary-term/RDBMS#>.
+@prefix dbms: <http://data.openlinksw.com/oplweb/glossary-term/DBMS#>.
+@prefix rdf: <http://data.openlinksw.com/oplweb/glossary-term/RDF#>.
+@prefix knowledge-graph: <http://data.openlinksw.com/oplweb/glossary-term/KnowledgeGraph#> .
+@prefix lod-cloud: <http://data.openlinksw.com/oplweb/glossary-term/LODCloud#> . 
+@prefix data-wrangling: <http://data.openlinksw.com/oplweb/glossary-term/DataWrangling#> . 
+@prefix sparql-query-lang: <http://data.openlinksw.com/oplweb/glossary-term/SPARQL#> . 
+@prefix virtuoso: <http://data.openlinksw.com/oplweb/product/Virtuoso#this> . 
+@prefix virtuoso-83: <http://data.openlinksw.com/oplweb/product_release/VirtuosoRelease83x#this> . 
+@prefix sparql-query-linkeddata-posts: <https://tinyurl.com/y9rvpmug#> .
+@prefix odbc-sap-hana-macos: <https://medium.com/openlink-odbc-jdbc-ado-net-data-access-drivers#> . 
+@prefix linkeddata-web-page: <http://www.openlinksw.com/linkeddata/> . 
+@prefix uda-web-site: <http://uda.openlinksw.com/> . 
+@prefix virtuoso-web-site: <http://virtuoso.openlinksw.com/> . 
+@prefix linkeddata-deployment-ttl: <https://medium.com/openlink-software-blog/simple-linked-data-deployment-tutorial-a532e568c82f#> . 
+@prefix what-is-a-sparql-endpoint: <https://medium.com/virtuoso-blog/what-is-a-virtuoso-sparql-endpoint-and-why-is-it-important-5244df738a3e#> . 
+@prefix linkeddata-deployment-jsonld: <https://medium.com/@kidehen/simple-linked-data-deployment-tutorial-using-json-ld-notation-3e753a5d44a3#> . 
+@prefix what-is-lod-cloud: <https://medium.com/virtuoso-blog/what-is-the-linked-open-data-cloud-and-why-is-it-important-1901a7cb7b1f#> . 
+@prefix openlink-web: <http://www.openlinksw.com/> . 
+
+@prefix what-is-virtuoso-sponger:<https://medium.com/virtuoso-blog/what-is-the-virtuoso-sponger-middleware-about-and-why-is-it-important-293546b32a32#>.
+@prefix virtuoso-sponger-web-page: <http://www.openlinksw.com/virtuososponger/> . 
+@prefix virtsponger-image: <https://miro.medium.com/max/1400/1*31Bq6WkSEYrMDawGqTbzNw.png> . 
+@prefix spongercartidgemarvel-image: <https://community.openlinksw.com/uploads/default/original/1X/49f1641555e4d22afba8da7e6b0523ccc7c7febf.png>.
+@prefix sponger-cartidge-marvel:<https://community.openlinksw.com/t/linked-data-middleware-sponger-cartridge-marvel-universe/924#>.
+@prefix sponger-covid-demo:<https://community.openlinksw.com/t/lod-cloud-knowledge-graph-usage-demo-structured-data-sniffer-super-links-uriburner-live-virtuoso-sponger-instance/1628#>.
+@prefix sponger-covid-demo-image: <https://community.openlinksw.com/uploads/default/optimized/1X/2c2cb76e3eb6dd765220548ad2ce87a912df8a6f_2_1380x928.jpeg>.
+@prefix kg-covid-demo-image: <https://community.openlinksw.com/uploads/default/optimized/1X/a73a701ef9ac4ae23c43cbbd43d9ce9226ba18e6_2_1380x896.jpeg>.
+@prefix virtuoso-meta-cartridge:<https://community.openlinksw.com/t/named-entity-extraction-and-virtuoso-meta-cartridges/1582#>.
+@prefix extractor-cartidge-image: <https://community.openlinksw.com/uploads/default/original/1X/6f2d179af603d96739844e13acf781b22ea8c534.png>.
+@prefix data-virtualization:<http://data.openlinksw.com/oplweb/glossary-term/DataVirtualization#this>.
+@prefix virt-data-virtualization-beginners:<https://community.openlinksw.com/t/virtuoso-data-virtualization-for-beginners-sql-data-sources/1573#>.
+@prefix datavirt-join-image: <https://community.openlinksw.com/uploads/default/original/1X/8e283f48ad1b8197b8cca4f3ad9ca67c13a855c5.png>.
+@prefix data-virt-for-sql-rdf:<https://medium.com/virtuoso-blog/conceptual-data-virtualization-for-sql-and-rdf-using-open-standards-24520925c7ce#>.
+@prefix data-virt-for-sql-rdf-image: <https://miro.medium.com/max/1400/1*Aszo6IEVGfBlJyCPpQfTIA.png>.
+@prefix access-mysql-oracle:<https://community.openlinksw.com/t/how-do-i-integrate-data-across-mysql-and-oracle-databases/1781#>.
+@prefix datavirtualization-image: <https://community.openlinksw.com/uploads/default/original/2X/c/c10e34058d91fd8da6f02f840bfbdb0258baabe8.jpeg>.
+@prefix tabulated-rdbms-comparison:<https://community.openlinksw.com/t/tabulated-relational-database-management-systems-rdbms-comparison/274#>.
+@prefix small-data:<https://medium.com/virtuoso-blog/what-is-small-data-and-why-is-it-important-fbf5f267884#>.
+@prefix linkeddata-sparql-image: <https://miro.medium.com/max/1296/1*nmycbuGbfNvzSnxt6kLX3g.png>.
+@prefix graph-v-rdbms:<https://medium.com/@kidehen/heres-why-9d278d5aa725#>.
+@prefix sentance-records-image: <https://miro.medium.com/max/1400/1*ml1daZTp1LdxxCT_8iWs_Q.png>.
+@prefix multi-mode-dbms-image: <https://i.pinimg.com/originals/8a/f8/cb/8af8cb8d7e983d04feaabe138d7df9d0.png> . 
+@prefix explainer-kg-linkeddata-ontologies: <https://medium.com/virtuoso-blog/linked-data-ontologies-and-knowledge-graphs-a3d0ad6d6f66#> .
+@prefix customize-r2rml-scripts: <https://medium.com/virtuoso-blog/customizing-r2rml-scripts-in-virtuoso-d57973d8fab#>.
+@prefix linkeddata-r2ml-image:<https://miro.medium.com/max/1400/1*V7baaQgsbQXG0zHHKiEryw.png>.
+@prefix virtualization-sql-rdf: <https://medium.com/virtuoso-blog/conceptual-data-virtualization-for-sql-and-rdf-using-open-standards-24520925c7ce#>.
+@prefix virtualization-sql-rdf-image:<https://miro.medium.com/max/1400/1*Aszo6IEVGfBlJyCPpQfTIA.png>.
+@prefix rdf-graph-mappings-virtuoso: <https://medium.com/virtuoso-blog/generate-relational-tables-to-rdf-relational-graphs-mappings-using-virtuosos-rdb2rdf-wizard-c4b83402599a#>.
+@prefix demo-virtualization-rdf-image:<https://miro.medium.com/max/1400/1*6Uxgk2FGvQM_Vkwmi-7wGw.png>.
+@prefix generate-rdf-views:<https://medium.com/virtuoso-blog/rdf-views-generate-b0538101a724#>.
+@prefix demo-rdf-views-image:<https://miro.medium.com/max/1400/1*5SxAvCN-dQHEiPHXig6xrQ.png>.
+@prefix dbms-comparison-image: <https://i.pinimg.com/originals/15/b8/08/15b808307c501e7ffa28661fc2438460.png>.
+@prefix knowledge-graph: <http://data.openlinksw.com/oplweb/glossary-term/KnowledgeGraph#>.
+@prefix knowledge-graph-image: <https://i.pinimg.com/originals/e0/0b/c9/e00bc9d0c3f36f8388e87b66a4f3e9b1.png> .
+@prefix dbms-page: <http://www.openlinksw.com/dbms/>. 
+
+@prefix      source: <http://www.openlinksw.com/data/turtle/general/dbms-notes.ttl> .
+@prefix   sourceDAV:<http://www.openlinksw.com/DAV/data/turtle/general/dbms-notes.ttl> .
+
+sourceDAV:
+a schema:CreativeWork ;
+owl:sameAs source:  ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-07-20T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-31T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "Data and Database Management Technology Notes -- Turtle Document (WebDAV)"@en ;
+schema:mainEntity dbms-page: .
+
+
+source:
+a schema:CreativeWork ;
+owl:sameAs sourceDAV: ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-07-20T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-31T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "Data and Database Management Technology Notes -- Turtle Document"@en ;
+schema:mainEntity dbms-page: .
+
+## Web Pages 
+## This Web Page is about various topics
+
+dbms-page:
+a schema:CreativeWork, schema:WebPage ;
+schema:author  <http://www.openlinksw.com/#this>  ;
+schema:dateCreated "2020-07-15T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-07-20T16:30:00-05:00"^^xsd:dateTime ;
+schema:name "DBMS Index Page"@en ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:description """Index of documents related to DBMS"""@en ;
+schema:about customize-r2rml-scripts:this, explainer-kg-linkeddata-ontologies:this, virtualization-sql-rdf:this,
+             rdf-graph-mappings-virtuoso:this, generate-rdf-views:this, graph-v-rdbms:this, small-data:this ;
+skos:related data-wrangling:this, linkeddata:this, knowledge-graph:this, rdbms:this ;
+schema:relatedLink virtuoso-web-site:, uda-web-site: ;
+cc:attributionURL dbms:this .
+
+
+## Blog Posts
+## Each of these posts is about the Database Management System concepty (i.e., dbms:#this )
+
+tabulated-rdbms-comparison:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:name "Tabulated Relational Database Management Systems (RDBMS) Comparison  "@en ;
+schema:image dbms-comparison-image: ;
+schema:description """A community forum post displaying comparison chart for Tabulated Relational Database Management Systems (RDBMS) """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this ;
+schema:mainEntityOfPage tabulated-rdbms-comparison: .
+
+small-data:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:image linkeddata-sparql-image:  ;
+schema:name "What is Small Data, and why is it Important?  "@en ;
+schema:description """A blog post expanding on the importance of Small Data 
+ """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this ;
+schema:mainEntityOfPage small-data: .
+
+graph-v-rdbms:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:image multi-mode-dbms-image: ;
+schema:name "Why both the Graph and Relational Database Monikers are problematic  "@en ;
+schema:description """A blog post expanding on why Graph and Relational Database Monikers are problematic. Graph Data is like saying âData Dataâ. Thus, a Graph Database is like saying âData Data Documentâ. That phrase sounds nice to the ear, and the visualization are temporarily appealing, but ultimately a path to confusion. 
+ """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this ;
+schema:mainEntityOfPage graph-v-rdbms: .
+
+
+generate-rdf-views:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:image demo-rdf-views-image:;
+schema:name "Generating Virtual Graphs from SQL-Compliant Relational Database Management Systems"@en ;
+schema:description """Virtuoso provides a one-click option, as part of its RDF Views Wizard for generating a basic Linked Data view over Tabular Relations (Tables) scoped to local or remote data sources. As is the case in a conventional SQL RDBMS usage scenario, these views provide a change-sensitive abstraction for operating on data via the SPARQL Query Language.
+This feature enables both beginner and advanced users alike to experience enhancements that a Semantic Web of Linked Data brings to Data Flow and Interaction with a minimal learning curve.
+ """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this, dbms:this, rdf:this ;
+schema:mainEntityOfPage generate-rdf-views: .
+
+rdf-graph-mappings-virtuoso:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:image demo-virtualization-rdf-image:;
+schema:name "Generate Relational Tables to RDF Graphs mapping using Virtuosoâs RDF Views Wizard"@en ;
+schema:description """This post provides a sequence of screenshots and comments to walk through generating RDF Graph Relations from SQL Tabular Relations using the Demo Suppliers table in the Northwind Demo Database.
+ """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this, dbms:this, rdf:this ;
+schema:mainEntityOfPage  rdf-graph-mappings-virtuoso: .
+
+virtualization-sql-rdf:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:image virtualization-sql-rdf-image: ;
+schema:name "Conceptual Relational Data Virtualization, using Existing Open Standards"@en ;
+schema:description """In this post provides a simple guide, including links to live examples, that demonstrates how to generate Graphical relations (entity relationship types represented as sentences, grouped by a sentence predicate) from Tabular relations (entity relationships represented as records in a table, grouped by a table name functioning as the predicate).
+ """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this, dbms:this, rdf:this ;
+schema:mainEntityOfPage virtualization-sql-rdf: .
+
+
+explainer-kg-linkeddata-ontologies:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:name "Linked Data, Ontologies, and Knowledge Graphs Explainer "@en ;
+schema:image  knowledge-graph-image: ;
+schema:description """This document will help you understand why Knowledge Graphs, Ontologies and Linked Data are powerful tools for digital transformation, by demonstrating how the magic of Hyperlinks extends beyond the World Wide Web.
+ """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this, dbms:this, rdf:this ;
+schema:mainEntityOfPage explainer-kg-linkeddata-ontologies: .
+
+
+customize-r2rml-scripts:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:image linkeddata-r2ml-image: ;
+schema:name "Customizing Relational Tables to RDF Graph Mappings using R2RML Scripts in Virtuoso"@en ;
+schema:description """In this post, we describe how Virtuoso leverages that semantic richness in R2RML, creating RDF Views over SQL Tables using terms from multiple shared ontologies while also handling the structural disparity that exists in a typical RDBMS schema.
+ """@en ;
+skos:related linkeddata:this, knowledge-graph:this,  odbc:this , jdbc:this, rdbms:this, dbms:this, rdf:this ;
+schema:mainEntityOfPage customize-r2rml-scripts: .
+
+
+## Turtle End ##
