@@ -1,0 +1,869 @@
+## SARS-CoV-2 and COVID-19 Notes
+@prefix : <#> . 
+@prefix cc: <http://creativecommons.org/ns#> . 
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> . 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix my-covid-19-notes: <https://kingsley.idehen.net/public_home/kidehen/Public/Linked%20Data%20Documents/Nanotations/random-covid19-notes.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> . 
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix schema: <http://schema.org/> . 
+@prefix dbpedia: <http://dbpedia.org/resource/> . 
+@prefix dbpedia-live: <http://dbpedia-live.openlinksw.com/resource/> .
+@prefix dbc: <http://dbpedia-live.openlinksw.com/resource/Category:> . 
+@prefix yago-virus-class: <http://dbpedia.org/class/yago/Virus101328702> .
+@prefix wikidata: <http://www.wikidata.org/entity/> .  
+@prefix egonw: <https://egonw.github.io/SARS-CoV-2-Queries/viruses.html#> .
+@prefix opl-wikidata-1: <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ82069695&gp=>  .
+@prefix opl-wikidata-2: <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=> . 
+@prefix dbpedia-live-fct: <http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_> . 
+@prefix atlantic-article-1: <https://www.theatlantic.com/science/archive/2020/03/biography-new-coronavirus/608338#> . 
+@prefix twitter-covid19-hashtag: <https://twitter.com/hashtag/covid19#> .
+@prefix twitter-sars_cov_2-hashtag: <https://twitter.com/hashtag/sars_cov_s#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> . 
+@prefix kbpedia: <http://kbpedia.org/kko/rc/> . 
+@prefix obo-doid: <http://purl.obolibrary.org/obo/doid#> .
+@prefix diarrhea-image: <https://www.health.harvard.edu/media/content/images/medical-illustrations/diarrhea-dreamstime_s_136912244.> . 
+@prefix diarrhea-article-1: <https://www.health.harvard.edu/a_to_z/diarrhea-a-to-z#> .
+@prefix opendata: <http://data.openlinksw.com/oplweb/glossary-term/OpenData#> .
+@prefix linkeddata: <http://data.openlinksw.com/oplweb/glossary-term/LinkedData#> .
+@prefix knowledge-graph: <http://data.openlinksw.com/oplweb/glossary-term/KnowledgeGraph#> .
+@prefix lod-cloud: <http://data.openlinksw.com/oplweb/glossary-term/LODCloud#> . 
+@prefix data-wrangling: <http://data.openlinksw.com/oplweb/glossary-term/DataWrangling#> . 
+@prefix ncbi-taxa-2697049: <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2697049#> . 
+@prefix ncbi-vssi-2697049: <https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Wuhan%20seafood%20market%20pneumonia%20virus,%20taxid:2697049#> .
+@prefix covid-19-pubmed: <https://pubmed.ncbi.nlm.nih.gov/?term=%28%28wuhan%5BAll+Fields%5D+AND+%28%22coronavirus%22%5BMeSH+Terms%5D+OR+%22coronavirus%22%5BAll+Fields%5D%29%29+AND+2019%2F12%5BPDAT%5D+%3A+2030%5BPDAT%5D%29+OR+2019-nCoV%5BAll+Fields%5D+OR+2019nCoV%5BAll+Fields%5D+OR+COVID-19%5BAll+Fields%5D+OR+SARS-CoV-2%5BAll+Fields%5D#> .
+@prefix us-cdc-index-page: <https://www.cdc.gov/coronavirus/2019-ncov/index.html#> . 
+@prefix us-cdc-covid19-update-page: <https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html#> . 
+@prefix ncbi-gene-bank: <https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs#> . 
+@prefix ncbi-clinical-trials: <https://clinicaltrials.gov/ct2/results?cond=%22wuhan+coronavirus%22#> . 
+@prefix covid-graph-video: <http://linkeddata.uriburner.com/about/id/entity/https/www.youtube.com/watch?v=54XLXg4fYsc> . 
+@prefix about-expo-growth: <http://linkeddata.uriburner.com/about/id/entity/https/www.youtube.com/watch?v=Kas0tIxDvrg> .
+@prefix embl-ebi: <https://www.ebi.ac.uk/ena/pathogens/covid-19#> . 
+@prefix embl-ebi-pathogens: <https://www.ebi.ac.uk/ena/pathogens/covid-19#> . 
+@prefix pandemic-history-video: <http://linkeddata.uriburner.com/about/id/entity/https/youtu.be/7_ppXSABYLY> . 
+@prefix pandemic-history-video-url: <https://youtu.be/7_ppXSABYLY> . 
+@prefix pandemic-history-strains-video: <http://linkeddata.uriburner.com/about/id/entity/https/youtu.be/7_ppXSABYLY?t=1314> . 
+@prefix vox-video-corona: <https://linkeddata.uriburner.com/about/id/entity/https/www.youtube.com/watch?v=gAk7aX5hksU> . 
+@prefix pandemic-simulation-game: <https://linkeddata.uriburner.com/about/id/entity/http/www.centerforhealthsecurity.org/event201/scenario.html> . 
+@prefix moderna-vacine: <https://linkeddata.uriburner.com/about/id/entity/https/www.modernatx.com/modernas-work-potential-vaccine-against-covid-19> . 
+@prefix atlantic-mag-endgame-post: <https://linkeddata.uriburner.com/about/id/entity/https/www.theatlantic.com/health/archive/2020/03/how-will-coronavirus-end/608719/?linkId=85439737> . 
+@prefix bing-covid-dashboard: <https://bing.com/covid#> . 
+@prefix wikidata-covid-dashboard: <https://sites.google.com/view/covid19-dashboard#> . 
+@prefix kg-against-covid: <https://thegraphlounge.com/knowledge-graphs-to-fight-covid-19#> . 
+@prefix kg-meetup-event-covid: <https://www.meetup.com/Knowledge-Graphs-Meetup/events/269710690#> .
+@prefix kg-meetup-zoom-id: <https://columbiauniversity.zoom.us/j/433909987#> . 
+@prefix economist-corona-article: <https://www.economist.com/briefing/2020/03/12/understanding-sars-cov-2-and-the-drugs-that-might-lessen-its-power#> .
+@prefix swiss-medical-weekly: <https://smw.ch/article/doi/smw.2020.20212#> .
+@prefix lod-cloud-kg-covid19-preso: <https://docs.google.com/presentation/d/1HxhbkEPY500ZISMOCrK_a_LtpBVU73OOrXzfwu9ZQEs#> . 
+@prefix covid9-kg-from-notes: <https://kingsley.idehen.net/public_home/kidehen/Public/Linked%20Data%20Documents/Nanotations/covid-19-knowedge-graph.html#> . 
+@prefix master-google-spreadsheet: <https://docs.google.com/spreadsheets/d/1Z0csxYkWFuvNpfaGQDKnhqdREHcwYbvd3s7vHsWsT5Q#> . 
+@prefix kg-against-covid-preso-video-segment: <https://youtu.be/HkVfGikcjOo?t=781#> .
+@prefix snomed-covid-19: <http://snomed.info/id/840539006#> . 
+@prefix johns-hopkins: <https://coronavirus.jhu.edu/data/new-cases#> . 
+@prefix covid-care-map: <https://www.covidcaremap.org/maps/us-healthcare-system-capacity/#> .
+@prefix henry-essay: <https://blog.usejournal.com/co-immunology-and-the-web-43379b46688e#> . 
+@prefix opl-covid19-page: <http://www.openlinksw.com/covid19/> .
+@prefix covid19: <http://live.dbpedia.org/page/Severe_acute_respiratory_syndrome_coronavirus_2>.
+@prefix openlink-web: <http://www.openlinksw.com/> . 
+@prefix      source: <http://www.openlinksw.com/data/turtle/general/covid19-notes.ttl> .
+@prefix   sourceDAV: <http://www.openlinksw.com/DAV/data/turtle/general/covid19-notes.ttl> .
+
+
+sourceDAV:
+a foaf:Document, schema:CreativeWork ;
+owl:sameAs source:  ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-12T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "COVID-19 and SARS-Cov-2 notes -- Turtle Document"@en ;
+schema:about :this, openlink-web:covid19 . 
+
+
+source:
+a foaf:Document, schema:CreativeWork ;
+owl:sameAs sourceDAV: ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-05-12T16:30:17-05:00"^^xsd:dateTime ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:name "COVID-19 and SARS-Cov-2 notes -- Turtle Document"@en ;
+schema:about :this, openlink-web:covid19 . 
+
+
+opl-covid19-page:
+a schema:CreativeWork, schema:WebPage ;
+schema:author <http://www.openlinksw.com/#this> ;
+schema:dateCreated "2020-03-14T13:00:00-05:00"^^xsd:dateTime ;
+schema:dateModified "2020-03-31T16:30:00-05:00"^^xsd:dateTime ;
+schema:name "Collection of COVID-19 and SARS-Cov-2 Pages"@en ;
+xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+cc:attributionName "OpenLink Software" ;
+schema:description """Document comprising content related to COVID19 and SARS_CoV_2
+                    and the LOD Cloud Knowledge Graph."""@en ;
+schema:about :sars-cov-2, :covid-19, <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, 
+             <https://tinyurl.com/ubhflt3#>, <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>,
+             master-google-spreadsheet:this, <https://tinyurl.com/r9xzlsn#>, lod-cloud-kg-covid19-preso:this, covid9-kg-from-notes:this, <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement/1599#>,
+             <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement-beyond-spreadsheets/1661/2#>, <http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_coronavirus_pandemic&distinct=1>;
+skos:related data-wrangling:this, linkeddata:this, opendata:this, knowledge-graph:this, lod-cloud:this ;
+cc:attributionURL opl-covid19-page:this .
+
+
+:sars-cov-2
+a yago-virus-class: ;
+schema:name "SARS-COV-2 Virus"@en ;
+skos:altLabel "#SARS_COV_2"@en ;
+schema:image <https://www.economist.com/img/b/1280/720/85/sites/default/files/20200314_FBD001.jpg> ;
+owl:sameAs dbpedia-live:Severe_acute_respiratory_syndrome_coronavirus_2, wd:Q82069695, ncbi-taxa-2697049:this ;
+skos:related :covid-19, twitter-sars_cov_2-hashtag:this, dbpedia-live:COVID-19_vaccine, pandemic-simulation-game:, dbpedia:SARS_coronavirus_main_proteinase, wikidata:Q5172253,
+             dbpedia:Coronavirus_SL-III_cis-acting_replication_element, dbpedia:SARS_coronavirus, master-google-spreadsheet:this, kg-against-covid-preso-video-segment:this,
+             wikidata-covid-dashboard:this ;
+schema:mainEntityOfPage <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ82069695&gp=5&go=&lp=6&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#> ,
+                        egonw:the-seven-coronaviruses-that-infect-human, atlantic-article-1:this,
+                        economist-corona-article:this, swiss-medical-weekly:this, ncbi-vssi-2697049:this, ncbi-gene-bank:this .
+
+:covid-19
+a obo:DOID_1579, kbpedia:RespiratoryAilment ;
+schema:name "COVID-19 Disease"@en ;
+schema:image <https://ihacares.com/assets/images/landing-pages/covid19/COVID-19_Web%20Landing%20Page%20Graphics-05.jpg>,
+             <https://www.uab.edu/news/images/2018/Coronavirus-Symptoms-graphic.jpg>,
+             <https://cathrinexing.files.wordpress.com/2020/04/toplayer-5.png> ;
+skos:altLabel "#COVID19"@en ;
+owl:sameAs wd:Q84263196, dbpedia-live:Coronavirus_disease_2019, snomed-covid-19:this ;
+skos:related :sars-cov-2, dbpedia:Zoonosis ;
+obo-doid:has_symptom :symptom1, :symptom2, :symptom3, :symptom4, :symptom5, :symptom6, :symptom7 ;
+skos:related twitter-covid19-hashtag:this, dbpedia:Pandemic_severity_index, pandemic-simulation-game: ;
+schema:mainEntityOfPage <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=2&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#>,
+                        <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=4&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#>,
+                        <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=5&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#>,
+                        <http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_coronavirus_pandemic&distinct=1#>,
+                        <https://twitter.com/search?q=%40kidehen%20%23COVID19%20%23KnowledgeGraph%20&src=typed_query&f=live#>,
+                        <https://medium.com/@balajis/the-official-chinese-government-guide-to-diagnosing-and-treating-the-novel-coronavirus-9d06868f8df4>,
+                        <https://ihacares.com/resources/covid19/>,
+                        <https://www.uab.edu/news/youcanuse/item/11141-how-to-prepare-yourself-in-the-midst-of-a-pandemic>,
+                        <https://www.caltech.edu/about/news/tip-iceberg-virologist-david-ho-bs-74-speaks-about-covid-19>,
+                        <https://tinyurl.com/qqdo5xx#>, covid-19-pubmed:this, us-cdc-index-page:this, ncbi-clinical-trials:this,
+                        us-cdc-covid19-update-page:reporting-cases, covid-graph-video:, about-expo-growth:, embl-ebi:, embl-ebi-pathogens:, pandemic-history-video:,
+                        vox-video-corona:, moderna-vacine:, atlantic-mag-endgame-post:, bing-covid-dashboard:this, wikidata-covid-dashboard:this, lod-cloud-kg-covid19-preso:this, covid9-kg-from-notes:this,
+                        master-google-spreadsheet:this, kg-against-covid-preso-video-segment:this, snomed-covid-19:, johns-hopkins:this, covid-care-map:this .
+
+obo-doid:has_symptom
+a rdf:Property ;
+rdfs:label "hasSymptom"@en ;
+skos:altLabel "Has Symptom"@en ;
+rdfs:domain obo:DOID_4 ;
+rdfs:range obo:SYMP_0000462 .
+
+:symptom1
+a obo:SYMP_0000025 ;
+schema:name "Dry Cough"@en ;
+schema:mainEntityOfPage <https://www.wikihow.com/Stop-a-Dry-Cough> ;
+schema:image <https://www.wikihow.com/images/thumb/4/48/Stop-a-Dry-Cough-Step-8.jpg/aid7245914-v4-728px-Stop-a-Dry-Cough-Step-8.jpg> .
+
+:symptom2
+a obo:SYMP_0000882 ;
+schema:name "High Fever"@en ;
+schema:mainEntityOfPage <https://www.wikihow.com/Reduce-a-Fever> ;
+schema:image <https://www.wikihow.com/images/thumb/5/58/Reduce-a-Fever-Step-10-Version-2.jpg/aid1103295-v4-728px-Reduce-a-Fever-Step-10-Version-2.jpg> .
+
+:symptom3
+a obo:SYMP_0019153 ;
+schema:name "Difficulty Breathing"@en ;
+schema:description "Chronic cases manifest as pneumonia"@en ;
+schema:mainEntityOfPage <https://www.mountsinai.org/health-library/symptoms/breathing-difficulty> ;
+skos:related dbpedia:Respiratory_system, dbpedia:Pneumonia ;
+schema:image <https://ssl.adam.com/graphics/images/en/1103.jpg>, <https://hackaday.com/wp-content/uploads/2020/03/Respiratory_System_Colored-rethemed.jpg>, 
+             <https://hackaday.com/wp-content/uploads/2020/03/New_Pneumonia_cartoon.jpg> .
+
+:symptom4
+a obo:SYMP_0000075 ;
+schema:name "Lethargy -- Tiredness"@en ;
+schema:mainEntityOfPage <https://www.verywellhealth.com/lethargy-overview-4582143> ;
+schema:image <https://www.verywellhealth.com/thmb/Nl8Lz2v087FxKlABdwFVXTNNaWQ=/700x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/lethargy-overview-4582143_FINAL-5c701610c9e77c000151ba37.png> .
+
+
+:symptom5
+a obo:SYMP_0000379 ;
+schema:name "Myalgia -- Muscle Pain"@en ;
+schema:mainEntityOfPage <https://www.healthwhoop.com/myalgia/> ;
+schema:image <https://www.healthwhoop.com/wp-content/uploads/2016/08/myalgia-768x346.jpg> .
+
+:symptom6
+a obo:SYMP_0000505 ;
+schema:mainEntityOfPage <https://www.cdc.gov/antibiotic-use/community/for-patients/common-illnesses/sore-throat.html> ;
+schema:image <https://www.cdc.gov/antibiotic-use/community/images/sore-throat-lg.jpg> ;
+schema:name "Sore Throat" . 
+
+:symptom7
+a obo:DOID_13250 ;
+schema:name "Diarrhoea"@en ;
+schema:mainEntityOfPage diarrhea-article-1:this ;
+schema:image diarrhea-image:jpg . 
+
+## Hashtags
+
+twitter-covid19-hashtag:this
+a skos:Concept ;
+skos:prefLabel "#COVID19"@en ;
+schema:description """Twitter Hashtag for COVID19 Disease"""@en ;
+schema:mainEntityOfPage <https://twitter.com/search?q=%40kidehen%20%23COVID19%20%23KnowledgeGraph&src=typed_query&f=live> . 
+
+## Various Entity Description & Search Results Documents
+
+<https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=2&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#>
+a schema:CreativeWork ;
+schema:name "Coronavirus disease 2019 (COVID-19) -- Page 2 of 6"@en ;
+schema:description "Faceted Browsing Page about COVID-19 Disease from Wikidata Edition Deployed using Virtuoso"@en ;
+schema:url <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=2&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1> ;
+skos:related <https://wikidata.demo.openlinksw.com/> . 
+
+<https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=4&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#>
+a schema:CreativeWork ;
+schema:name "Coronavirus disease 2019 (COVID-19) -- Page 4 of 6"@en ;
+schema:description "Faceted Browsing Page about COVID-19 Disease from Wikidata Edition Deployed using Virtuoso"@en ;
+schema:url <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=4&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1> ;
+skos:related <https://wikidata.demo.openlinksw.com/> . 
+
+<https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=5&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#>
+a schema:CreativeWork ;
+schema:name "Coronavirus disease 2019 (COVID-19) -- Page 5 of 6"@en ;
+schema:description "Faceted Browsing Page about COVID-19 Disease from Wikidata Edition Deployed using Virtuoso."@en ;
+schema:url <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ84263196&gp=5&go=&lp=5&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#> ;
+skos:related <https://wikidata.demo.openlinksw.com/> .  
+
+<http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_coronavirus_pandemic&distinct=1#>
+a schema:CreativeWork ;
+schema:name "About the Coronavirus (SARS-CoV-2) Pandemic"@en ;
+schema:description "Faceted Browsing Page about the Conronavirus from DBpedia-Live."@en ;
+schema:url <http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_coronavirus_pandemic&distinct=1> ;
+skos:related <https://wikidata.demo.openlinksw.com/> .  
+
+<https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ82069695&gp=5&go=&lp=6&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1#>
+a schema:CreativeWork ;
+schema:name "About SARS-Cov-2 Virus -- Wikidata Page 5 of 7"@en ;
+schema:description "Faceted Browsing Page about SARS-Cov-2 virus from Wikidata Edition Deployed using Virtuoso"@en ;
+schema:url <https://wikidata.demo.openlinksw.com/describe/?url=http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ82069695&gp=5&go=&lp=6&invfp=IFP_OFF&sas=SAME_AS_OFF&distinct=1> ;
+skos:related <https://wikidata.demo.openlinksw.com/> . 
+
+covid-19-pubmed:this
+a schema:CreativeWork ;
+schema:name "SARS-Cov-2 and COVID-19 Articles from the U.S National Library of Medicine"@en ;
+schema:description """Search Page Results for keywords SARS-Cov-2 and COVID-19 Articles from the U.S National Library of Medicine."""@en ;
+schema:url covid-19-pubmed: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+ncbi-clinical-trials:this
+a schema:CreativeWork ;
+schema:name "SARS-Cov-2 and COVID-19 related Clinical Trials from ClinicalTrials.gov"@en ;
+schema:description """Search Page Results for keywords SARS-Cov-2 and COVID-19 from ClinicalTrials.gov is a database, a of privately 
+                       and publicly funded clinical studies conducted around the world."""@en ;
+schema:url ncbi-clinical-trials: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+ncbi-vssi-2697049:this
+a schema:CreativeWork ;
+schema:name "NCBI Severe acute respiratory syndrome coronavirus 2 data hub"@en ;
+schema:description """Results for searches related SARS-CoV-2 GenBank data."""@en ;
+schema:url ncbi-vssi-2697049: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+ncbi-gene-bank:this
+a schema:CreativeWork ;
+schema:name "NCBI Genbank -- SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2) Sequences"@en ;
+schema:description """Results for looking up SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2) Sequences from NCBI Genebank."""@en ;
+schema:url ncbi-gene-bank: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+economist-corona-article:this
+a schema:CreativeWork ;
+schema:name "Understanding SARS-CoV-2 and the drugs that might lessen its power"@en ;
+schema:description """Article from The Economist about the quest for better understanding SARS-Cov-2 and drugs that might lessen its power."""@en ;
+schema:url economist-corona-article: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+swiss-medical-weekly:this
+a schema:CreativeWork ;
+schema:name "Preliminary case report on the SARS-CoV-2 cluster in the UK, France, and Spain"@en ;
+schema:description """Preliminary case report on the SARS-CoV-2 cluster in the UK, France, and Spain, by Swiss Medical Weekly Journal."""@en ;
+schema:url swiss-medical-weekly: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+atlantic-article-1:this
+a schema:CreativeWork ;
+schema:name "Why the Coronavirus Has Been So Successful"@en ;
+schema:description """Why the Coronavirus Has Been So Successful by The Atlantic."""@en ;
+schema:url atlantic-article-1: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+
+## SPARQL Query Generated Reports
+
+egonw:the-seven-coronaviruses-that-infect-human
+a schema:CreativeWork ;
+schema:name "SPARQL Query Collection: The seven coronaviruses that infect humans"@en ;
+schema:description """Github hosted notebook comprising SPARQL Queries about the seven coronaviruses that infect humans."""@en ;
+schema:url egonw: ;
+skos:related :covid-19, :sars-cov-2 . 
+
+
+<https://tinyurl.com/ya5j9oq3#>
+a schema:CreativeWork ;
+schema:name "Meshing COVID-19 Data across various tracking data sources (Bing, Divoc, Our World In Data)"@en ;
+schema:image <https://i.pinimg.com/originals/3a/70/42/3a7042319b15abfb7d5ac8d36dab1448.png> ; 
+schema:description """SPARQL generated page that meshes COVID-19 Data across various tracking data sources 
+                      and the LOD Cloud Knowledge Graph via DBpedia."""@en ;
+schema:url <https://tinyurl.com/ya5j9oq3> ;
+skos:related :covid-19, :sars-cov-2 . 
+
+
+<https://tinyurl.com/ybrgeoqa#>
+a schema:CreativeWork ;
+schema:name "Meshing COVID-19 Data across Our World In Data, Bing, Divoc, Healthdata, and DBpedia "@en ;
+schema:image <https://i.pinimg.com/originals/80/46/5a/80465a0984fbb89b720>, 
+             <https://i.pinimg.com/originals/57/26/78/572678cfffb44f13053ef42c79754e4d.png>,
+             <https://i.pinimg.com/originals/1c/6e/41/1c6e4148fbdc4a7f017c299211d69a82.png> ; 
+schema:description """SPARQL generated page that meshes COVID-19 Data across Our World In Data, Bing, Divoc, Healthdata.org Projects, and the LOD Cloud Knowledge Graph 
+                      while also producing an index of Dashboards."""@en ;
+schema:url <https://tinyurl.com/ybrgeoqa> ;
+schema:mentions dbpedia:Bing, <https://ourworldindata.org/>, <https://91-divoc.com/#>, <https://bing.com/covid/#>,  <https://aatishb.com/covidtrends#>,
+                <http://www.healthdata.org/#>  ;
+skos:related :covid-19, :sars-cov-2 . 
+
+
+<https://tinyurl.com/ycqkq5bs#>
+a schema:CreativeWork ;
+schema:name "Meshing COVID-19 Data across Our World In Data, Bing, Divoc, and DBpedia "@en ;
+schema:image <https://i.pinimg.com/originals/80/46/5a/80465a0984fbb89b720>, 
+             <https://i.pinimg.com/originals/57/26/78/572678cfffb44f13053ef42c79754e4d.png>,
+             <https://i.pinimg.com/originals/1c/6e/41/1c6e4148fbdc4a7f017c299211d69a82.png> ; 
+schema:description """SPARQL generated page that meshes COVID-19 Data across Our World In Data, Bing, Divoc, and the LOD Cloud Knowledge Graph 
+                      while also producing an index of Dashboards. Links in this variant of the SPARQL Results page resove to a Faceted Browsing 
+                      interface to exposes the undelying data fusion that's occurred via DBpedia cross references etc."""@en ;
+schema:url <https://tinyurl.com/ycqkq5bs> ;
+schema:mentions dbpedia:Bing, <https://ourworldindata.org/>, <https://91-divoc.com/#>, <https://bing.com/covid/#>, <https://aatishb.com/covidtrends#> ;
+skos:related :covid-19, :sars-cov-2 . 
+
+
+<https://tinyurl.com/y876jn4t#>
+a schema:CreativeWork ;
+schema:name "SPASQL (SPARQL inside SQL) Meshup of COVID-19 Data across Our World In Data, Bing, and Divoc "@en ;
+schema:image <https://i.pinimg.com/originals/10/d0/4c/10d04c53ef9ff7e99c81d3e9de8465cb.png>, 
+             <https://i.pinimg.com/originals/57/26/78/572678cfffb44f13053ef42c79754e4d.png>,
+             <https://i.pinimg.com/originals/1c/6e/41/1c6e4148fbdc4a7f017c299211d69a82.png> ; 
+schema:description """SPASQL generated page via an XMLA (XML for Analysis) based HTML5 document that meshes 
+                      COVID-19 Data across Johns Hopkins Daily CSV Reports, Our World In Data, Bing, Divoc, and the LOD Cloud Knowledge Graph 
+                      in the form of a Dashboards Index. This solution demonstrates the power of Relational Abstraction and Loose-Coupling 
+                      of existing Query Languages (SQL and SPARQL, which are both existing open standards) for Manipulation)."""@en ;
+schema:url <https://tinyurl.com/ybh9b5w8> ;
+schema:mentions dbpedia:Bing, <https://ourworldindata.org/>, <https://91-divoc.com/#>, <https://bing.com/covid/#> ;
+skos:related :covid-19, :sars-cov-2 . 
+
+
+<https://tinyurl.com/ycc2fnfe#>
+a schema:CreativeWork ;
+schema:name "Meshing COVID-19 Data across John's Hopkins, Our World In Data, Bing, and Divoc "@en ;
+schema:image <https://i.pinimg.com/originals/c5/1f/45/c51f450f83432a539df92114f2681563.png> ; 
+schema:description """SPARQL generated page that meshes COVID-19 Data across Johns Hopkins and the LOD Cloud Knowledge Graph 
+                      while also producing an index of Dashboards (Our World In Data, Divoc,)."""@en ;
+schema:url <https://tinyurl.com/ycc2fnfe> ;
+schema:mentions dbpedia:Bing, <https://nextstrain.org/#this>, <https://91-divoc.com/#>, <https://bing.com/covid/#> ;
+skos:related :covid-19, :sars-cov-2. 
+
+<https://tinyurl.com/qqdo5xx#>
+a schema:CreativeWork ;
+schema:name "SARS-CoV-2 Specimens from Nextstrain with NIH Cross References"@en ;
+schema:image <https://i.pinimg.com/originals/dd/01/75/dd01754225b9d5a70e6ce88892af7ea5.png> ; 
+schema:description """SPARQL-generated report, in HTML format, about specimens submitted to @nextstrain that have been cross-referenced with genomic
+                       information collated by the U.S National Institutes of Health (NIH)."""@en ;
+schema:url <https://tinyurl.com/qqdo5xx> ;
+schema:mentions dbpedia:National_Institutes_of_Health, <https://nextstrain.org/#this> ;
+skos:related :covid-19, :sars-cov-2, <https://nextstrain.org/ncov#this>, pandemic-history-strains-video: . 
+
+<https://tinyurl.com/qpb5rp7#> 
+a schema:CreativeWork ;
+schema:name "COVID-19 Disease Tracking by States across the USA"@en ;
+schema:image <https://i.pinimg.com/originals/52/05/6c/52056c6a9570063a58e6d88b312cff91.png> ; 
+schema:description """SPARQL-generated report, in HTML format,tracking by States in the USA. This is
+                      the result of transforming Open Data (in the form of CSV docs) to Linked Data using
+                      the Virtuoso Sponger Middleware instance that underlies the URIBurner Service (a dynamic 
+                      LOD Cloud Knowledge Graph hub)."""@en ;
+schema:url <https://tinyurl.com/qpb5rp7> ;
+schema:mentions dbpedia:USA, :covid-19 ;
+skos:related :covid-19, :sars-cov-2, <https://tinyurl.com/qqdo5xx#> . 
+
+<https://tinyurl.com/ubhflt3#>
+a schema:CreativeWork ;
+schema:name "Latest Uniprot Snapshot related to COVID19 and SARS-Cov-2"@en ;
+schema:image <https://i.pinimg.com/originals/c1/a1/52/c1a152b44028cd4341da30465da1700c.png> ; 
+schema:description """SPARQL-generated report, in HTML format, about the latest Uniprot Snapshot related to COVID19 and SARS-Cov-2. 
+                      This report uses SPARQL's SAMPLE() function to produce an index for further exploration using 
+                      the follow-your-nose pattern enabled by deploying RDF sentences using Linked Data principles."""@en ;
+schema:url <https://tinyurl.com/ubhflt3> ;
+schema:mentions :covid-19,  :sars-cov-2 ;
+skos:related dbpedia:Bioinformatics, dbpedia:Genomics, dbpedia:Molecular_biology, <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#> . 
+
+<https://tinyurl.com/vupbot8#>
+a schema:CreativeWork ;
+schema:name "Daily COVID-19 Disease Tracking by States across the USA"@en ;
+schema:image <https://i.pinimg.com/originals/74/a4/19/74a41980a363932896483bff19bd3701.png> ; 
+schema:description """SPARQL-generated report, in HTML format, covering daily tracking of COVID19 disease 
+                      by States across the USA. This is the result of transforming Google Spreadsheet Data
+                      (with CSV format negotiated RESTfully) to Linked Data using the Virtuoso Sponger Middleware instance
+                      that underlies the URIBurner Service (a dynamic LOD Cloud Knowledge Graph hub)."""@en ;
+schema:mentions dbpedia:USA, :covid-19 ;
+schema:url <https://tinyurl.com/vupbot8> ;
+skos:related :covid-19, :sars-cov-2, <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#> . 
+
+<https://tinyurl.com/rut54gf#>
+a schema:CreativeWork ;
+schema:name "COVID-19 Research Literature from Kaggle Dataset"@en ;
+schema:image <https://i.pinimg.com/originals/a7/d5/0f/a7d50f0d446a1fcf222fa2fe2dd94945.png> ; 
+schema:description """SPARQL-generated report, in HTML format, covering COVID19 disease 
+                      related literature published as an RDF-NTriples dataset to Kaggle that's
+                      been loaded to the LOD Cloud Knowledge Graph via our LOD Cloud Cache instance."""@en ;
+schema:mentions :covid-19 ;
+schema:url <https://tinyurl.com/rut54gf> ;
+skos:related :covid-19, :sars-cov-2, <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#> . 
+
+<https://tinyurl.com/ravx6g4#>
+a schema:CreativeWork ;
+schema:name "Johns Hopkins Daily COVID19 Report -- 27th March 2020"@en ;
+schema:image <https://i.pinimg.com/originals/89/06/5c/89065c9c885189dce8943361a61b5f23.png> ; 
+schema:description """SPARQL-generated report, presented using a standard HTML Table, 
+                      about the spread of COVID19 across the USA as of the 27th March 2020 -- from the 
+                      Johns Hopkins Dataset"""@en ;
+schema:mentions :covid-19 ;
+schema:url <https://tinyurl.com/ravx6g4> ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, opendata:this, 
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#> . 
+
+<https://tinyurl.com/u7elkld#>
+a schema:CreativeWork ;
+schema:name "SARS-CoV-2 Genome from Uniprot "@en ;
+schema:mainEntity :sars-cov-2 ;
+schema:image <https://i.pinimg.com/originals/81/ac/64/81ac64d9824e711a6c4285240454bb70.png> ; 
+schema:description """SPARQL-generated Report about Mapping of the SARS-CoV-2 Virus Genome described using RDF sentences by Uniprot"""@en ;
+schema:url <https://tinyurl.com/u7elkld> ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, opendata:this, 
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#> . 
+
+
+<https://tinyurl.com/sdcl3e3#>
+a schema:CreativeWork ;
+schema:name "Diseases and Medical Subject Headings (MeSH) Cross References"@en ;
+schema:image <https://i.pinimg.com/originals/91/eb/4f/91eb4f29d765360a24065d342f5c7c5e.png> ; 
+schema:description """SPARQL-generated report targeting COVID-19 research dataset from Mayo Clinic 
+                      and Johns Hopkins University loaded to our LOD Cloud Cache Knowledge Graph. This
+                      report also mints cross-refefences to MeSH via Linked Data URIs created as part
+                      of the query definition.
+                      """@en ;
+schema:mentions :covid-19, <https://www.ncbi.nlm.nih.gov/mesh#this> ;
+schema:url <https://tinyurl.com/sdcl3e3> ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, opendata:this, 
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>, <https://tinyurl.com/u7elkld#> . 
+
+<https://tinyurl.com/s95wjs5#>
+a schema:CreativeWork ;
+schema:name "Diseases and National Center for Biotechnology Information (NCBI) Cross References"@en ;
+schema:image <https://i.pinimg.com/originals/91/eb/4f/91eb4f29d765360a24065d342f5c7c5e.png> ; 
+schema:description """SPARQL-generated report targeting COVID-19 research dataset from Mayo Clinic 
+                      and Johns Hopkins University loaded to our LOD Cloud Cache Knowledge Graph. This
+                      report also mints cross-refefences to NCBI via Linked Data URIs created as part
+                      of the query definition.
+                      """@en ;
+schema:url <https://tinyurl.com/s95wjs5> ;
+schema:mentions <https://www.ncbi.nlm.nih.gov/#this> ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, opendata:this, 
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>, <https://tinyurl.com/u7elkld#> . 
+
+<https://tinyurl.com/truzv9e#>
+a schema:CreativeWork ;
+schema:name "Top Gene Mutation Instances and Gene Card References"@en ;
+schema:image <https://i.pinimg.com/originals/8b/39/5f/8b395f6e5b37e8d16cdbc192fb4a27e9.png> ; 
+schema:description """SPARQL-generated report targeting COVID-19 research dataset from Mayo Clinic 
+                      and Johns Hopkins University loaded to our LOD Cloud Cache Knowledge Graph. This
+                      report also mints cross-refefences to Gene Card via Linked Data URIs created as part
+                      of the query definition.
+                      """@en ;
+schema:mentions <https://www.genecards.org/#this> ;
+schema:url <https://tinyurl.com/truzv9e> ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, opendata:this, 
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>, <https://tinyurl.com/u7elkld#>,
+             <https://tinyurl.com/s95wjs5#> . 
+
+
+<https://tinyurl.com/s3otskq#>
+a schema:CreativeWork ;
+schema:name "Hospitals and ICU Capacity by US State and County"@en ;
+schema:image <https://i.pinimg.com/originals/42/87/07/428707e5943c2a248c2c315f4aacc80f.png> ; 
+schema:description """SPARQL-generated report about Hospital ICU capacity across the USA by
+                       State and County. This is all possible courtesy of Open Data provided by a Kaiser Health News
+                       as part of a recent news article about the aforementioned topic.
+                      """@en ;
+schema:mentions <https://khn.org/news/as-coronavirus-spreads-widely-millions-of-older-americans-live-in-counties-with-no-icu-beds/#this> ;
+schema:url <https://tinyurl.com/s3otskq>;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, opendata:this, 
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>, <https://tinyurl.com/u7elkld#>,
+             <https://tinyurl.com/s95wjs5#>, <https://tinyurl.com/truzv9e#> . 
+
+## Pivot Viewer Visual Reports and Dashboards
+
+<https://tinyurl.com/r9xzlsn#>
+a schema:CreativeWork ;
+schema:name "Pivot Viewer Report on COVID-19 across USA"@en ;
+schema:image <https://i.pinimg.com/originals/48/44/ba/4844baa0b7483b2caeaf646524b0d1d0.png> ; 
+schema:description """SPARQL-generated report, presented using the Virtuoso hosted HTML5-Pivot Viewer, 
+                      about the spread of COVID19 across the USA as of the 27th March 2020 -- from the 
+                      Johns Hopkins Dataset"""@en ;
+schema:mentions :covid-19 ;
+schema:url <https://tinyurl.com/r9xzlsn> ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, opendata:this, 
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>,
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>, <https://tinyurl.com/ravx6g4#> . 
+
+
+
+## Spreadsheets and other Data Sources
+
+master-google-spreadsheet:this
+a schema:CreativeWork ;
+schema:name "COVID-19 Master Google Spreadsheet"@en ;
+schema:image <https://i.pinimg.com/originals/5b/6a/fb/5b6afb178f2100aded4458699e2ac2d7.png> ; 
+schema:description """Google Master Spreadsheet comprising topic-specific Spreadsheets associated
+                      with individually labeled tabs. Individual sheets include data from Open Data
+                      publishers such as NextStrain, Our World In Data, Worldometers, COVID19 Tracking Project,
+                      U.S. National Institutes of Health (NIH) etc. Courtesy of RESTful interaction patterns 
+                      you can retrieve the content of this spreadsheet in a variety of forms e.g., CSV"""@en ;
+schema:mentions :covid-19, <https://ourworldindata.org/#this>, <https://nextstrain.org/#this>, 
+                <https://www.worldometers.info/#this>, <https://covidtracking.com/#this>  ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this, <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement/1599/2>,
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, 
+             <https://tinyurl.com/ubhflt3#>, <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#> ;
+schema:url master-google-spreadsheet: . 
+
+
+## Organizations
+
+<https://covidtracking.com/#this>
+a schema:Organization ;
+schema:name "COVID-19 Tracking Project"@en ;
+schema:description """Organization behing an open-source and open data publishing project that tracks the COVID-19 disease pandemic."""@en ;
+skos:related pandemic-history-strains-video: ;
+schema:sameAs <https://covidtracking.com/> .
+
+<https://ourworldindata.org/#this>
+a schema:Organization ;
+schema:name "Our World In Data"@en ;
+schema:description """Organization behing an open-source and open data publishing project."""@en ;
+skos:related pandemic-history-strains-video: ;
+schema:sameAs <https://ourworldindata.org/> .
+
+<https://www.worldometers.info/#this>
+a schema:Organization ;
+schema:name "Worldometers"@en ;
+schema:description """Organization behing an open-source and open data publishing project."""@en ;
+skos:related pandemic-history-strains-video: ;
+schema:sameAs <https://ourworldindata.org/> .
+
+<https://nextstrain.org/#this> 
+a schema:Organization ;
+schema:name "Nextstrain"@en ;
+schema:description """Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data."""@en ;
+skos:related pandemic-history-strains-video: ;
+schema:sameAs <https://nextstrain.org/> . 
+
+<https://www.genecards.org/#this> 
+a schema:Organization ;
+schema:name "Gencards"@en ;
+schema:description """Human Gene Database""" ;
+schema:sameAs <https://www.genecards.org/> . 
+
+<https://www.ncbi.nlm.nih.gov/#this> 
+a schema:Organization ;
+schema:name "The National Center for Biotechnology Information"@en ;
+skos:altLabel "NCBI"@en ;
+schema:description """The National Center for Biotechnology Information advances science and health by providing access to biomedical and genomic information.""" ;
+schema:sameAs <https://www.ncbi.nlm.nih.gov/> .
+
+
+<https://www.ncbi.nlm.nih.gov/mesh#this>
+schema:name "Medical Subject Headings"@en ;
+skos:altLabel "MeSH"@en ;
+schema:description """MeSH (Medical Subject Headings) is the NLM controlled vocabulary thesaurus used for indexing articles for PubMed.""" ;
+schema:sameAs <https://www.ncbi.nlm.nih.gov/mesh/> . 
+
+## Post and Articles
+
+covid9-kg-from-notes:this
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "COVID19 Knowledge Graph from an HTML Document"@en ;
+schema:image <https://i.pinimg.com/originals/e0/0b/c9/e00bc9d0c3f36f8388e87b66a4f3e9b1.png> ; 
+schema:description """Example of a simple document about a COVID-19 Knowledge Graph that leverages
+                      Linked Open Data principles by identifying every entity using a Hyperlink while
+                      describing everthing using structured sentences where a Hyperlink denotes the subject, 
+                      predicate, and object (optionally)."""@en ;
+schema:related :covid-19,  :sars-cov-2 , lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this ;
+schema:url covid9-kg-from-notes: ;
+rdfs:seeAlso lod-cloud-kg-covid19-preso:this, kg-against-covid-preso-video-segment:this . 
+
+<https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement/1599#>
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "Data Wrangling and Progressive LOD Cloud Knowledge Graph Enhancement"@en ;
+schema:image <https://i.pinimg.com/originals/aa/b7/3f/aab73f2657c67eaec7ba171437977e8f.png> ; 
+schema:description """A post about best-practices for rapidly integrating new Open Data associated with the 
+                      COVID-19 disease and SARS-CoV-2 virus into the LOD Cloud Knowledge Graph."""@en ;
+schema:mentions :covid-19, <https://ourworldindata.org/#this>, <https://nextstrain.org/#this>, 
+                <https://www.worldometers.info/#this>, <https://covidtracking.com/#this>  ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this, data-wrangling:this,
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, 
+             <https://tinyurl.com/ubhflt3#>, <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>, 
+             <https://tinyurl.com/ya5j9oq3#>, <https://tinyurl.com/ybrgeoqa#>, <https://tinyurl.com/ycqkq5bs#> ;
+schema:url <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement> .
+
+<https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement-beyond-spreadsheets/1661/2#>
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "Data-Wrangling and Progressive LOD Cloud Knowledge Graph Enhancement â Beyond Spreadsheets"@en ;
+schema:image <https://i.pinimg.com/originals/5c/51/6f/5c516fa0f2fc93b58f6b0e9f279994fb.png> ; 
+schema:description """A post about finalizing infrastructure for progressive updates to the LOD Cloud Knowledge Graph 
+                      in regards to COVID-19 that covers negation of issues posed by Google Spreadsheet limitations."""@en ;
+schema:mentions :covid-19, <https://ourworldindata.org/#this>, <https://nextstrain.org/#this>, 
+                <https://www.worldometers.info/#this>, <https://covidtracking.com/#this>  ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this, data-wrangling:this,
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, 
+             <https://tinyurl.com/ubhflt3#>, <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#>, 
+             <https://tinyurl.com/ya5j9oq3#>, <https://tinyurl.com/ybrgeoqa#>, <https://tinyurl.com/ycqkq5bs#> ;
+schema:url <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement-beyond-spreadsheets/1661/2> .
+
+<https://hackaday.com/2020/03/25/ventilators-101-what-they-do-and-how-they-work#>
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "Ventilators 101: What They Do and How They Work Article"@en ;
+schema:mainEntity <https://linkeddata.uriburner.com/about/id/entity/https/hackaday.com/2020/03/25/ventilators-101-what-they-do-and-how-they-work/> ;
+schema:url <https://hackaday.com/2020/03/25/ventilators-101-what-they-do-and-how-they-work/> . 
+
+
+<https://linkeddata.uriburner.com/about/id/entity/https/hackaday.com/2020/03/25/ventilators-101-what-they-do-and-how-they-work/>
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "Ventilators 101: What They Do and How They Work"@en ;
+schema:about dbpedia:Ventilator ;
+schema:mentions dbpedia:Respiratory_system, dbpedia:Pneumonia ;
+schema:image <https://hackaday.com/wp-content/uploads/2020/03/Ventilators_feat.jpg> ;
+skos:related :symptom3 . 
+
+<https://twitter.com/search?q=%40kidehen%20%23COVID19%20%23KnowledgeGraph%20&src=typed_query&f=live#>
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "Twitter Pages associated with #COVID19 and #KnowledgeGraph"@en ;
+schema:image <https://i.pinimg.com/originals/52/f7/6e/52f76e57f99a1fd472ce4ef09c814873.png> ; 
+schema:description """Index of posts associated with COVID19 and Knowledge Graph that I've published
+                      to Twitter."""@en ;
+schema:mentions :covid-19, knowledge-graph:this  ;
+schema:url <https://twitter.com/search?q=%40kidehen%20%23COVID19%20%23KnowledgeGraph%20&src=typed_query&f=live> ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this, <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement/1599/2>,
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>, 
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#> .
+
+
+<http://live.dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3A2019%25E2%2580%259320_coronavirus_pandemic&distinct=1>
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "DBpedia-Live Page about Coronavirus Pandemic"@en ;
+schema:image <https://i.pinimg.com/originals/0e/e4/d1/0ee4d1f3037f8b00078f7b0f7c1f873b.png> ; 
+schema:description """Index of posts associated with COVID19 and Knowledge Graph that I've published
+                      to Twitter."""@en ;
+schema:mainEntityOfPage :covid-19  ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this, <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement/1599/2>,
+             <https://tinyurl.com/qpb5rp7#>, <https://tinyurl.com/qqdo5xx#>, <https://tinyurl.com/ubhflt3#>, 
+             <https://tinyurl.com/vupbot8#>, <https://tinyurl.com/rut54gf#> .
+
+us-cdc-covid19-update-page:reporting-cases 
+a schema:CreativeWork, schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:mainEntityOfPage :covid-19  ;
+schema:name "CDC Situation Update Page: Reporting Cases"@en ;
+schema:image <https://i.pinimg.com/originals/a4/93/07/a49307c00e9784bd48ebff67e31f921a.png> ; 
+schema:description """Situation Update page from the US CDC about cases reported across states in the USA."""@en ;
+schema:mentions :covid-19,  dbpedia:United_States  ;
+skos:related :covid-19, :sars-cov-2 .
+
+henry-essay:this
+a schema:BlogPosting ;
+schema:mainEntity covid19: ;
+schema:name "Co-Immunology and the Web" ;
+schema:image <https://miro.medium.com/max/1400/1*CaoT7XrzDlux2Aazr6TC2Q.jpeg> ;
+schema:creator <http://bblfish.net/people/henry/card#me> ;
+schema:description """This post covers the history, nature, and implications of the Web in our quest for 
+                      a post-COVID19 society in which sociality functions, sustainably."""@en ;
+skos:related :covid-19, :sars-cov-2, lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this, <https://community.openlinksw.com/t/data-wrangling-and-progressive-lod-cloud-knowledge-graph-enhancement-beyond-spreadsheets/1661/2#> ;
+schema:url  henry-essay: . 
+
+<http://bblfish.net/people/henry/card#me>
+schema:mainEntityOfPage <https://linkeddata.uriburner.com/describe/?url=https%3A%2F%2Fbblfish.net%2Fpeople%2Fhenry%2Fcard%23me&distinct=1>, <https://www.linkedin.com/in/bblfish/> ;
+schema:name "Henry Story" ;
+schema:sameAs <http://bblfish.net/people/henry/card> ;
+owl:sameAs <https://www.linkedin.com/in/bblfish#i> .
+
+## Presentations
+
+lod-cloud-kg-covid19-preso:this
+a schema:CreativeWork ;
+schema:name "The Fight Against COVID19: Unleashing the FORCE of the LOD Cloud Knowledge Graph Presentation"@en ;
+schema:image <https://i.pinimg.com/originals/c7/0e/11/c70e117251988f6602e751ab41bb1a5d.png> ; 
+schema:description """Presentation about how to maximize the implicit power of the ubquitous LOD Cloud Knowledge Graph
+                       by using Open Standards to negate Data Access, Integration, and Interoperability inertia."""@en ;
+skos:related :covid-19,  :sars-cov-2 , lod-cloud:this, linkeddata:this, knowledge-graph:this, 
+             opendata:this ;
+schema:url lod-cloud-kg-covid19-preso: ;
+rdfs:seeAlso covid9-kg-from-notes:this . 
+
+
+
+## Recordings from YouTube
+
+covid-graph-video:
+a schema:CreativeWork ;
+schema:mainEntityOfPage :covid-19  ;
+schema:name "Understanding COVID19 Growth Graphs - Video"@en ;
+# schema:image <https://i.pinimg.com/originals/a4/93/07/a49307c00e9784bd48ebff67e31f921a.png> ; 
+schema:description """Understanding where we are regarding COVID19 Growth"""@en ;
+schema:mentions :covid-19 ;
+schema:url covid-graph-video:video ;
+skos:related :covid-19, :sars-cov-2 .
+
+about-expo-growth:
+a schema:CreativeWork ;
+schema:mainEntityOfPage :covid-19  ;
+schema:name "Understanding Exponential Growth -- Video"@en ;
+# schema:image <https://i.pinimg.com/originals/a4/93/07/a49307c00e9784bd48ebff67e31f921a.png> ; 
+schema:description """YouTube Video that explains Exponential Growth"""@en ;
+schema:mentions :covid-19 ;
+schema:url about-expo-growth:video ;
+skos:related :covid-19, :sars-cov-2 .
+
+pandemic-history-video:
+a schema:CreativeWork ;
+schema:mainEntityOfPage :covid-19  ;
+schema:name "History of Pandemics -- Video"@en ;
+# schema:image <https://i.pinimg.com/originals/a4/93/07/a49307c00e9784bd48ebff67e31f921a.png> ; 
+schema:description """YouTube Video about the history of Pandemics."""@en ;
+schema:mentions :covid-19 ;
+schema:url pandemic-history-video-url: ;
+skos:related :covid-19, :sars-cov-2 .
+
+kg-against-covid-preso-video-segment:this
+a schema:CreativeWork ;
+schema:mainEntityOfPage :covid-19  ;
+schema:name "Kingsley Idehen Presentation Segment -- Knowledge Graphs for Fighting COVID-19 Virtual Meetup"@en ;
+schema:image <https://i.pinimg.com/originals/c7/0e/11/c70e117251988f6602e751ab41bb1a5d.png> ; 
+schema:description """YouTube Video segment covering Kingsley Idehen's presentation segment at the recent
+                      Knowledge Graphs for Fighting COVID-19 Virtual Meetup."""@en ;
+schema:mentions :covid-19 ;
+schema:url kg-against-covid-preso-video-segment: ;
+skos:related :covid-19, :sars-cov-2 ;
+rdfs:seeAlso covid9-kg-from-notes:this . 
+
+
+## Dashboards 
+
+bing-covid-dashboard:this
+a schema:CreativeWork ;
+schema:name "Bing Search Engine COVID-19 Dashboard"@en ;
+schema:image <https://i.pinimg.com/originals/a0/2a/bc/a02abc2d6a0d3da84731ee07e2ec2884.png> ;
+schema:url bing-covid-dashboard: ;
+schema:mainEntity :covid-19 ;
+skos:related :covid-19, :sars-cov-2 ;
+schema:description """Visual summary of information about the COVID-19 pandemic from a variety of sources.""" . 
+
+wikidata-covid-dashboard:this
+a schema:CreativeWork ;
+schema:name "Wikidata COVID-19 Dashboard"@en ;
+schema:image <https://i.pinimg.com/originals/ed/ff/91/edff91509db3ddc4e3109f45dd47c889.png> ;
+schema:url wikidata-covid-dashboard: ;
+schema:mainEntity :covid-19 ;
+skos:related :covid-19, :sars-cov-2 ;
+schema:description """Visual summary of information about the COVID-19 pandemic from Wikipedia.""" . 
+
+johns-hopkins:this
+a schema:CreativeWork ;
+schema:name "Johns Hopkins Curve-Flattening Analytics Dashboard"@en ;
+schema:image <https://i.pinimg.com/originals/ae/05/7b/ae057b74add7955d8bcb978aec9ae365.png> ;
+schema:url johns-hopkins: ;
+schema:mainEntity :covid-19 ;
+skos:related :covid-19, :sars-cov-2 ;
+schema:description """Visual summary of COVID-19 Curve-Flattening across countries from Johns Hopkins.""" . 
+
+covid-care-map:this
+a schema:CreativeWork ;
+schema:name "CovidCareMap"@en ;
+skos:prefLabel "CovidCareMap Dashboard"@en ;
+schema:descripton "COVID-19 Hospital Care Capacity Mapping Dashboard"@en ;
+schema:image <https://i.pinimg.com/originals/85/55/d4/8555d4a034ae3fc5f4dcaef98d3c9a54.png> ;
+schema:url covid-care-map: ;
+schema:mainEntity :covid-19 ;
+skos:related :covid-19, :sars-cov-2 .
+
+
+## Events
+
+kg-against-covid:this
+a schema:Event ;
+owl:sameAs kg-meetup-event-covid:this ;
+schema:description """A virtual Meetup to discuss active knowledge graph projects that can be used in the fight against the coronavirus (COVID-19)."""@en ;
+schema:endDate "2020-04-01T14:00:00-0500"^^xsd:dateTime ;
+schema:eventAttendanceMode schema:OnlineEventAttendanceMode ;
+schema:eventStatus schema:EventScheduled ;
+schema:image <https://thegraphlounge.com/wp-content/uploads/2020/03/knowledge-graphs-to-fight-covid-19.jpg>, <https://i.pinimg.com/originals/32/f8/15/32f81546cbb76c5237df95357b51c8fe.png> ;
+schema:location kg-against-covid:location ;
+schema:name "Knowledge Graphs to Fight COVID-19"@en ;
+schema:offers kg-against-covid:offer ;
+schema:startDate "2020-04-01T12:00:00-0500"^^xsd:dateTime ;
+schema:endDate "2020-04-01T14:00:00-0500"^^xsd:dateTime ;
+schema:url kg-against-covid:, kg-meetup-event-covid: ;
+skos:related :covid-19 .
+ 
+kg-against-covid:location 
+a schema:VirtualLocation ;
+owl:sameAs kg-meetup-zoom-id:location ;
+schema:name "Virtual Location for Knowledge Graphs against COVID-19 Meetup"@en ;
+schema:url kg-meetup-zoom-id: . 
+
+kg-against-covid:offer
+a schema:Offer ;
+schema:name "Virtual Meetup about applying Knowledge Graphs to the fight against COVID-19 Disease"@en ;
+schema:price "0.00"^^xsd:decimal . 
+
+## Classes 
+
+yago-virus-class:
+a owl:Class ;
+rdfs:label "Virus Class -- YAGO"@en ;
+rdfs:comment "Virus Class defined by YAGO Ontology" . 
+
+## URI Minting & Meshups
+
+obo:DOID_1579 schema:mainEntityOfPage <http://bioportal.bioontology.org/ontologies/DOID?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FDOID_1579> ;
+              owl:equivalentClass <http://denote.rnet.ryerson.ca/umlsMap/browser/browse.php?CUI=C0029582#> .
