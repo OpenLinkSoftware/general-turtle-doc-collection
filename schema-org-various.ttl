@@ -6,6 +6,7 @@ PREFIX dbp: <http://dbpedia.org/property/>
 PREFIX	gql: <http://www.openlinksw.com/schemas/graphql#> 
 PREFIX dct: <http://purl.org/dc/terms/> 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX schema: <http://schema.org> 
 
 #  Schema.Org to GraphQL Entity & Property Mappings  
 gql:Map gql:schemaObjects gql:SchemaProduct, gql:SchemaProducts, gql:Offer, gql:Offers, gql:WebPage, gql:FAQPage, gql:FAQPages, 
