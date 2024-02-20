@@ -1,0 +1,276 @@
+@prefix schema:      <http://schema.org/> .
+@prefix oplsof:      <http://www.openlinksw.com/ontology/software#> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix oplfea:      <http://www.openlinksw.com/ontology/features#> .
+@prefix oplpro:      <http://www.openlinksw.com/ontology/products#> .
+@prefix foaf:        <http://xmlns.com/foaf/0.1/> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:        <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml:         <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+@prefix wdrs:        <http://www.w3.org/2007/05/powder-s#> .
+@prefix oplmch:      <http://www.openlinksw.com/ontology/machines#> .
+@prefix oplsof:      <http://www.openlinksw.com/ontology/software#> .
+@prefix cc:          <http://creativecommons.org/ns#> .
+@prefix :            <#> .
+@prefix source:      <http://www.openlinksw.com/data/turtle/oplweb/ProductFormats.ttl> .
+@prefix sourceDAV:   <http://www.openlinksw.com/DAV/data/turtle/oplweb/ProductFormats.ttl> .
+
+sourceDAV:
+   a schema:CreativeWork ;
+   schema:name "OpenLink Software Product Architecture -- WebDAV hosted TURTLE Document"^^xsd:string ;
+   dcterms:format "text/turtle" ;
+   schema:dateCreated "2013-01-01T13:00:00-05:00"^^xsd:dateTime ;
+   schema:dateModified "2024-02-20T16:48:00"^^xsd:dateTime ;
+   schema:author <http://www.openlinksw.com/#this> ;
+   schema:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName  "OpenLink Software" ;
+   owl:sameAs source: .
+
+source: a schema:CreativeWork ;
+   schema:name "OpenLink Product Architecture"^^xsd:string ;
+   schema:comment  """This is a turtle document that uses Linked Data oriented content to describe OpenLink Product Architecture """@en ;
+   dcterms:format "text/turtle" ;
+   schema:dateCreated "2013-01-01T13:00:00-05:00"^^xsd:dateTime ;
+   schema:dateModified "2015-09-14T13:38:00-05:00"^^xsd:dateTime ;
+   schema:author <http://www.openlinksw.com/#this> ;
+   schema:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName  "OpenLink Software" ;
+   schema:about <http://data.openlinksw.com/oplweb/product_format/dav#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/fs#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/standard#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/enterprise#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/mt#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/st#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/express#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/personal#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/onsite#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/offsite#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/workgroup#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/oss#this> ,
+              <http://data.openlinksw.com/oplweb/product_format/ec2#this> .
+
+<http://data.openlinksw.com/oplweb/product_format/dav#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "DBMS (WebDAV) Hosted" ;
+    schema:name "DBMS (WebDAV) Hosted Architecture" ;
+    oplpro:ProductFormatCode "dav" .
+
+<http://data.openlinksw.com/oplweb/product_format/ec2#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "Amazon EC2 Cloud" ;
+    schema:name "Amazon EC2 Cloud" ;
+    oplpro:ProductFormatCode "ec2" ;
+    oplpro:hasProduct <http://data.openlinksw.com/oplweb/product/virtuoso-uim-unisvr-ec2#this> .
+
+<http://data.openlinksw.com/oplweb/product_format/enterprise#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "Enterprise Architecture" ;
+    schema:name "Enterprise Architecture" ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/AIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/DynixPTX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/FreeBSD#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/HPUX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Irix#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSClassic#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/SCOOpenServer#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Tru64UNIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/UnixWare#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+    oplpro:ProductFormatCode "enterprise" .
+
+# <http://data.openlinksw.com/oplweb/product_format/enterprise2#this> a oplpro:ProductFormat ;
+#     wdrs:describedby source: ;
+#     skos:altLabel "Enterprise Architecture 2" ;
+#     schema:name "Enterprise Architecture 2" ;
+#     oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>,
+#         <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+#         <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this>,
+#         <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+#     oplpro:ProductFormatCode "enterprise2" .
+
+<http://data.openlinksw.com/oplweb/product_format/express#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "Single-Tier Express Architecture" ;
+    schema:name "Single-Tier Express Architecture" ;
+    rdfs:comment """Application that includes in-built client network connectivity components [a/k/a wire protocol] with regards to RDBMS  connectivity.""" ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+    schema:image <http://uda.openlinksw.com/images/udapformatee.png> ;
+    oplpro:ProductFormatCode "express" .
+
+<http://data.openlinksw.com/oplweb/product_format/fs#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "File System Hosted Architecture" ;
+    schema:name "File System Hosted Architecture" ;
+    oplpro:ProductFormatCode "fs" .
+
+<http://data.openlinksw.com/oplweb/product_format/mt#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    schema:image <http://uda.openlinksw.com/images/udapformatmt.png> ;
+    schema:logo <https://ods-qa.openlinksw.com/DAV/home/JacquelineHand/Public/software-license.png> ;
+    skos:altLabel "Multi-Tier Architecture" ;
+    schema:name "Multi-Tier Architecture" ;
+    rdfs:comment """Application that includes in-built network connectivity [i.e., RDBMS independent client and server components] with regards to RDBMS  connectivity.""" ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/.NETCLR#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/AIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/DynixPTX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/FreeBSD#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/HPUX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Irix#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/JavaVirtualMachine#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSClassic#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MonoCLR#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/SCOOpenServer#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Tru64UNIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/UnixWare#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+    oplpro:ProductFormatCode "mt" ;
+    oplfea:hasFeature <http://data.openlinksw.com/oplweb/product_format_feature/CentralizedConfiguration_Management#this>,
+        <http://data.openlinksw.com/oplweb/product_format_feature/GenericDrivers#this>,
+        <http://data.openlinksw.com/oplweb/product_format_feature/NetworkReady#this>,
+        <http://data.openlinksw.com/oplweb/product_format_feature/RulesEngineBasedSecurity#this>,
+        <http://data.openlinksw.com/oplweb/product_format_feature/SecureDataTransmission#this>,
+        <http://data.openlinksw.com/oplweb/product_format_feature/ZeroConfigurationforODBCDSNs#this> .
+
+<http://data.openlinksw.com/oplweb/product_format/offsite#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "Off Site" ;
+    schema:name "Off Site" ;
+    oplpro:ProductFormatCode "offsite" ;
+    oplpro:hasProduct <http://data.openlinksw.com/oplweb/product/ps-appconsult-uda-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-appconsult-virt-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-devconsult-uda-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-devconsult-virt-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-strconsult-uda-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-strconsult-virt-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-bronze-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-gold-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-platinum-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-silver-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-training-ldta-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-training-uda-ofs#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-training-virt-ofs#this> .
+
+<http://data.openlinksw.com/oplweb/product_format/onsite#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "On Site" ;
+    schema:name "On Site" ;
+    oplpro:ProductFormatCode "onsite" ;
+    oplpro:hasProduct <http://data.openlinksw.com/oplweb/product/ps-appconsult-uda-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-appconsult-virt-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-devconsult-uda-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-devconsult-virt-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-strconsult-uda-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-strconsult-virt-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-bronze-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-gold-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-platinum-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-support-silver-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-training-ldta-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-training-uda-ons#this>,
+        <http://data.openlinksw.com/oplweb/product/ps-training-virt-ons#this> .
+
+<http://data.openlinksw.com/oplweb/product_format/oss#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "Open Source" ;
+    schema:name "Open Source" ;
+    oplpro:ProductFormatCode "oss" ;
+    oplpro:hasProduct <http://data.openlinksw.com/oplweb/product/virtuoso-connect-oss#this> .
+
+<http://data.openlinksw.com/oplweb/product_format/personal#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "Personal Architecture" ;
+    schema:name "Personal Architecture" ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+    oplsof:hasDatabaseFamily <http://www.openlinksw.com/ontology/software#OpenLinkVirtuoso> ;
+    oplpro:ProductFormatCode "personal" .
+
+<http://data.openlinksw.com/oplweb/product_format/st#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    rdfs:comment """Client Application that depends on external networking services e.g., those provided by an RDBMS sever  application in regards to database connectivity""" ;
+    schema:image <http://uda.openlinksw.com/images/udapformatst.png> ;
+    schema:logo <https://ods-qa.openlinksw.com/DAV/home/JacquelineHand/Public/software-license.png> ;
+    skos:altLabel "Single-Tier Architecture" ;
+    schema:name "Single-Tier Architecture" ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/.NETCLR#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/AIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/DynixPTX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/FreeBSD#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/HPUX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Irix#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSClassic#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MonoCLR#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/SCOOpenServer#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Tru64UNIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/UnixWare#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+    oplsof:hasDatabaseFamily <http://www.openlinksw.com/ontology/software#DB2>,
+        <http://www.openlinksw.com/ontology/software#Informix>,
+        <http://www.openlinksw.com/ontology/software#Ingres>,
+        <http://www.openlinksw.com/ontology/software#JDBCBridge>,
+        <http://www.openlinksw.com/ontology/software#MySQL>,
+        <http://www.openlinksw.com/ontology/software#ODBCBridge>,
+        <http://www.openlinksw.com/ontology/software#OLEDBBridge>,
+        <http://www.openlinksw.com/ontology/software#Oracle>,
+        <http://www.openlinksw.com/ontology/software#PostgreSQL>,
+        <http://www.openlinksw.com/ontology/software#Progress>,
+        <http://www.openlinksw.com/ontology/software#SQLServer>,
+        <http://www.openlinksw.com/ontology/software#Sybase> ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/.NETCLR#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/AIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/DynixPTX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/FreeBSD#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/HPUX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Irix#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSClassic#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MonoCLR#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/SCOOpenServer#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Tru64UNIX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/UnixWare#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+    oplpro:ProductFormatCode "st" ;
+    oplfea:hasFeature <http://data.openlinksw.com/oplweb/product_format_feature/SingleComponentInstallationProcess#this> .
+
+<http://data.openlinksw.com/oplweb/product_format/standard#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "standard" ;
+    schema:name "Standard Architecture" ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Firefox#this> ;
+    oplpro:ProductFormatCode "standard" .
+
+<http://data.openlinksw.com/oplweb/product_format/workgroup#this> a oplpro:ProductFormat ;
+    wdrs:describedby source: ;
+    skos:altLabel "workgroup" ;
+    schema:name "Workgroup Architecture" ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/GenericLinux#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/MacOSX#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Solaris#this>,
+        <http://data.openlinksw.com/oplweb/opsys_family/Windows#this> ;
+    oplpro:ProductFormatCode "workgroup" ;
+    oplpro:hasProduct <http://data.openlinksw.com/oplweb/product/virtuoso-connect-wrk#this>,
+        <http://data.openlinksw.com/oplweb/product/virtuoso-uim-nntp-wrk#this>,
+        <http://data.openlinksw.com/oplweb/product/virtuoso-uim-rdbms-wrk#this>,
+        <http://data.openlinksw.com/oplweb/product/virtuoso-uim-unisvr-wrk#this>,
+        <http://data.openlinksw.com/oplweb/product/virtuoso-uim-vappsvr-wrk#this>,
+        <http://data.openlinksw.com/oplweb/product/virtuoso-uim-vdbms-wrk#this>,
+        <http://data.openlinksw.com/oplweb/product/virtuoso-uim-xmldb-wrk#this> .
+
+
