@@ -113,7 +113,7 @@ source: a schema:CreativeWork ;
 <http://data.openlinksw.com/oplweb/product_format/mt#this> a oplpro:ProductFormat ;
     wdrs:describedby source: ;
     schema:image <http://uda.openlinksw.com/images/udapformatmt.png> ;
-    schema:logo <https://ods-qa.openlinksw.com/DAV/home/JacquelineHand/Public/software-license.png> ;
+#    schema:logo <https://ods-qa.openlinksw.com/DAV/home/JacquelineHand/Public/software-license.png> ;
     skos:altLabel "Multi-Tier Architecture" ;
     schema:name "Multi-Tier Architecture" ;
     rdfs:comment """Application that includes in-built network connectivity [i.e., RDBMS independent client and server components] with regards to RDBMS  connectivity.""" ;
@@ -201,7 +201,7 @@ source: a schema:CreativeWork ;
     wdrs:describedby source: ;
     rdfs:comment """Client Application that depends on external networking services e.g., those provided by an RDBMS sever  application in regards to database connectivity""" ;
     schema:image <http://uda.openlinksw.com/images/udapformatst.png> ;
-    schema:logo <https://ods-qa.openlinksw.com/DAV/home/JacquelineHand/Public/software-license.png> ;
+#    schema:logo <https://ods-qa.openlinksw.com/DAV/home/JacquelineHand/Public/software-license.png> ;
     skos:altLabel "Single-Tier Architecture" ;
     schema:name "Single-Tier Architecture" ;
     oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/.NETCLR#this>,
