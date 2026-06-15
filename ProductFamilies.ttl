@@ -331,3 +331,21 @@ source: a schema:CreativeWork ;
     oplpro:hasFormat <http://data.openlinksw.com/oplweb/product_format/onsite#this> ,
                      <http://data.openlinksw.com/oplweb/product_format/offsite#this> .
 
+<http://data.openlinksw.com/oplweb/product_family/opal#this>
+    a oplpro:ProductFamily ;
+    schema:applicationCategory schema:BusinessApplication ;
+    schema:operatingSystem "Windows, Linux, MacOSX, Unix, Solaris " ;
+    schema:sameAs <http://data.openlinksw.com/oplweb/product_family/opal> ;
+    wdrs:describedby source: ;
+    schema:name "OPAL Product Family" ;
+    skos:prefLabel "OPAL Product Family" ;
+    skos:altLabel "OpenLink AI Layer (OPAL)" ;
+    schema:description  """OPAL (OpenLink AI Layer) is a powerful AI-oriented middleware layer that enables the creation, deployment, and use of Smart Agents. It achieves this by loosely coupling Large Language Models (LLMs), OpenAPI-compliant Web Services, and Data Spaces, which include databases, knowledgebases, knowledge graphs, and file systems.""";
+    gr:hasManufacturer <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+    oplpro:productFamilyCode "opal" ;
+    schema:comment  """OpenLink AI Layer (OPAL). """ ;
+    schema:author <http://www.openlinksw.com/#this> ;
+    schema:image <https://www.openlinksw.com/DAV/oplweb3/images/logos/openlink-ai-layer-logo-100.png> ;
+    schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/logos/openlink-ai-layer-logo-100.png> ;
+    oplsof:hasOperatingSystemFamily  <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
+
