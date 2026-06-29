@@ -346,6 +346,6 @@ source: a schema:CreativeWork ;
     schema:comment  """OpenLink AI Layer (OPAL). """ ;
     schema:author <http://www.openlinksw.com/#this> ;
     schema:image <https://www.openlinksw.com/DAV/oplweb3/images/logos/openlink-ai-layer-logo-100.png> ;
-    schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/logos/openlink-ai-layer-logo-100.png> ;
+    schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/logos/openlink-ai-layer-logo-160.png> ;
     oplsof:hasOperatingSystemFamily  <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
 
