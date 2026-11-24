@@ -349,6 +349,7 @@ source: a schema:CreativeWork ;
     schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/logos/openlink-ai-layer-logo-160.png> ;
     oplsof:hasOperatingSystemFamily  <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
 
+
 <http://data.openlinksw.com/oplweb/product_family/lod#this>
     a oplpro:ProductFamily ;
     schema:applicationCategory schema:BusinessApplication ;
@@ -371,17 +372,16 @@ source: a schema:CreativeWork ;
     a oplpro:ProductFamily ;
     schema:applicationCategory schema:BusinessApplication ;
     schema:operatingSystem "Windows, Linux, MacOSX, Unix, Solaris " ;
-    schema:sameAs <http://data.openlinksw.com/oplweb/product_family/lod> ;
+    schema:sameAs <http://data.openlinksw.com/oplweb/product_family/loac> ;
     wdrs:describedby source: ;
-    schema:name "Linked Open Agentic Commerce (LOAC) Product Family" ;
-    skos:prefLabel "Linked Open Agentic Commerce Product Family" ;
-    skos:altLabel "LOAC - applying Linked Data principles directly to commerce systems." ;
-    schema:description  """LOAC is a model for representing commerce as a linked data-based entity-relationship graph constructed using hyperlinks as the primary mechanism of identity and traversal, making every layer of commerce both discoverable and computable.""";
+    schema:name "Linked Open Agentic Commerce" ;
+    skos:prefLabel "Linked Open Agentic Commerce" ;
+    skos:altLabel "Linked Open Agentic Commerce" ;
+    schema:description """Linked Open Agentic Commerce (LOAC): offers, licenses and prices for access to web-hosted files, named graphs and services, published as Linked Data so that people and AI agents can find and buy them. Purchases are enforced by access-control rules on the server that hosts the resource.""" ;
     gr:hasManufacturer <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
     oplpro:productFamilyCode "loac" ;
-    schema:comment  """LOAC - applying Linked Data principles directly to commerce systems """ ;
+    schema:comment """Linked Open Agentic Commerce (LOAC).""" ;
     schema:author <http://www.openlinksw.com/#this> ;
-    schema:image <https://www.openlinksw.com/DAV/oplweb3/images/linked-open-agentic-commerce.png> ;
-    schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/linked-open-agentic-commerce.png> ;
-    oplsof:hasOperatingSystemFamily  <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
-
+    schema:image <https://www.openlinksw.com/DAV/oplweb3/images/logos/loac-agent-logo-160.png> ;
+    schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/logos/loac-shop-icon-48.png> ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
