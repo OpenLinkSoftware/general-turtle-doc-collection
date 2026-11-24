@@ -349,3 +349,16 @@ source: a schema:CreativeWork ;
     schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/logos/openlink-ai-layer-logo-160.png> ;
     oplsof:hasOperatingSystemFamily  <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
 
+
+<http://data.openlinksw.com/oplweb/product_family/loac#this>
+    a oplpro:ProductFamily ;
+    schema:sameAs <http://data.openlinksw.com/oplweb/product_family/loac> ;
+    wdrs:describedby source: ;
+    schema:name "Linked Open Agentic Commerce" ;
+    skos:prefLabel "Linked Open Agentic Commerce" ;
+    skos:altLabel "Linked Open Agentic Commerce" ;
+    schema:description """Linked Open Agentic Commerce (LOAC): offers, licenses and prices for access to web-hosted files, named graphs and services, published as Linked Data so that people and AI agents can find and buy them. Purchases are enforced by access-control rules on the server that hosts the resource.""" ;
+    gr:hasManufacturer <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+    oplpro:productFamilyCode "loac" ;
+    schema:comment """Linked Open Agentic Commerce (LOAC).""" ;
+    schema:author <http://www.openlinksw.com/#this> .
