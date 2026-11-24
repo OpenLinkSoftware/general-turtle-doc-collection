@@ -350,8 +350,28 @@ source: a schema:CreativeWork ;
     oplsof:hasOperatingSystemFamily  <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
 
 
+<http://data.openlinksw.com/oplweb/product_family/lod#this>
+    a oplpro:ProductFamily ;
+    schema:applicationCategory schema:BusinessApplication ;
+    schema:operatingSystem "Windows, Linux, MacOSX, Unix, Solaris " ;
+    schema:sameAs <http://data.openlinksw.com/oplweb/product_family/lod> ;
+    wdrs:describedby source: ;
+    schema:name "LOD Connectivity Product Family" ;
+    skos:prefLabel "LOD Connectivity Product Family" ;
+    skos:altLabel "Virtuoso Data Access Driver for the World Wide Web" ;
+    schema:description  """The OpenLink Virtuoso Linked Open Data connectors proved client access to Web-hosted data in a similar way to SQL RDBMS hosted data""";
+    gr:hasManufacturer <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+    oplpro:productFamilyCode "lod" ;
+    schema:comment  """Virtuoso Data Access Driver for the World Wide Web""" ;
+    schema:author <http://www.openlinksw.com/#this> ;
+    schema:image <https://www.openlinksw.com/DAV/oplweb3/images/linked-open-data.png> ;
+    schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/linked-open-data.png> ;
+    oplsof:hasOperatingSystemFamily  <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
+
 <http://data.openlinksw.com/oplweb/product_family/loac#this>
     a oplpro:ProductFamily ;
+    schema:applicationCategory schema:BusinessApplication ;
+    schema:operatingSystem "Windows, Linux, MacOSX, Unix, Solaris " ;
     schema:sameAs <http://data.openlinksw.com/oplweb/product_family/loac> ;
     wdrs:describedby source: ;
     schema:name "Linked Open Agentic Commerce" ;
@@ -361,4 +381,7 @@ source: a schema:CreativeWork ;
     gr:hasManufacturer <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
     oplpro:productFamilyCode "loac" ;
     schema:comment """Linked Open Agentic Commerce (LOAC).""" ;
-    schema:author <http://www.openlinksw.com/#this> .
+    schema:author <http://www.openlinksw.com/#this> ;
+    schema:image <https://www.openlinksw.com/DAV/oplweb3/images/logos/loac-agent-logo-160.png> ;
+    schema:logo <https://www.openlinksw.com/DAV/oplweb3/images/logos/loac-shop-icon-48.png> ;
+    oplsof:hasOperatingSystemFamily <http://data.openlinksw.com/oplweb/opsys_family/Virtuoso#this> .
